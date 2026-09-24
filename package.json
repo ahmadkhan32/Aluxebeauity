@@ -1,0 +1,9 @@
+{
+  "name": "aluxebeauty",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Ayesha Luxe Beauty & RAWR Beauty WordPress Theme",
+  "scripts": {
+    "build": "echo 'Build successful'"
+  }
+}

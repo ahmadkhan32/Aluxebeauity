@@ -1,0 +1,124 @@
+/* ============================================================
+   RAWR BEAUTY — Responsive Breakpoints (responsive.css)
+   ============================================================ */
+
+@media (max-width: 1024px) {
+  .rawr-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .rawr-cta-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .rawr-products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .rawr-insta-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .rawr-footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-navigation {
+    display: none;
+  }
+  .header-wa-btn {
+    display: none;
+  }
+  .rawr-mobile-toggle {
+    display: flex;
+  }
+  .rawr-cta-grid {
+    grid-template-columns: 1fr;
+  }
+  .rawr-products-grid {
+    grid-template-columns: 1fr;
+  }
+  .rawr-giftcard-card {
+    grid-template-columns: 1fr;
+    padding: 30px;
+  }
+  .rawr-hiring-box {
+    grid-template-columns: 1fr;
+    padding: 30px;
+  }
+  .rawr-blog-grid {
+    grid-template-columns: 1fr;
+  }
+  .rawr-insta-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .rawr-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .rawr-prefooter-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ─── MOBILE DRAWER ACTIVE STATE ─── */
+.rawr-mobile-drawer {
+  position: fixed;
+  top: 0;
+  right: -320px;
+  width: 300px;
+  height: 100vh;
+  background: white;
+  z-index: 1000;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  transition: right 0.3s ease;
+  padding: 24px;
+}
+
+.rawr-mobile-drawer.active {
+  right: 0;
+}
+
+.rawr-mobile-drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 20px;
+}
+
+.rawr-close-drawer {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--color-primary);
+}
+
+.rawr-mobile-nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.rawr-mobile-nav a {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.rawr-mobile-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+}
+
+.rawr-mobile-backdrop.active {
+  display: block;
+}

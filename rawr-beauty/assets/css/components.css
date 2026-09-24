@@ -1,0 +1,702 @@
+/* ============================================================
+   RAWR BEAUTY — Components Stylesheet (components.css)
+   ============================================================ */
+
+/* ─── ANNOUNCEMENT BAR ─── */
+.rawr-announcement-bar {
+  background: var(--color-primary);
+  color: white;
+  padding: 10px 0;
+  font-size: 13px;
+}
+
+.rawr-announcement-text {
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+/* ─── MAIN HEADER ─── */
+.rawr-main-header {
+  background: white;
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.rawr-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.rawr-logo-link {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.rawr-logo-script {
+  font-family: var(--font-serif);
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: var(--color-primary);
+}
+
+.rawr-logo-sub {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  color: var(--color-secondary-dark);
+}
+
+.rawr-nav-menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.rawr-nav-menu a {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.rawr-nav-menu a:hover {
+  color: var(--color-secondary-dark);
+}
+
+.rawr-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.rawr-mobile-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.rawr-mobile-toggle span {
+  width: 24px;
+  height: 2px;
+  background: var(--color-primary);
+  transition: var(--transition-smooth);
+}
+
+/* ─── HERO SECTION ─── */
+.rawr-hero-section {
+  padding: 90px 0;
+  background: linear-gradient(180deg, #FAF7F2 0%, #FFFFFF 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.rawr-hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.rawr-hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.6rem, 5vw, 4.2rem);
+  line-height: 1.15;
+  color: var(--color-primary);
+  margin: 16px 0 20px;
+}
+
+.rawr-hero-title span {
+  background: linear-gradient(135deg, var(--color-secondary-dark) 0%, var(--color-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.rawr-hero-description {
+  font-size: 16px;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: 32px;
+  max-width: 580px;
+}
+
+.rawr-hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.rawr-hero-perks {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-border);
+}
+
+.rawr-perk-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+/* Floating Hero Cards */
+.rawr-hero-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.rawr-floating-card {
+  background: white;
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--color-border);
+  transition: var(--transition-smooth);
+}
+
+.rawr-floating-card:hover {
+  transform: translateX(8px);
+  border-color: var(--color-secondary);
+  box-shadow: var(--shadow-hover);
+}
+
+.card-icon {
+  font-size: 32px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-alt);
+  border-radius: 16px;
+  flex-shrink: 0;
+}
+
+.card-body strong {
+  display: block;
+  font-size: 16px;
+  color: var(--color-primary);
+  margin-bottom: 4px;
+}
+
+.card-body span {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+/* ─── QUICK BOOKING CTAs ─── */
+.rawr-cta-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.rawr-cta-card {
+  background: white;
+  border-radius: 20px;
+  padding: 32px 24px;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: var(--transition-smooth);
+}
+
+.rawr-cta-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--color-secondary);
+}
+
+.rawr-cta-icon {
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
+.rawr-cta-title {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  margin-bottom: 6px;
+  color: var(--color-primary);
+}
+
+.rawr-cta-price {
+  font-weight: 700;
+  color: var(--color-secondary-dark);
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.rawr-cta-desc {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+/* ─── PRESS STRIP ─── */
+.rawr-press-strip {
+  padding: 40px 0;
+  background: var(--color-bg-alt);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.rawr-press-label {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: 800;
+  color: var(--color-text-muted);
+  margin-bottom: 20px;
+}
+
+.rawr-press-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.rawr-press-logo {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  letter-spacing: 4px;
+  font-weight: 700;
+  color: var(--color-primary);
+  opacity: 0.6;
+  transition: var(--transition-smooth);
+}
+
+.rawr-press-logo:hover {
+  opacity: 1;
+  color: var(--color-secondary-dark);
+}
+
+/* ─── LOCATION STATUS BADGES ─── */
+.rawr-badge-status {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 12px;
+  text-transform: uppercase;
+}
+
+.rawr-status-open {
+  background: #E8F5E9;
+  color: #2E7D32;
+}
+
+.rawr-status-coming {
+  background: #FFF8E1;
+  color: #F57F17;
+}
+
+.rawr-status-temp-closed {
+  background: #FFF3E0;
+  color: #E65100;
+}
+
+.rawr-status-closed {
+  background: #FFEBEE;
+  color: #C62828;
+}
+
+/* ─── PRODUCTS GRID ─── */
+.rawr-products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.rawr-product-card {
+  background: white;
+  border-radius: 16px;
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: var(--shadow-card);
+  transition: var(--transition-smooth);
+}
+
+.rawr-product-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-secondary);
+}
+
+.rawr-product-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: var(--color-primary);
+  color: white;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border-radius: 8px;
+  z-index: 2;
+}
+
+.rawr-product-img-box {
+  height: 180px;
+  background: var(--color-bg-alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-icon {
+  font-size: 54px;
+}
+
+.rawr-product-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.rawr-product-rating {
+  color: var(--color-secondary);
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+}
+
+.rawr-product-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+.rawr-product-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 16px;
+  margin-top: auto;
+}
+
+.rawr-product-price {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+.rawr-product-old-price {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  text-decoration: line-through;
+}
+
+/* ─── GIFT CARD SECTION ─── */
+.rawr-giftcard-card {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #16213E 100%);
+  border-radius: 24px;
+  padding: 50px;
+  color: white;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.rawr-voucher-card {
+  background: linear-gradient(135deg, #FAF4E5 0%, #E2C97A 100%);
+  border-radius: 16px;
+  padding: 30px;
+  color: var(--color-primary);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  border: 2px solid white;
+}
+
+.voucher-logo {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  display: block;
+}
+
+.voucher-sub {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.voucher-amount {
+  font-family: var(--font-serif);
+  font-size: 40px;
+  font-weight: 800;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.voucher-valid {
+  font-size: 12px;
+  color: rgba(26, 26, 46, 0.7);
+}
+
+/* ─── HIRING BOX ─── */
+.rawr-hiring-box {
+  background: white;
+  border-radius: 24px;
+  padding: 50px 40px;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.rawr-hiring-stats {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.hiring-stat-card {
+  background: var(--color-bg-alt);
+  border-radius: 14px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--color-border);
+}
+
+.stat-number {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+.stat-label {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+/* ─── INSTAGRAM GRID ─── */
+.rawr-insta-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+
+.rawr-insta-item {
+  background: white;
+  aspect-ratio: 1;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+  transition: var(--transition-smooth);
+}
+
+.rawr-insta-item:hover {
+  transform: scale(1.05);
+  border-color: var(--color-secondary);
+}
+
+.insta-icon {
+  font-size: 28px;
+}
+
+.insta-tag {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-secondary-dark);
+}
+
+/* ─── BLOG POSTS GRID ─── */
+.rawr-blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.rawr-post-card {
+  background: white;
+  border-radius: 20px;
+  padding: 32px 24px;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-smooth);
+}
+
+.rawr-post-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-secondary);
+}
+
+.post-card-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  margin-bottom: 12px;
+}
+
+.post-card-tag {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-secondary-dark);
+}
+
+.post-card-time {
+  color: var(--color-text-muted);
+}
+
+.post-card-title {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: var(--color-primary);
+  line-height: 1.3;
+}
+
+.post-card-excerpt {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.post-card-link {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-secondary-dark);
+}
+
+/* ─── PREFOOTER & FOOTER ─── */
+.rawr-prefooter-cta {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #16213E 100%);
+  padding: 50px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.rawr-prefooter-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.rawr-main-footer {
+  background: var(--color-primary);
+  color: white;
+  padding: 80px 0 50px;
+}
+
+.rawr-footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.rawr-footer-brand {
+  margin-bottom: 16px;
+}
+
+.rawr-footer-brand .rawr-logo-script {
+  color: white;
+}
+
+.rawr-footer-title {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  color: var(--color-secondary-light);
+  margin-bottom: 20px;
+}
+
+.rawr-footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.rawr-footer-links a {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 13px;
+}
+
+.rawr-footer-links a:hover {
+  color: var(--color-secondary-light);
+  padding-left: 4px;
+}
+
+.rawr-footer-contact-info p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 8px;
+}
+
+.rawr-footer-contact-info a {
+  color: var(--color-secondary-light);
+}
+
+.rawr-footer-bottom {
+  background: #121220;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 24px 0;
+  font-size: 12px;
+}
+
+.rawr-footer-bottom-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.rawr-legal-links {
+  display: flex;
+  gap: 8px;
+}
+
+.rawr-legal-links a {
+  color: rgba(255, 255, 255, 0.6);
+}

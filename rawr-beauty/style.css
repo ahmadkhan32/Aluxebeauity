@@ -1,0 +1,45 @@
+/*
+Theme Name: RAWR Beauty
+Theme URI: https://rawrbeauty.co.uk
+Author: Ayesha Luxe Beauty / RAWR Architecture Team
+Author URI: https://rawrbeauty.co.uk
+Description: Bespoke multi-purpose WordPress theme for salon booking, 26+ locations, WooCommerce store, careers, academy training, and franchise network.
+Version: 1.0.0
+Tested up to: 6.7
+Requires at least: 6.2
+Requires PHP: 7.4
+License: Proprietary / GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: rawr-beauty
+Domain Path: /languages
+Tags: beauty, salon, booking, woocommerce, full-site-editing, custom-post-types, responsive-layout, micro-animations
+*/
+
+/* Reset & Theme Root Variables */
+:root {
+  --color-primary: #1A1A2E;
+  --color-primary-light: #2A2A48;
+  --color-secondary: #C9A84C;
+  --color-secondary-light: #E2C97A;
+  --color-secondary-dark: #A8862E;
+  --color-accent-pink: #E8829A;
+  --color-accent-green: #4A7C59;
+  
+  --color-bg-main: #FFFFFF;
+  --color-bg-alt: #FDF9F4;
+  --color-bg-dark: #121220;
+  
+  --color-text-main: #1A1A2E;
+  --color-text-muted: #666680;
+  --color-text-light: #FFFFFF;
+  --color-border: #E8E5DF;
+  
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-script: 'Great Vibes', cursive;
+  
+  --container-width: 1280px;
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-card: 0 10px 30px rgba(26, 26, 46, 0.08);
+  --shadow-hover: 0 16px 40px rgba(201, 168, 76, 0.2);
+}
