@@ -1,19 +1,19 @@
-# Ayesha Luxe Beauty & RAWR Beauty WordPress Theme
+# Ayesha Luxe Beauty - Complete Salon & E-Commerce Platform
 
 > **Enhance Your Beauty, Embrace Your Glow** ✨
 
 A complete beauty business platform featuring:
 1. **Ayesha Luxe Beauty Live Web App** ready for instant zero-dependency deployment on Vercel.
-2. **RAWR Beauty Custom WordPress Theme** (`rawr-beauty/` & `rawr-beauty.zip`) with 26 UK Locations CPT, WooCommerce templates, React widgets, and REST API endpoints.
+2. **Ayesha Luxe Beauty WordPress Theme** (`rawr-beauty/` & `rawr-beauty.zip`) with 26 UK Locations CPT, WooCommerce templates, React widgets, and REST API endpoints.
 
 ---
 
 ## 🎨 Brand & Contact
 
 - **Brand**: Ayesha Luxe Beauty
-- **Tagline**: Luxury Salon Beauty At Your Doorstep
+- **Tagline**: Luxury Salon Beauty At Your Doorstep & Across 26 UK Branches
 - **WhatsApp Booking**: [+44 7477 154228](https://wa.me/447477154228)
-- **Service Area**: London, UK (FREE Home Service within 2 Miles)
+- **Service Area**: London & Nationwide UK (FREE Home Service within 2 Miles)
 - **Palette**: Luxury Gold `#C9A84C` · Blush Pink `#E8829A` · Herbal Green `#4A7C59` · Charcoal `#1A1A2E`
 - **GitHub Repository**: [https://github.com/ahmadkhan32/Aluxebeauity.git](https://github.com/ahmadkhan32/Aluxebeauity.git)
 
@@ -31,17 +31,18 @@ All prices taken directly from authentic salon price menus:
 
 ---
 
-## 📦 RAWR Beauty WordPress Theme
+## 📦 Ayesha Luxe Beauty WordPress Theme
 
 Located in `rawr-beauty/` and bundled as `rawr-beauty.zip`:
-- **Theme Name**: RAWR Beauty
+- **Theme Name**: Ayesha Luxe Beauty
 - **Version**: 1.0.0
 - **Includes**:
-  - `page-templates/`: About, Services, Booking, Locations, Academy, Education, Careers, Franchise, Media, Contact
-  - `post-types/`: Locations (26 records), Services, Courses, Careers, Press, Testimonials
-  - `taxonomies/`: Service Category, Location Region, Course Category, Press Category
+  - Dedicated page templates: `page-academy.php`, `page-careers.php`, `page-services.php`, `page-branches.php`, `page-packages.php`, `page-franchise.php`, `page-book-now.php`
+  - `page-templates/`: About, Services, Booking, Branches, Academy, Education, Careers, Franchise, Media, Contact
+  - `post-types/`: Branches (26 records), Services, Courses, Careers, Press, Testimonials
+  - `taxonomies/`: Service Category, Branch Region, Course Category, Press Category
   - `woocommerce/`: Archive Product, Single Product, Content Product, Cart, Checkout, MyAccount
-  - `src/react/` & `assets/dist/react-app.js`: Location Finder & Booking React components
+  - Modular eCommerce: Quick Buy, Drawer Cart, AJAX Fragments, Shipping & Billing Validation
   - `theme.json`: Modern Gutenberg full-site editing theme configuration
 
 ### WordPress Installation

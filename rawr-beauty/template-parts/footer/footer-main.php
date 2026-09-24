@@ -11,14 +11,14 @@
             <!-- Brand Column -->
             <div class="rawr-footer-col">
                 <div class="rawr-footer-brand">
-                    <span class="rawr-logo-script">RAWR</span>
-                    <span class="rawr-logo-sub">BEAUTY</span>
+                    <span class="rawr-logo-script">Ayesha</span>
+                    <span class="rawr-logo-sub">LUXE BEAUTY</span>
                 </div>
                 <p style="color: rgba(255,255,255,0.7); font-size: 14px; line-height: 1.6; margin-bottom: 20px;">
                     <?php esc_html_e('Enhance your beauty, embrace your glow. Award-winning treatments across 26 UK locations and doorstep mobile therapy within 2 miles.', 'rawr-beauty'); ?>
                 </p>
                 <div class="rawr-footer-contact-info">
-                    <p>📞 <a href="tel:07398926226">07398 926226</a></p>
+                    <p>📞 <a href="tel:07477154228">07477 154228</a></p>
                     <p>💬 <a href="<?php echo esc_url(rawr_whatsapp_url()); ?>" target="_blank" rel="noopener noreferrer">WhatsApp Direct Booking</a></p>
                 </div>
             </div>
@@ -27,12 +27,12 @@
             <div class="rawr-footer-col">
                 <h4 class="rawr-footer-title"><?php esc_html_e('Treatments', 'rawr-beauty'); ?></h4>
                 <ul class="rawr-footer-links">
-                    <li><a href="<?php echo esc_url(home_url('/services#brows')); ?>"><?php esc_html_e('Eyebrows & Threading', 'rawr-beauty'); ?></a></li>
-                    <li><a href="<?php echo esc_url(home_url('/services#lashes')); ?>"><?php esc_html_e('Eyelash Extensions', 'rawr-beauty'); ?></a></li>
-                    <li><a href="<?php echo esc_url(home_url('/services#nails')); ?>"><?php esc_html_e('Gel Nails & Pedicures', 'rawr-beauty'); ?></a></li>
-                    <li><a href="<?php echo esc_url(home_url('/services#facials')); ?>"><?php esc_html_e('Hydra Facials & Glow', 'rawr-beauty'); ?></a></li>
-                    <li><a href="<?php echo esc_url(home_url('/services#laser')); ?>"><?php esc_html_e('Laser Hair Removal', 'rawr-beauty'); ?></a></li>
-                    <li><a href="<?php echo esc_url(home_url('/booking')); ?>"><?php esc_html_e('Bridal Packages', 'rawr-beauty'); ?></a></li>
+                    <li><a href="<?php echo esc_url(home_url('/services/')); ?>"><?php esc_html_e('All Services & Prices', 'rawr-beauty'); ?></a></li>
+                    <li><a href="<?php echo esc_url(home_url('/services/')); ?>"><?php esc_html_e('Eyebrows & Threading', 'rawr-beauty'); ?></a></li>
+                    <li><a href="<?php echo esc_url(home_url('/services/')); ?>"><?php esc_html_e('Eyelash Extensions', 'rawr-beauty'); ?></a></li>
+                    <li><a href="<?php echo esc_url(home_url('/services/')); ?>"><?php esc_html_e('Gel Nails & BIAB', 'rawr-beauty'); ?></a></li>
+                    <li><a href="<?php echo esc_url(home_url('/services/')); ?>"><?php esc_html_e('Hydra Facials & Skin', 'rawr-beauty'); ?></a></li>
+                    <li><a href="<?php echo esc_url(home_url('/packages/')); ?>"><?php esc_html_e('Bridal & Pamper Packages', 'rawr-beauty'); ?></a></li>
                 </ul>
             </div>
 
@@ -40,12 +40,12 @@
             <div class="rawr-footer-col">
                 <h4 class="rawr-footer-title"><?php esc_html_e('Explore', 'rawr-beauty'); ?></h4>
                 <ul class="rawr-footer-links">
-                    <li><a href="<?php echo esc_url(home_url('/locations')); ?>"><?php esc_html_e('All 26 UK Salons', 'rawr-beauty'); ?></a></li>
-                    <li><a href="<?php echo esc_url(home_url('/shop')); ?>"><?php esc_html_e('Beauty Product Shop', 'rawr-beauty'); ?></a></li>
-                    <li><a href="<?php echo esc_url(home_url('/training')); ?>"><?php esc_html_e('Academy & Education', 'rawr-beauty'); ?></a></li>
-                    <li><a href="<?php echo esc_url(home_url('/careers')); ?>"><?php esc_html_e('Therapist Careers', 'rawr-beauty'); ?></a></li>
-                    <li><a href="<?php echo esc_url(home_url('/franchise')); ?>"><?php esc_html_e('Franchise Opportunities', 'rawr-beauty'); ?></a></li>
-                    <li><a href="<?php echo esc_url(home_url('/about')); ?>"><?php esc_html_e('About Our Mission', 'rawr-beauty'); ?></a></li>
+                    <li><a href="<?php echo esc_url(home_url('/branches/')); ?>"><?php esc_html_e('26 UK Branches', 'rawr-beauty'); ?></a></li>
+                    <li><a href="<?php echo esc_url(home_url('/shop/')); ?>"><?php esc_html_e('Shop 🛒', 'rawr-beauty'); ?></a></li>
+                    <li><a href="<?php echo esc_url(home_url('/packages/')); ?>"><?php esc_html_e('Packages', 'rawr-beauty'); ?></a></li>
+                    <li><a href="<?php echo esc_url(home_url('/academy/')); ?>"><?php esc_html_e('Academy Courses', 'rawr-beauty'); ?></a></li>
+                    <li><a href="<?php echo esc_url(home_url('/careers/')); ?>"><?php esc_html_e('Salon Careers', 'rawr-beauty'); ?></a></li>
+                    <li><a href="<?php echo esc_url(home_url('/franchise/')); ?>"><?php esc_html_e('Franchise Concessions', 'rawr-beauty'); ?></a></li>
                 </ul>
             </div>
 

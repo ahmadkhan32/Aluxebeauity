@@ -11,8 +11,8 @@
             <!-- Brand Logo -->
             <div class="site-branding">
                 <a href="<?php echo esc_url(home_url('/')); ?>" class="rawr-logo-link" rel="home">
-                    <span class="rawr-logo-script">RAWR</span>
-                    <span class="rawr-logo-sub">BEAUTY</span>
+                    <span class="rawr-logo-script">Ayesha</span>
+                    <span class="rawr-logo-sub">LUXE BEAUTY</span>
                 </a>
             </div>
 
@@ -29,13 +29,15 @@
                 } else {
                     ?>
                     <ul class="rawr-nav-menu">
-                        <li><a href="<?php echo esc_url(home_url('/services')); ?>"><?php esc_html_e('Services', 'rawr-beauty'); ?></a></li>
-                        <li><a href="<?php echo esc_url(home_url('/locations')); ?>"><?php esc_html_e('Locations', 'rawr-beauty'); ?></a></li>
-                        <li><a href="<?php echo esc_url(home_url('/shop')); ?>"><?php esc_html_e('Shop', 'rawr-beauty'); ?></a></li>
-                        <li><a href="<?php echo esc_url(home_url('/about')); ?>"><?php esc_html_e('About', 'rawr-beauty'); ?></a></li>
-                        <li><a href="<?php echo esc_url(home_url('/careers')); ?>"><?php esc_html_e('Careers', 'rawr-beauty'); ?></a></li>
-                        <li><a href="<?php echo esc_url(home_url('/franchise')); ?>"><?php esc_html_e('Franchise', 'rawr-beauty'); ?></a></li>
-                        <li><a href="<?php echo esc_url(home_url('/booking')); ?>" class="rawr-btn rawr-btn-primary rawr-btn-sm"><?php esc_html_e('Book Now', 'rawr-beauty'); ?></a></li>
+                        <li><a href="<?php echo esc_url(home_url('/services/')); ?>"><?php esc_html_e('Services', 'rawr-beauty'); ?></a></li>
+                        <li><a href="<?php echo esc_url(home_url('/branches/')); ?>"><?php esc_html_e('26 Branches', 'rawr-beauty'); ?></a></li>
+                        <li><a href="<?php echo esc_url(home_url('/shop/')); ?>"><?php esc_html_e('Shop 🛒', 'rawr-beauty'); ?></a></li>
+                        <li><a href="<?php echo esc_url(home_url('/packages/')); ?>"><?php esc_html_e('Packages', 'rawr-beauty'); ?></a></li>
+                        <li><a href="<?php echo esc_url(home_url('/academy/')); ?>"><?php esc_html_e('Academy', 'rawr-beauty'); ?></a></li>
+                        <li><a href="<?php echo esc_url(home_url('/careers/')); ?>"><?php esc_html_e('Careers', 'rawr-beauty'); ?></a></li>
+                        <li><a href="<?php echo esc_url(home_url('/franchise/')); ?>"><?php esc_html_e('Franchise', 'rawr-beauty'); ?></a></li>
+                        <li><a href="<?php echo esc_url(home_url('/blog/')); ?>"><?php esc_html_e('Blog', 'rawr-beauty'); ?></a></li>
+                        <li><a href="<?php echo esc_url(home_url('/book-now/')); ?>" class="rawr-btn rawr-btn-primary rawr-btn-sm"><?php esc_html_e('Book Now', 'rawr-beauty'); ?></a></li>
                     </ul>
                     <?php
                 }
