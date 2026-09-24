@@ -181,6 +181,6 @@ function rawr_api_franchise_inquiry($request) {
     return rest_ensure_response(array(
         'success' => true,
         'message' => 'Franchise inquiry registered successfully. WhatsApp prompt created.',
-        'whatsapp_redirect' => rawr_whatsapp_url("Hi Ayesha! I submitted a franchise inquiry for $city. My name is $name ($phone)."),
+        'whatsapp_redirect' => rawr_whatsapp_url("Hi A Luxe! I submitted a franchise inquiry for $city. My name is $name ($phone)."),
     ));
 }

@@ -11,7 +11,7 @@
             <!-- Brand Logo -->
             <div class="site-branding">
                 <a href="<?php echo esc_url(home_url('/')); ?>" class="rawr-logo-link" rel="home">
-                    <span class="rawr-logo-script">Ayesha</span>
+                    <span class="rawr-logo-script">A</span>
                     <span class="rawr-logo-sub">LUXE BEAUTY</span>
                 </a>
             </div>

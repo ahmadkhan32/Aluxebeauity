@@ -25,7 +25,7 @@ function rawr_ajax_check_postcode() {
             __('Postcode "%s" is within our primary service boundary! Complimentary home service is available for all treatment bookings.', 'rawr-beauty'),
             strtoupper($postcode)
         ),
-        'whatsapp_url' => rawr_whatsapp_url("Hi Ayesha! I checked postcode $postcode for free home beauty service and would like to book."),
+        'whatsapp_url' => rawr_whatsapp_url("Hi A Luxe! I checked postcode $postcode for free home beauty service and would like to book."),
     ));
 }
 add_action('wp_ajax_rawr_check_postcode', 'rawr_ajax_check_postcode');

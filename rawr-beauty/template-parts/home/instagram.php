@@ -12,8 +12,8 @@ $insta_tags = array('#RAWRBeauty', '#BrowGoals', '#HydraGlow', '#LaserSmooth', '
             <span class="rawr-badge"><?php esc_html_e('Follow Our Story', 'rawr-beauty'); ?></span>
             <h2 class="rawr-title"><?php esc_html_e('Join Our Community On Instagram', 'rawr-beauty'); ?></h2>
             <p class="rawr-subtitle">
-                <a href="https://instagram.com/ayesha.luxe.beauty" target="_blank" rel="noopener noreferrer" style="color: var(--color-secondary-dark); font-weight: 700;">
-                    📷 @rawrbeauty.official &nbsp;|&nbsp; @ayesha.luxe.beauty
+                <a href="https://instagram.com/aluxebeauty" target="_blank" rel="noopener noreferrer" style="color: var(--color-secondary-dark); font-weight: 700;">
+                    📷 @rawrbeauty.official &nbsp;|&nbsp; @aluxebeauty
                 </a>
             </p>
         </div>

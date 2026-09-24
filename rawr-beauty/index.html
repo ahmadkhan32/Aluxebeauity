@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ayesha Luxe Beauty | Salon Treatments, 26 UK Branches & E-Commerce</title>
-  <meta name="description" content="Luxury salon treatments, 26 UK branches, accredited training academy, e-commerce beauty shop, and mobile doorstep services. Book online or on WhatsApp.">
-  <meta name="keywords" content="Ayesha Luxe Beauty, 26 branches, beauty salon UK, nail salon, brows and lashes, beauty academy, franchise, doorstep beauty, e-commerce beauty shop">
+  <title>A Luxe Beauty | Salon Treatments, 26 UK Branches & E-Commerce</title>
+  <meta name="description" content="A Luxe Beauty - Luxury salon treatments, 26 UK branches, accredited training academy, e-commerce beauty shop, and mobile doorstep services. Book online or on WhatsApp.">
+  <meta name="keywords" content="A Luxe Beauty, 26 branches, beauty salon UK, nail salon, brows and lashes, beauty academy, franchise, doorstep beauty, e-commerce beauty shop">
   
   <!-- Open Graph -->
-  <meta property="og:title" content="Ayesha Luxe Beauty | 26 UK Branches & E-Commerce Shop">
+  <meta property="og:title" content="A Luxe Beauty | 26 UK Branches & E-Commerce Shop">
   <meta property="og:description" content="Nails, Brows, Lashes, Facials, 26 UK Branches, Professional Training Academy, and Beauty E-Commerce.">
   <meta property="og:type" content="website">
   
@@ -174,9 +174,142 @@
     .wa-float { position: fixed; bottom: 24px; right: 24px; z-index: 9990; display: flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #25D366, #128C7E); color: white; padding: 12px 20px; border-radius: 50px; font-size: 13px; font-weight: 700; box-shadow: 0 10px 30px rgba(37,211,102,0.45); transition: var(--transition); }
     .wa-float:hover { transform: translateY(-4px) scale(1.03); color: white; }
 
+    /* Mobile Toggle Button */
+    .mobile-toggle-btn {
+      display: none;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 36px;
+      height: 36px;
+      background: var(--gold-pale);
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 8px;
+      cursor: pointer;
+      padding: 7px;
+      z-index: 1001;
+      transition: var(--transition);
+    }
+    .hamburger-bar {
+      display: block;
+      width: 100%;
+      height: 2.5px;
+      background: var(--charcoal);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+    .mobile-toggle-btn.active .hamburger-bar:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+    .mobile-toggle-btn.active .hamburger-bar:nth-child(2) {
+      opacity: 0;
+    }
+    .mobile-toggle-btn.active .hamburger-bar:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* Mobile Drawer */
+    .mobile-menu-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(4px);
+      z-index: 9998;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    .mobile-menu-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .mobile-menu-drawer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 85%;
+      max-width: 320px;
+      background: #FFFFFF;
+      z-index: 9999;
+      box-shadow: 10px 0 30px rgba(0,0,0,0.25);
+      transform: translateX(-100%);
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      flex-direction: column;
+      padding: 24px;
+      overflow-y: auto;
+    }
+    .mobile-menu-drawer.active {
+      transform: translateX(0);
+    }
+    .mobile-menu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--light-gray);
+      margin-bottom: 20px;
+    }
+    .mobile-menu-close {
+      background: none;
+      border: none;
+      font-size: 28px;
+      cursor: pointer;
+      color: var(--charcoal);
+      line-height: 1;
+    }
+    .mobile-nav-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+    }
+    .mobile-nav-links a {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--charcoal);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 10px;
+      transition: var(--transition);
+    }
+    .mobile-nav-links a:hover {
+      background: var(--gold-pale);
+      color: var(--gold-dark);
+    }
+    .mobile-nav-links a.mobile-book-btn {
+      background: var(--gradient-gold);
+      color: #1A1A2E;
+      justify-content: center;
+      margin-top: 10px;
+      padding: 12px;
+      border-radius: 50px;
+      box-shadow: var(--shadow-gold);
+    }
+    .mobile-menu-footer {
+      padding-top: 20px;
+      border-top: 1px solid var(--light-gray);
+      font-size: 12px;
+      color: var(--dark-gray);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
     @media (max-width: 900px) {
-      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
       .nav-links { display: none; }
+      .mobile-toggle-btn { display: flex; }
+      .d-desktop-only { display: none !important; }
+    }
+    @media (max-width: 600px) {
+      .section-title { font-size: 2rem; }
+      .hero-title { font-size: 2.2rem; }
+      .hero-stats { flex-direction: column; gap: 16px; }
+      .services-grid, .products-grid, .branches-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -191,7 +324,7 @@
         <span>🚗 FREE Home Service within 2 Miles</span>
       </div>
       <div>
-        <a href="https://wa.me/447477154228?text=Hello%20Ayesha%2C%20I%20would%20like%20to%20book%20a%20treatment" target="_blank" class="top-bar-link">
+        <a href="https://wa.me/447477154228?text=Hello%20A%20Luxe%20Beauty%2C%20I%20would%20like%20to%20book%20a%20treatment" target="_blank" class="top-bar-link">
           💬 WhatsApp Booking: +44 7477 154228
         </a>
       </div>
@@ -202,7 +335,7 @@
   <header class="site-header">
     <div class="container header-nav">
       <a href="/" class="logo">
-        <span class="logo-script">Ayesha</span>
+        <span class="logo-script">A</span>
         <span class="logo-main">LUXE BEAUTY</span>
         <span class="logo-sub">26 UK BRANCHES & DOORSTEP SALON</span>
       </a>
@@ -223,12 +356,44 @@
         <button class="cart-btn" onclick="toggleCart()" aria-label="Open Cart">
           🛒 <span id="cartCountBadge" class="cart-count">0</span>
         </button>
-        <a href="#booking" class="btn btn-gold btn-sm">
+        <a href="/book-now/" class="btn btn-gold btn-sm d-desktop-only">
           Book Appointment
         </a>
+        <button class="mobile-toggle-btn" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
       </div>
     </div>
   </header>
+
+  <!-- Mobile Navigation Overlay & Drawer -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay" onclick="toggleMobileMenu()"></div>
+  <nav class="mobile-menu-drawer" id="mobileMenuDrawer" aria-label="Mobile Navigation">
+    <div class="mobile-menu-header">
+      <div class="logo">
+        <span class="logo-script">A</span>
+        <span class="logo-main">LUXE BEAUTY</span>
+      </div>
+      <button class="mobile-menu-close" onclick="toggleMobileMenu()" aria-label="Close menu">&times;</button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="/services/" onclick="toggleMobileMenu()">💅 Services & Prices</a></li>
+      <li><a href="/branches/" onclick="toggleMobileMenu()">📍 26 UK Branches</a></li>
+      <li><a href="/shop/" onclick="toggleMobileMenu()">🛒 Beauty Shop</a></li>
+      <li><a href="/packages/" onclick="toggleMobileMenu()">🎁 Packages & Bundles</a></li>
+      <li><a href="/academy/" onclick="toggleMobileMenu()">🎓 Training Academy</a></li>
+      <li><a href="/careers/" onclick="toggleMobileMenu()">💼 Salon Careers</a></li>
+      <li><a href="/franchise/" onclick="toggleMobileMenu()">🏬 Franchise</a></li>
+      <li><a href="/blog/" onclick="toggleMobileMenu()">📖 Beauty Blog</a></li>
+      <li><a href="/book-now/" onclick="toggleMobileMenu()" class="mobile-book-btn">✨ Book Appointment</a></li>
+    </ul>
+    <div class="mobile-menu-footer">
+      <p>📞 <a href="tel:07477154228">07477 154228</a></p>
+      <p>💬 <a href="https://wa.me/447477154228?text=Hello%20A%20Luxe%20Beauty" target="_blank">WhatsApp Direct Booking</a></p>
+    </div>
+  </nav>
 
   <!-- Hero -->
   <section class="hero">
@@ -707,7 +872,7 @@
           <span style="display:inline-block; font-size:10px; font-weight:800; letter-spacing:2px; text-transform:uppercase; color:#E2C97A; margin-bottom:12px;">Business Opportunity</span>
           <h2 style="font-family:var(--font-heading); font-size:2rem; color:#E2C97A; margin-bottom:12px;">UK Franchise Partnerships</h2>
           <p style="font-size:14px; opacity:0.85; line-height:1.7; margin-bottom:20px;">
-            Partner with Ayesha Luxe Beauty and operate your own high-traffic salon concession. Complete turnkey store build, supply chain, and training support provided.
+            Partner with A Luxe Beauty and operate your own high-traffic salon concession. Complete turnkey store build, supply chain, and training support provided.
           </p>
           <a href="/franchise/" class="btn btn-gold btn-sm">
             Request Franchise Prospectus
@@ -905,7 +1070,7 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <h3 style="font-family:var(--font-heading); font-size:24px; color:white; margin-bottom:12px;">Ayesha Luxe Beauty</h3>
+          <h3 style="font-family:var(--font-heading); font-size:24px; color:white; margin-bottom:12px;">A Luxe Beauty</h3>
           <p style="font-size:12px; color:var(--light-gray); line-height:1.7;">
             Operating across 26 UK salon branches and doorstep mobile treatments. Dedicated to high standards, hygiene, and radiant results.
           </p>
@@ -941,13 +1106,13 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2026 Ayesha Luxe Beauty. All rights reserved. Enhance your beauty, embrace your glow.</p>
+        <p>© 2026 A Luxe Beauty. All rights reserved. Enhance your beauty, embrace your glow.</p>
       </div>
     </div>
   </footer>
 
   <!-- Floating WhatsApp -->
-  <a href="https://wa.me/447477154228?text=Hello%20Ayesha%2C%20I%20would%20like%20to%20book%20a%20treatment" target="_blank" class="wa-float">
+  <a href="https://wa.me/447477154228?text=Hello%20A%20Luxe%20Beauty%2C%20I%20would%20like%20to%20book%20a%20treatment" target="_blank" class="wa-float">
     <span style="font-size:18px;">💬</span>
     <span>Book on WhatsApp</span>
   </a>
@@ -957,6 +1122,18 @@
     var cart = [];
     var currentQuickBuyProduct = null;
     var currentQuickBuyQty = 1;
+
+    function toggleMobileMenu() {
+      var overlay = document.getElementById('mobileMenuOverlay');
+      var drawer = document.getElementById('mobileMenuDrawer');
+      var btn = document.querySelector('.mobile-toggle-btn');
+      if (drawer && overlay) {
+        var isActive = drawer.classList.toggle('active');
+        overlay.classList.toggle('active');
+        if (btn) btn.classList.toggle('active', isActive);
+        document.body.style.overflow = isActive ? 'hidden' : '';
+      }
+    }
 
     function toggleCart() {
       document.getElementById('cartDrawer').classList.toggle('active');
@@ -1055,7 +1232,7 @@
       if (cart.length === 0) return alert('Your cart is empty!');
       var itemsTxt = cart.map(function(i) { return '• ' + i.qty + 'x ' + i.name + ' (£' + (i.price * i.qty).toFixed(2) + ')'; }).join('%0A');
       var total = cart.reduce(function(a, b) { return a + (b.price * b.qty); }, 0);
-      var msg = "Hello Ayesha Luxe Beauty! I want to complete my salon order:%0A%0A" + itemsTxt + "%0A%0A*Total:* £" + total.toFixed(2) + "%0A%0APlease process with tracked UK delivery!";
+      var msg = "Hello A Luxe Beauty! I want to complete my salon order:%0A%0A" + itemsTxt + "%0A%0A*Total:* £" + total.toFixed(2) + "%0A%0APlease process with tracked UK delivery!";
       window.open("https://wa.me/447477154228?text=" + msg, "_blank");
     }
 

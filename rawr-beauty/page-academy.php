@@ -2,7 +2,7 @@
 /**
  * Template Name: Training Academy
  *
- * @package Ayesha_Luxe_Beauty
+ * @package A_Luxe_Beauty
  */
 
 get_header();

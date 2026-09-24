@@ -26,7 +26,7 @@ export function Header({ cartCount = 0, onOpenCart }) {
       >
         <a href="/" style={{ color: "#ffffff", textDecoration: "none" }}>
           <div style={{ fontSize: "11px", letterSpacing: "3px", textTransform: "uppercase", color: "#C9A84C", fontWeight: "700" }}>
-            RAWR & AYESHA
+            A LUXE BEAUTY
           </div>
           <div style={{ fontSize: "1.4rem", fontFamily: "Georgia, serif", fontWeight: "700" }}>
             LUXE BEAUTY

@@ -30,7 +30,7 @@
                 <p style="color: var(--color-text-muted); font-size: 14px; margin-bottom: 24px;">
                     <?php esc_html_e('Speak confidentially with our Founder and Franchise Director on WhatsApp.', 'rawr-beauty'); ?>
                 </p>
-                <a href="<?php echo esc_url(rawr_whatsapp_url('Hi Ayesha! I would like to schedule an intro call regarding the RAWR franchise.')); ?>" target="_blank" rel="noopener noreferrer" class="rawr-btn rawr-btn-whatsapp" style="width: 100%; text-align: center;">
+                <a href="<?php echo esc_url(rawr_whatsapp_url('Hi A Luxe! I would like to schedule an intro call regarding the RAWR franchise.')); ?>" target="_blank" rel="noopener noreferrer" class="rawr-btn rawr-btn-whatsapp" style="width: 100%; text-align: center;">
                     💬 <?php esc_html_e('Schedule WhatsApp Intro Call', 'rawr-beauty'); ?>
                 </a>
             </div>

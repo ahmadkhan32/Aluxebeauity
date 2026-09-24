@@ -11,7 +11,7 @@
             <!-- Brand Column -->
             <div class="rawr-footer-col">
                 <div class="rawr-footer-brand">
-                    <span class="rawr-logo-script">Ayesha</span>
+                    <span class="rawr-logo-script">A</span>
                     <span class="rawr-logo-sub">LUXE BEAUTY</span>
                 </div>
                 <p style="color: rgba(255,255,255,0.7); font-size: 14px; line-height: 1.6; margin-bottom: 20px;">

@@ -8,7 +8,7 @@ export default function BookingWidget() {
   const [clientName, setClientName] = useState("");
   const [postcode, setPostcode] = useState("");
 
-  const waMessage = `Hi Ayesha! I would like to book a RAWR Beauty treatment:
+  const waMessage = `Hi A Luxe! I would like to book a RAWR Beauty treatment:
 - Treatment: ${service}
 - Format: ${locationType} ${postcode ? `(${postcode})` : ""}
 - Preferred Date: ${date || "Soonest available"}

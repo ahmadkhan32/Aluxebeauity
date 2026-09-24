@@ -2,7 +2,7 @@
 /**
  * Template Name: 26 UK Branches
  *
- * @package Ayesha_Luxe_Beauty
+ * @package A_Luxe_Beauty
  */
 
 get_header();

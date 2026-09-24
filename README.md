@@ -1,16 +1,16 @@
-# Ayesha Luxe Beauty - Complete Salon & E-Commerce Platform
+# A Luxe Beauty - Complete Salon & E-Commerce Platform
 
 > **Enhance Your Beauty, Embrace Your Glow** ✨
 
 A complete beauty business platform featuring:
-1. **Ayesha Luxe Beauty Live Web App** ready for instant zero-dependency deployment on Vercel.
-2. **Ayesha Luxe Beauty WordPress Theme** (`rawr-beauty/` & `rawr-beauty.zip`) with 26 UK Locations CPT, WooCommerce templates, React widgets, and REST API endpoints.
+1. **A Luxe Beauty Live Web App** ready for instant zero-dependency deployment on Vercel.
+2. **A Luxe Beauty WordPress Theme** (`rawr-beauty/` & `rawr-beauty.zip`) with 26 UK Locations CPT, WooCommerce templates, React widgets, and REST API endpoints.
 
 ---
 
 ## 🎨 Brand & Contact
 
-- **Brand**: Ayesha Luxe Beauty
+- **Brand**: A Luxe Beauty
 - **Tagline**: Luxury Salon Beauty At Your Doorstep & Across 26 UK Branches
 - **WhatsApp Booking**: [+44 7477 154228](https://wa.me/447477154228)
 - **Service Area**: London & Nationwide UK (FREE Home Service within 2 Miles)
@@ -31,10 +31,10 @@ All prices taken directly from authentic salon price menus:
 
 ---
 
-## 📦 Ayesha Luxe Beauty WordPress Theme
+## 📦 A Luxe Beauty WordPress Theme
 
 Located in `rawr-beauty/` and bundled as `rawr-beauty.zip`:
-- **Theme Name**: Ayesha Luxe Beauty
+- **Theme Name**: A Luxe Beauty
 - **Version**: 1.0.0
 - **Includes**:
   - Dedicated page templates: `page-academy.php`, `page-careers.php`, `page-services.php`, `page-branches.php`, `page-packages.php`, `page-franchise.php`, `page-book-now.php`

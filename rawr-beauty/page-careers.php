@@ -2,7 +2,7 @@
 /**
  * Template Name: Careers & Hiring
  *
- * @package Ayesha_Luxe_Beauty
+ * @package A_Luxe_Beauty
  */
 
 get_header();

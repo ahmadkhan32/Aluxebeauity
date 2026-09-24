@@ -7,7 +7,7 @@
 ?>
 <div id="rawr-mobile-drawer" class="rawr-mobile-drawer">
     <div class="rawr-mobile-drawer-header">
-        <span class="rawr-logo-script">RAWR Beauty</span>
+        <span class="rawr-logo-script">A Luxe Beauty</span>
         <button type="button" class="rawr-close-drawer" id="rawr-mobile-close-btn">&times;</button>
     </div>
     <div class="rawr-mobile-drawer-body">
@@ -30,7 +30,7 @@
                 💬 <?php esc_html_e('Chat on WhatsApp', 'rawr-beauty'); ?>
             </a>
             <a href="tel:07398926226" class="rawr-btn rawr-btn-outline" style="text-align: center;">
-                📞 07398 926226
+                📞 07477 154228
             </a>
         </div>
     </div>

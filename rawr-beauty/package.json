@@ -2,7 +2,7 @@
   "name": "aluxebeauty",
   "version": "1.0.0",
   "private": true,
-  "description": "Ayesha Luxe Beauty - Complete Salon & E-Commerce Platform",
+  "description": "A Luxe Beauty - Complete Salon & E-Commerce Platform",
   "scripts": {
     "build": "echo Static build complete"
   }
