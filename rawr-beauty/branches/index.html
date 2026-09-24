@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>26 UK Branches & Salon Concessions | Ayesha Luxe Beauty</title>
+  <meta name="description" content="Find our 26 luxury salon branches across London, Birmingham, Manchester, Cardiff, Leeds, Bristol, and nationwide UK retail destinations.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700;800&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --gold: #C9A84C;
+      --gold-light: #E2C97A;
+      --gold-dark: #A8862E;
+      --gold-pale: #FDF8EE;
+      --pink: #E8829A;
+      --pink-pale: #FFF0F4;
+      --charcoal: #1A1A2E;
+      --dark-gray: #4A4A6A;
+      --gray: #8888AA;
+      --light-gray: #F0F0F5;
+      --white: #FFFFFF;
+      --gradient-gold: linear-gradient(135deg, #E2C97A 0%, #C9A84C 50%, #A8862E 100%);
+      --gradient-hero: linear-gradient(160deg, #1A1A2E 0%, #16213E 50%, #0F3460 100%);
+      --font-heading: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'Montserrat', sans-serif;
+      --font-script: 'Great Vibes', cursive;
+      --border-radius: 16px;
+      --border-radius-pill: 50px;
+      --shadow-sm: 0 4px 14px rgba(26,26,46,0.06);
+      --shadow-md: 0 10px 30px rgba(26,26,46,0.1);
+      --shadow-lg: 0 20px 50px rgba(26,26,46,0.15);
+      --shadow-gold: 0 8px 30px rgba(201,168,76,0.3);
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: var(--font-body); color: var(--charcoal); background: var(--white); line-height: 1.6; overflow-x: hidden; }
+    a { text-decoration: none; color: inherit; transition: var(--transition); }
+    .container { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+
+    .top-bar { background: var(--charcoal); color: var(--white); padding: 8px 0; font-size: 12px; border-bottom: 1px solid rgba(201,168,76,0.25); }
+    .top-bar-inner { display: flex; justify-content: space-between; align-items: center; }
+    .top-bar-link { color: var(--gold-light); font-weight: 700; }
+
+    .site-header { position: sticky; top: 0; z-index: 1000; background: rgba(255,255,255,0.96); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(201,168,76,0.15); padding: 12px 0; }
+    .header-nav { display: flex; justify-content: space-between; align-items: center; }
+    .logo { display: flex; flex-direction: column; text-decoration: none; line-height: 1; }
+    .logo-script { font-family: var(--font-script); font-size: 26px; color: var(--gold-dark); margin-left: 2px; }
+    .logo-main { font-family: var(--font-heading); font-size: 22px; font-weight: 700; letter-spacing: 3px; color: var(--charcoal); }
+    .logo-sub { font-size: 8px; font-weight: 700; letter-spacing: 2px; color: var(--pink); text-transform: uppercase; margin-top: 2px; }
+    
+    .nav-links { display: flex; align-items: center; gap: 16px; list-style: none; }
+    .nav-links a { font-size: 12px; font-weight: 600; color: var(--charcoal); position: relative; padding: 6px 0; }
+    .nav-links a:hover, .nav-links a.active { color: var(--gold-dark); }
+    .nav-links a.active::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--gold); border-radius: 2px; }
+
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 28px; border-radius: var(--border-radius-pill); font-size: 13px; font-weight: 700; cursor: pointer; transition: var(--transition); border: 2px solid transparent; }
+    .btn-gold { background: var(--gradient-gold); color: var(--charcoal); box-shadow: var(--shadow-gold); }
+    .btn-gold:hover { transform: translateY(-3px); }
+    .btn-sm { padding: 8px 16px; font-size: 11px; }
+
+    .branches-hero { background: var(--gradient-hero); color: white; padding: 80px 0; text-align: center; }
+    .section-tag { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); background: var(--gold-pale); border: 1px solid rgba(201,168,76,0.3); padding: 5px 16px; border-radius: 20px; margin-bottom: 12px; }
+    .section-title { font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; margin-bottom: 12px; }
+    .section-title span { background: var(--gradient-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+    .search-box { max-width: 550px; margin: 30px auto; position: relative; }
+    .search-input { width: 100%; padding: 16px 24px; border-radius: 50px; border: 2px solid rgba(201,168,76,0.4); font-size: 14px; font-family: var(--font-body); outline: none; box-shadow: var(--shadow-sm); }
+    .search-input:focus { border-color: var(--gold); }
+
+    .branches-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 24px; }
+    .branch-card { background: white; border-radius: 16px; padding: 24px; border: 1px solid rgba(201,168,76,0.2); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between; transition: var(--transition); }
+    .branch-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--gold); }
+    .branch-region { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; color: var(--gold-dark); margin-bottom: 6px; }
+    .branch-name { font-family: var(--font-heading); font-size: 1.35rem; font-weight: 700; color: var(--charcoal); margin-bottom: 8px; }
+    .branch-address { font-size: 13px; color: var(--dark-gray); line-height: 1.6; margin-bottom: 12px; }
+    .branch-hours { font-size: 12px; color: var(--gray); margin-bottom: 16px; }
+
+    .site-footer { background: var(--charcoal); color: white; padding: 70px 0 30px; border-top: 1px solid rgba(201,168,76,0.25); }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 40px; margin-bottom: 50px; }
+    .footer-title { font-family: var(--font-heading); font-size: 17px; font-weight: 600; color: var(--gold-light); margin-bottom: 16px; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 12px; color: var(--light-gray); }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 12px; color: var(--gray); flex-wrap: wrap; gap: 12px; }
+
+    .wa-float { position: fixed; bottom: 24px; right: 24px; z-index: 9990; display: flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #25D366, #128C7E); color: white; padding: 12px 20px; border-radius: 50px; font-size: 13px; font-weight: 700; box-shadow: 0 10px 30px rgba(37,211,102,0.45); }
+
+    @media (max-width: 900px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div>★ 26 High-Traffic Concession Locations Across Great Britain</div>
+      <div><a href="https://wa.me/447477154228" target="_blank" class="top-bar-link">💬 Fast Booking on WhatsApp: +44 7477 154228</a></div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-nav">
+      <a href="/" class="logo">
+        <span class="logo-script">Ayesha</span>
+        <span class="logo-main">LUXE BEAUTY</span>
+        <span class="logo-sub">26 UK BRANCHES & DOORSTEP SALON</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/branches/" class="active">26 Branches</a></li>
+        <li><a href="/shop/">Shop 🛒</a></li>
+        <li><a href="/packages/">Packages</a></li>
+        <li><a href="/academy/">Academy</a></li>
+        <li><a href="/careers/">Careers</a></li>
+        <li><a href="/franchise/">Franchise</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/book-now/">Book Now</a></li>
+      </ul>
+
+      <div class="header-actions">
+        <a href="/book-now/" class="btn btn-gold btn-sm">Book Appointment</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="branches-hero">
+    <div class="container">
+      <span class="section-tag" style="background:rgba(201,168,76,0.2); color:var(--gold-light);">Nationwide Network</span>
+      <h1 class="section-title" style="color:white;">26 UK <span>Branch Concessions</span></h1>
+      <p style="color:rgba(255,255,255,0.85); max-width:650px; margin:0 auto 20px;">
+        Find your nearest Ayesha Luxe Beauty salon in the UK's leading shopping destinations, or book our mobile doorstep service to your home within 2 miles.
+      </p>
+
+      <div class="search-box">
+        <input type="text" id="branchSearch" class="search-input" placeholder="🔍 Search by city, centre name or postcode..." onkeyup="filterBranches()">
+      </div>
+    </div>
+  </section>
+
+  <main class="container" style="padding: 60px 24px;">
+    <div class="branches-grid" id="branchesGrid">
+      <!-- 1 -->
+      <div class="branch-card" data-city="london">
+        <div>
+          <div class="branch-region">London Central</div>
+          <h3 class="branch-name">Oxford Street Flagship</h3>
+          <p class="branch-address">📍 Primark Concession, 14-28 Oxford St, London W1D 1AU</p>
+          <p class="branch-hours">🕒 Mon–Sat: 9am–9pm · Sun: 12pm–6pm</p>
+        </div>
+        <a href="/book-now/?branch=Oxford-Street" class="btn btn-gold btn-sm" style="width:100%;">Book at Oxford St</a>
+      </div>
+
+      <!-- 2 -->
+      <div class="branch-card" data-city="london">
+        <div>
+          <div class="branch-region">East London</div>
+          <h3 class="branch-name">Westfield Stratford City</h3>
+          <p class="branch-address">📍 Concession Level 1, Montfichet Rd, London E20 1EJ</p>
+          <p class="branch-hours">🕒 Mon–Sat: 10am–9pm · Sun: 12pm–6pm</p>
+        </div>
+        <a href="/book-now/?branch=Westfield-Stratford" class="btn btn-gold btn-sm" style="width:100%;">Book at Stratford</a>
+      </div>
+
+      <!-- 3 -->
+      <div class="branch-card" data-city="london">
+        <div>
+          <div class="branch-region">West London</div>
+          <h3 class="branch-name">Westfield White City</h3>
+          <p class="branch-address">📍 Ariel Way, Shepherds Bush, London W12 7GF</p>
+          <p class="branch-hours">🕒 Mon–Sat: 10am–9pm · Sun: 12pm–6pm</p>
+        </div>
+        <a href="/book-now/?branch=Westfield-White-City" class="btn btn-gold btn-sm" style="width:100%;">Book at White City</a>
+      </div>
+
+      <!-- 4 -->
+      <div class="branch-card" data-city="birmingham">
+        <div>
+          <div class="branch-region">West Midlands</div>
+          <h3 class="branch-name">Birmingham Bullring</h3>
+          <p class="branch-address">📍 Primark Floor 2, 38 High St, Birmingham B4 7SL</p>
+          <p class="branch-hours">🕒 Mon–Sat: 9am–8pm · Sun: 11am–5pm</p>
+        </div>
+        <a href="/book-now/?branch=Birmingham-Bullring" class="btn btn-gold btn-sm" style="width:100%;">Book at Bullring</a>
+      </div>
+
+      <!-- 5 -->
+      <div class="branch-card" data-city="manchester">
+        <div>
+          <div class="branch-region">Greater Manchester</div>
+          <h3 class="branch-name">Manchester Arndale</h3>
+          <p class="branch-address">📍 Concession Unit 12, Market St, Manchester M4 3AQ</p>
+          <p class="branch-hours">🕒 Mon–Sat: 9am–8pm · Sun: 11:30am–5:30pm</p>
+        </div>
+        <a href="/book-now/?branch=Manchester-Arndale" class="btn btn-gold btn-sm" style="width:100%;">Book at Manchester</a>
+      </div>
+
+      <!-- 6 -->
+      <div class="branch-card" data-city="cardiff">
+        <div>
+          <div class="branch-region">South Wales</div>
+          <h3 class="branch-name">Cardiff St David's</h3>
+          <p class="branch-address">📍 Bridge St, St Davids Dewi Sant, Cardiff CF10 2EF</p>
+          <p class="branch-hours">🕒 Mon–Fri: 9:30am–8pm · Sun: 11am–5pm</p>
+        </div>
+        <a href="/book-now/?branch=Cardiff-St-Davids" class="btn btn-gold btn-sm" style="width:100%;">Book at Cardiff</a>
+      </div>
+
+      <!-- 7 -->
+      <div class="branch-card" data-city="bristol">
+        <div>
+          <div class="branch-region">South West</div>
+          <h3 class="branch-name">Bristol Cribbs Causeway</h3>
+          <p class="branch-address">📍 The Mall, Cribbs Causeway, Patchway, Bristol BS34 5DG</p>
+          <p class="branch-hours">🕒 Mon–Sat: 9:30am–8pm · Sun: 11am–5pm</p>
+        </div>
+        <a href="/book-now/?branch=Bristol-Cribbs" class="btn btn-gold btn-sm" style="width:100%;">Book at Bristol</a>
+      </div>
+
+      <!-- 8 -->
+      <div class="branch-card" data-city="leeds">
+        <div>
+          <div class="branch-region">West Yorkshire</div>
+          <h3 class="branch-name">Leeds Trinity</h3>
+          <p class="branch-address">📍 Albion St, Trinity Leeds Shopping Centre, Leeds LS1 5ER</p>
+          <p class="branch-hours">🕒 Mon–Sat: 9am–8pm · Sun: 11am–5pm</p>
+        </div>
+        <a href="/book-now/?branch=Leeds-Trinity" class="btn btn-gold btn-sm" style="width:100%;">Book at Leeds</a>
+      </div>
+
+      <!-- 9 -->
+      <div class="branch-card" data-city="glasgow">
+        <div>
+          <div class="branch-region">Scotland</div>
+          <h3 class="branch-name">Glasgow Braehead</h3>
+          <p class="branch-address">📍 King's Inch Rd, Renfrew, Glasgow G51 4BN</p>
+          <p class="branch-hours">🕒 Mon–Sat: 9am–9pm · Sun: 10am–6pm</p>
+        </div>
+        <a href="/book-now/?branch=Glasgow-Braehead" class="btn btn-gold btn-sm" style="width:100%;">Book at Glasgow</a>
+      </div>
+
+      <!-- 10 -->
+      <div class="branch-card" data-city="liverpool">
+        <div>
+          <div class="branch-region">Merseyside</div>
+          <h3 class="branch-name">Liverpool ONE</h3>
+          <p class="branch-address">📍 5 Wall St, Liverpool ONE, Liverpool L1 8JQ</p>
+          <p class="branch-hours">🕒 Mon–Fri: 9:30am–8pm · Sun: 11am–5pm</p>
+        </div>
+        <a href="/book-now/?branch=Liverpool-ONE" class="btn btn-gold btn-sm" style="width:100%;">Book at Liverpool</a>
+      </div>
+
+      <!-- 11 -->
+      <div class="branch-card" data-city="newcastle">
+        <div>
+          <div class="branch-region">North East</div>
+          <h3 class="branch-name">Newcastle Metrocentre</h3>
+          <p class="branch-address">📍 Platinum Mall, Metrocentre, Gateshead NE11 9YG</p>
+          <p class="branch-hours">🕒 Mon–Sat: 9am–9pm · Sun: 11am–5pm</p>
+        </div>
+        <a href="/book-now/?branch=Newcastle-Metrocentre" class="btn btn-gold btn-sm" style="width:100%;">Book at Newcastle</a>
+      </div>
+
+      <!-- 12 -->
+      <div class="branch-card" data-city="nottingham">
+        <div>
+          <div class="branch-region">East Midlands</div>
+          <h3 class="branch-name">Nottingham Victoria Centre</h3>
+          <p class="branch-address">📍 Upper Mall, Victoria Centre, Nottingham NG1 3QN</p>
+          <p class="branch-hours">🕒 Mon–Sat: 9am–6pm · Sun: 11am–5pm</p>
+        </div>
+        <a href="/book-now/?branch=Nottingham-Victoria" class="btn btn-gold btn-sm" style="width:100%;">Book at Nottingham</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3 style="font-family:var(--font-heading); font-size:24px; color:white; margin-bottom:12px;">Ayesha Luxe Beauty</h3>
+          <p style="font-size:12px; color:var(--light-gray); line-height:1.7;">
+            Operating across 26 UK salon branches and doorstep mobile treatments within 2 miles.
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/branches/">26 Branches</a></li>
+            <li><a href="/shop/">Shop 🛒</a></li>
+            <li><a href="/packages/">Packages</a></li>
+            <li><a href="/academy/">Academy</a></li>
+            <li><a href="/careers/">Careers</a></li>
+            <li><a href="/franchise/">Franchise</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/book-now/">Book Now</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Direct Contact</h4>
+          <p style="font-size:12px; color:var(--light-gray); margin-bottom:6px;">📱 WhatsApp: +44 7477 154228</p>
+          <p style="font-size:12px; color:var(--light-gray); margin-bottom:6px;">💌 info@aluxebeauty.co.uk</p>
+          <p style="font-size:12px; color:var(--light-gray);">📍 26 UK Salons Nationwide</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Ayesha Luxe Beauty. All rights reserved. Enhance your beauty, embrace your glow.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/447477154228?text=Hello%20Ayesha%2C%20I%20want%20to%20find%20my%20nearest%20salon%20branch" target="_blank" class="wa-float">
+    <span style="font-size:18px;">💬</span>
+    <span>Branch WhatsApp</span>
+  </a>
+
+  <script>
+    function filterBranches() {
+      var query = document.getElementById('branchSearch').value.toLowerCase();
+      var cards = document.querySelectorAll('.branch-card');
+      cards.forEach(function(card) {
+        var text = card.textContent.toLowerCase();
+        if (text.indexOf(query) !== -1) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
