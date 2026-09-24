@@ -483,8 +483,9 @@
         <span>Subtotal:</span>
         <span id="cartSubtotal">£0.00</span>
       </div>
-      <button onclick="startCheckout()" class="btn btn-gold" style="width:100%; margin-bottom:8px;">Proceed to WhatsApp Checkout</button>
-      <p style="font-size:11px; text-align:center; color:var(--gray);">Tracked UK delivery · Secure payment options</p>
+      <button onclick="goToCheckout()" class="btn btn-gold" style="width:100%; margin-bottom:8px; border:none; cursor:pointer;">🔒 PROCEED TO CHECKOUT</button>
+      <button onclick="startCheckout()" class="btn btn-whatsapp" style="width:100%; margin-bottom:8px; font-size:12px; border:none; cursor:pointer;">💬 Instant WhatsApp Checkout</button>
+      <p style="font-size:11px; text-align:center; color:var(--gray);">Fast UK Tracked Shipping (England, Scotland, Wales, NI)</p>
     </div>
   </div>
 
@@ -514,10 +515,43 @@
             <input type="tel" id="qbPhone" required style="width:100%; padding:10px; border:1px solid #ccc; border-radius:8px;">
           </div>
           <div style="margin-bottom:14px;">
-            <label style="display:block; font-size:12px; font-weight:700; margin-bottom:4px;">Delivery Address & Postcode *</label>
-            <input type="text" id="qbAddress" required style="width:100%; padding:10px; border:1px solid #ccc; border-radius:8px;">
+            <label style="display:block; font-size:12px; font-weight:700; margin-bottom:4px;">Street Address & Postcode *</label>
+            <input type="text" id="qbAddress" placeholder="House number, street, postcode" required style="width:100%; padding:10px; border:1px solid #ccc; border-radius:8px;">
           </div>
-          <button type="submit" class="btn btn-gold" style="width:100%;">Confirm Order on WhatsApp</button>
+          <div style="margin-bottom:14px;">
+            <label style="display:block; font-size:12px; font-weight:700; margin-bottom:4px;">UK Country / Region *</label>
+            <select id="qbCountry" onchange="onShopQuickBuyCountryChange(this.value)" style="width:100%; padding:10px; border:1px solid #ccc; border-radius:8px; background:#fff;" required>
+              <option value="England" selected>England</option>
+              <option value="Scotland">Scotland</option>
+              <option value="Wales">Wales</option>
+              <option value="Northern Ireland">Northern Ireland</option>
+            </select>
+          </div>
+          <div style="margin-bottom:16px;">
+            <label style="display:block; font-size:12px; font-weight:700; margin-bottom:4px;">UK City / Town *</label>
+            <select id="qbCity" required style="width:100%; padding:10px; border:1px solid #ccc; border-radius:8px; background:#fff;">
+              <option value="London" selected>London</option>
+              <option value="Birmingham">Birmingham</option>
+              <option value="Manchester">Manchester</option>
+              <option value="Leeds">Leeds</option>
+              <option value="Liverpool">Liverpool</option>
+              <option value="Sheffield">Sheffield</option>
+              <option value="Bristol">Bristol</option>
+              <option value="Newcastle upon Tyne">Newcastle upon Tyne</option>
+              <option value="Nottingham">Nottingham</option>
+              <option value="Leicester">Leicester</option>
+              <option value="Coventry">Coventry</option>
+              <option value="Southampton">Southampton</option>
+              <option value="Brighton & Hove">Brighton & Hove</option>
+              <option value="Reading">Reading</option>
+              <option value="Oxford">Oxford</option>
+              <option value="Cambridge">Cambridge</option>
+            </select>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:8px;">
+            <button type="submit" class="btn btn-gold" style="width:100%; border:none; cursor:pointer;">⚡ Instant Order on WhatsApp</button>
+            <button type="button" class="btn btn-outline" style="width:100%; border-color:var(--gold); cursor:pointer;" onclick="proceedQbToCheckout()">🔒 Complete Full Checkout</button>
+          </div>
         </form>
       </div>
     </div>
@@ -667,14 +701,19 @@
       e.preventDefault();
       var name = document.getElementById('qbFullName').value;
       var phone = document.getElementById('qbPhone').value;
-      var addr = document.getElementById('qbAddress').value;
+      var address = document.getElementById('qbAddress').value;
+      var country = document.getElementById('qbCountry').value;
+      var city = document.getElementById('qbCity').value;
 
-      var msg = "⚡ QUICK BUY ORDER:%0A%0A" +
-                "*Product:* " + qbProduct.name + " (£" + qbProduct.price.toFixed(2) + ")%0A" +
-                "*Name:* " + name + "%0A" +
-                "*Phone:* " + phone + "%0A" +
-                "*Address:* " + addr + "%0A%0A" +
-                "Please send payment link and dispatch order!";
+      var msg = "⚡ *QUICK BUY ORDER - A LUXE BEAUTY*%0A%0A" +
+                "*Product:* " + encodeURIComponent(qbProduct.name) + " (£" + qbProduct.price.toFixed(2) + ")%0A" +
+                "*Customer:* " + encodeURIComponent(name) + "%0A" +
+                "*Phone:* " + encodeURIComponent(phone) + "%0A" +
+                "*Country:* " + encodeURIComponent(country) + "%0A" +
+                "*City:* " + encodeURIComponent(city) + "%0A" +
+                "*Address & Postcode:* " + encodeURIComponent(address) + "%0A%0A" +
+                "Please confirm my order and send tracked dispatch link!";
+
       window.open("https://wa.me/447477154228?text=" + msg, "_blank");
       closeQuickBuy();
     }
@@ -690,6 +729,42 @@
       document.body.style.overflow = drawer.classList.contains('active') ? 'hidden' : '';
     }
   }
+
+
+    var UK_SHOP_CITIES = {
+      'England': ['London', 'Birmingham', 'Manchester', 'Leeds', 'Liverpool', 'Sheffield', 'Bristol', 'Newcastle upon Tyne', 'Nottingham', 'Leicester', 'Coventry', 'Southampton', 'Brighton & Hove', 'Reading', 'Oxford', 'Cambridge', 'York', 'Bath', 'Colchester', 'Canterbury', 'Norwich', 'Exeter'],
+      'Scotland': ['Edinburgh', 'Glasgow', 'Aberdeen', 'Dundee', 'Inverness', 'Stirling', 'Perth', 'Dunfermline', 'Paisley', 'East Kilbride', 'Livingston', 'Ayr'],
+      'Wales': ['Cardiff', 'Swansea', 'Newport', 'Wrexham', 'Bangor', 'St Davids', 'Barry', 'Bridgend', 'Llanelli'],
+      'Northern Ireland': ['Belfast', 'Derry (Londonderry)', 'Lisburn', 'Newry', 'Armagh', 'Bangor', 'Coleraine', 'Ballymena', 'Enniskillen']
+    };
+
+    function onShopQuickBuyCountryChange(country) {
+      var citySelect = document.getElementById('qbCity');
+      if (!citySelect) return;
+      citySelect.innerHTML = '<option value="">Select City</option>';
+      var list = UK_SHOP_CITIES[country] || UK_SHOP_CITIES['England'];
+      list.forEach(function(c) {
+        var opt = document.createElement('option');
+        opt.value = c;
+        opt.textContent = c;
+        citySelect.appendChild(opt);
+      });
+      if (list.length > 0) citySelect.selectedIndex = 1;
+    }
+
+    function goToCheckout() {
+      if (cart.length === 0) return alert('Your cart is empty! Add products first.');
+      localStorage.setItem('aluxe_beauty_cart', JSON.stringify(cart));
+      window.location.href = '/checkout/';
+    }
+
+    function proceedQbToCheckout() {
+      if (qbProduct) {
+        cart = [{ name: qbProduct.name, price: qbProduct.price, icon: qbProduct.img, qty: 1 }];
+        localStorage.setItem('aluxe_beauty_cart', JSON.stringify(cart));
+        window.location.href = '/checkout/';
+      }
+    }
 
 </script>
 </body>

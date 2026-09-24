@@ -1,0 +1,1442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Secure Checkout | A Luxe Beauty - Official E-Commerce Store</title>
+  <meta name="description" content="Secure checkout for A Luxe Beauty. Fast UK tracked delivery across England, Scotland, Wales & Northern Ireland. Instant Quick Buy & safe order processing.">
+  <meta name="keywords" content="A Luxe Beauty checkout, UK beauty shop, salon products checkout, fast UK delivery, quick buy">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Secure Checkout | A Luxe Beauty">
+  <meta property="og:description" content="Complete your luxury salon cosmetics & skincare order. Free UK tracked delivery over £40.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700;800&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --gold: #C9A84C;
+      --gold-light: #E6C875;
+      --gold-dark: #A8862E;
+      --gold-pale: #FDF8EE;
+      --pink: #E8829A;
+      --pink-pale: #FDF0F3;
+      --charcoal: #1A1A2E;
+      --dark-gray: #2D2D44;
+      --light-gray: #F8F7F4;
+      --gray: #6C6C80;
+      --white: #FFFFFF;
+      --border-radius: 14px;
+      --border-radius-pill: 50px;
+      --shadow-sm: 0 4px 15px rgba(0,0,0,0.06);
+      --shadow-md: 0 10px 30px rgba(0,0,0,0.1);
+      --shadow-lg: 0 20px 50px rgba(0,0,0,0.15);
+      --shadow-gold: 0 8px 25px rgba(201,168,76,0.3);
+      --gradient-gold: linear-gradient(135deg, #E6C875, #C9A84C);
+      --gradient-hero: linear-gradient(135deg, #1A1A2E 0%, #2D1B36 50%, #1A1A2E 100%);
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --font-heading: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'Montserrat', sans-serif;
+      --font-script: 'Great Vibes', cursive;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      color: var(--charcoal);
+      background: #F8F7F4;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+    /* Top Announcement Bar */
+    .top-bar { background: var(--charcoal); color: var(--white); font-size: 11px; padding: 8px 0; border-bottom: 1px solid rgba(201,168,76,0.3); }
+    .top-bar-inner { display: flex; justify-content: space-between; align-items: center; }
+    .top-bar-badge { display: inline-flex; align-items: center; gap: 8px; font-weight: 500; }
+    .top-bar-link { color: var(--gold-light); font-weight: 700; text-decoration: none; }
+    .top-bar-link:hover { color: var(--white); }
+
+    /* Site Header */
+    .site-header { position: sticky; top: 0; z-index: 1000; background: rgba(255,255,255,0.96); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(201,168,76,0.15); padding: 12px 0; }
+    .header-nav { display: flex; justify-content: space-between; align-items: center; }
+    .logo { display: flex; flex-direction: column; text-decoration: none; line-height: 1; }
+    .logo-script { font-family: var(--font-script); font-size: 26px; color: var(--gold-dark); margin-left: 2px; }
+    .logo-main { font-family: var(--font-heading); font-size: 22px; font-weight: 700; letter-spacing: 3px; color: var(--charcoal); }
+    .logo-sub { font-size: 8px; font-weight: 700; letter-spacing: 2px; color: var(--pink); text-transform: uppercase; margin-top: 2px; }
+
+    .nav-links { display: flex; align-items: center; gap: 16px; list-style: none; }
+    .nav-links a { font-size: 12px; font-weight: 600; color: var(--charcoal); position: relative; padding: 6px 0; text-decoration: none; transition: var(--transition); }
+    .nav-links a:hover, .nav-links a.active { color: var(--gold-dark); }
+    .nav-links a.active::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--gold); border-radius: 2px; }
+    .header-actions { display: flex; align-items: center; gap: 12px; }
+
+    .cart-btn { background: var(--gold-pale); border: 1px solid rgba(201,168,76,0.3); border-radius: 50px; padding: 8px 14px; display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 700; cursor: pointer; color: var(--charcoal); }
+    .cart-count { background: var(--gold); color: #1A1A2E; border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 800; }
+
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 28px; border-radius: var(--border-radius-pill); font-size: 13px; font-weight: 700; cursor: pointer; transition: var(--transition); border: 2px solid transparent; text-decoration: none; }
+    .btn-gold { background: var(--gradient-gold); color: var(--charcoal); box-shadow: var(--shadow-gold); }
+    .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(201,168,76,0.4); }
+    .btn-whatsapp { background: linear-gradient(135deg, #25D366, #128C7E); color: white; box-shadow: 0 4px 18px rgba(37,211,102,0.35); }
+    .btn-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,211,102,0.5); }
+    .btn-outline { background: transparent; border-color: var(--gold); color: var(--gold-dark); }
+    .btn-outline:hover { background: var(--gold-pale); }
+    .btn-sm { padding: 8px 16px; font-size: 11px; }
+
+    /* Mobile Toggle Button */
+    .mobile-toggle-btn {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      width: 42px;
+      height: 42px;
+      background: #FFFFFF;
+      border: 1px solid rgba(201, 168, 76, 0.35);
+      border-radius: 8px;
+      cursor: pointer;
+      padding: 8px;
+      transition: all 0.3s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .mobile-toggle-btn:hover { background: var(--gold-pale); border-color: var(--gold); }
+    .hamburger-bar {
+      display: block;
+      width: 22px;
+      height: 2.5px;
+      background: var(--charcoal);
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+    .mobile-toggle-btn.active .hamburger-bar:nth-child(1) {
+      transform: translateY(7.5px) rotate(45deg);
+      -webkit-transform: translateY(7.5px) rotate(45deg);
+    }
+    .mobile-toggle-btn.active .hamburger-bar:nth-child(2) { opacity: 0; }
+    .mobile-toggle-btn.active .hamburger-bar:nth-child(3) {
+      transform: translateY(-7.5px) rotate(-45deg);
+      -webkit-transform: translateY(-7.5px) rotate(-45deg);
+    }
+
+    /* Mobile Drawer */
+    .mobile-menu-overlay {
+      position: fixed;
+      inset: 0;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.6);
+      -webkit-backdrop-filter: blur(4px);
+      backdrop-filter: blur(4px);
+      z-index: 9998;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    .mobile-menu-overlay.active { opacity: 1; visibility: visible; pointer-events: auto; }
+    .mobile-menu-drawer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 85%;
+      max-width: 320px;
+      height: 100vh;
+      background: #FFFFFF;
+      z-index: 9999;
+      box-shadow: 10px 0 35px rgba(0, 0, 0, 0.25);
+      transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      flex-direction: column;
+      padding: 24px 20px;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .mobile-menu-drawer.active {
+      transform: translateX(0);
+      -webkit-transform: translateX(0);
+    }
+    .mobile-menu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #ECECF2;
+      margin-bottom: 18px;
+    }
+    .mobile-menu-close { background: none; border: none; font-size: 32px; cursor: pointer; color: #1A1A2E; line-height: 1; padding: 0 4px; }
+    .mobile-nav-links { list-style: none; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+    .mobile-nav-links a {
+      font-size: 14px;
+      font-weight: 700;
+      color: #1A1A2E;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 11px 14px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .mobile-nav-links a:hover, .mobile-nav-links a.active { background: #FDF8EE; color: #A8862E; }
+    .mobile-nav-links .mobile-book-btn { background: linear-gradient(135deg, #E6C875, #C9A84C); color: #1A1A2E !important; margin-top: 8px; justify-content: center; }
+    .mobile-menu-footer { padding-top: 18px; border-top: 1px solid #ECECF2; margin-top: 18px; font-size: 12px; color: #6C6C80; }
+    .mobile-menu-footer p { margin: 6px 0; }
+    .mobile-menu-footer a { color: #C9A84C; font-weight: 700; text-decoration: none; }
+
+    /* Breadcrumbs & Hero Header */
+    .checkout-header {
+      background: var(--gradient-hero);
+      color: white;
+      padding: 40px 0 35px;
+      text-align: center;
+      position: relative;
+    }
+    .checkout-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(201,168,76,0.18);
+      border: 1px solid rgba(201,168,76,0.4);
+      color: var(--gold-light);
+      padding: 4px 14px;
+      border-radius: 50px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+    .checkout-title {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 3.8vw, 3rem);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .checkout-title span {
+      background: var(--gradient-gold);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .checkout-breadcrumbs {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.7);
+    }
+    .checkout-breadcrumbs a { color: var(--gold-light); text-decoration: none; }
+
+    /* Checkout Main Layout */
+    .checkout-section { padding: 45px 0 80px; }
+    .checkout-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 36px;
+      align-items: flex-start;
+    }
+
+    /* Checkout Forms */
+    .checkout-card {
+      background: white;
+      border-radius: 18px;
+      padding: 30px;
+      border: 1px solid rgba(201,168,76,0.22);
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 24px;
+    }
+    .card-heading {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--charcoal);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #ECECF2;
+      margin-bottom: 22px;
+    }
+    .step-num {
+      width: 28px;
+      height: 28px;
+      background: var(--gold-pale);
+      color: var(--gold-dark);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 800;
+      border: 1px solid rgba(201,168,76,0.4);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .form-group { margin-bottom: 18px; }
+    .form-group.full { grid-column: 1 / -1; }
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .form-group label span.req { color: #E53935; }
+    .form-control {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #D5D5E2;
+      border-radius: 10px;
+      font-size: 14px;
+      font-family: var(--font-body);
+      color: var(--charcoal);
+      background: #FFFFFF;
+      transition: var(--transition);
+      outline: none;
+    }
+    .form-control:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(201,168,76,0.2);
+    }
+    select.form-control { cursor: pointer; }
+
+    /* Country / City Selector highlight */
+    .country-city-box {
+      background: var(--gold-pale);
+      border: 1px dashed rgba(201,168,76,0.6);
+      padding: 16px;
+      border-radius: 12px;
+      margin-bottom: 18px;
+    }
+    .country-city-note {
+      font-size: 11px;
+      color: var(--gold-dark);
+      font-weight: 600;
+      margin-top: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Payment Option Selectors */
+    .payment-methods {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .payment-option {
+      border: 2px solid #E8E8F0;
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .payment-option.active, .payment-option:hover {
+      border-color: var(--gold);
+      background: var(--gold-pale);
+    }
+    .payment-option input[type="radio"] {
+      accent-color: var(--gold-dark);
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+    }
+    .payment-details {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .payment-title { font-size: 14px; font-weight: 700; color: var(--charcoal); }
+    .payment-sub { font-size: 11px; color: var(--gray); margin-top: 2px; }
+
+    /* Order Summary Column */
+    .summary-card {
+      background: white;
+      border-radius: 18px;
+      padding: 30px;
+      border: 1px solid rgba(201,168,76,0.25);
+      box-shadow: var(--shadow-md);
+      position: sticky;
+      top: 90px;
+    }
+    .order-items-list {
+      max-height: 280px;
+      overflow-y: auto;
+      padding-right: 6px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .order-item-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #ECECF2;
+    }
+    .item-thumb {
+      width: 46px;
+      height: 46px;
+      border-radius: 8px;
+      background: var(--gold-pale);
+      border: 1px solid rgba(201,168,76,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+    .item-meta { flex: 1; }
+    .item-name { font-size: 13px; font-weight: 700; color: var(--charcoal); }
+    .item-price { font-size: 12px; font-weight: 700; color: var(--gold-dark); margin-top: 2px; }
+    .item-qty-stepper {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid #D5D5E2;
+      border-radius: 50px;
+      padding: 2px 6px;
+      background: #FAFAF8;
+    }
+    .item-qty-stepper button {
+      background: none;
+      border: none;
+      width: 22px;
+      height: 22px;
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--charcoal);
+    }
+    .item-qty-val { width: 24px; text-align: center; font-size: 12px; font-weight: 700; }
+    .item-remove-btn {
+      background: none;
+      border: none;
+      color: #888;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 4px;
+    }
+    .item-remove-btn:hover { color: #E53935; }
+
+    /* Free Shipping Progress */
+    .shipping-bar-box {
+      background: var(--gold-pale);
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin-bottom: 20px;
+      font-size: 12px;
+      text-align: center;
+    }
+    .shipping-progress {
+      height: 5px;
+      background: rgba(201,168,76,0.25);
+      border-radius: 3px;
+      overflow: hidden;
+      margin-top: 8px;
+    }
+    .shipping-progress-fill {
+      height: 100%;
+      background: var(--gold);
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+
+    /* Coupon Box */
+    .coupon-box {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    .coupon-box input {
+      flex: 1;
+      padding: 10px 14px;
+      border: 1px solid #D5D5E2;
+      border-radius: 8px;
+      font-size: 12px;
+      text-transform: uppercase;
+      outline: none;
+    }
+    .coupon-box button {
+      background: var(--charcoal);
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    /* Price breakdown */
+    .price-summary {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 13px;
+      margin-bottom: 20px;
+      border-top: 1px solid #ECECF2;
+      padding-top: 14px;
+    }
+    .price-row { display: flex; justify-content: space-between; align-items: center; color: var(--dark-gray); }
+    .price-row.total {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--charcoal);
+      border-top: 2px solid #ECECF2;
+      padding-top: 12px;
+      margin-top: 4px;
+    }
+    .price-row.total .total-amount { color: var(--gold-dark); }
+
+    .place-order-btn {
+      width: 100%;
+      padding: 16px;
+      border-radius: 50px;
+      background: var(--gradient-gold);
+      color: #1A1A2E;
+      font-size: 15px;
+      font-weight: 800;
+      border: none;
+      cursor: pointer;
+      box-shadow: var(--shadow-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: var(--transition);
+      margin-bottom: 12px;
+    }
+    .place-order-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(201,168,76,0.45);
+    }
+
+    .place-wa-btn {
+      width: 100%;
+      padding: 14px;
+      border-radius: 50px;
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      color: white;
+      font-size: 14px;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: var(--transition);
+    }
+    .place-wa-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,211,102,0.4); }
+
+    .trust-badges {
+      margin-top: 22px;
+      padding-top: 16px;
+      border-top: 1px solid #ECECF2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      font-size: 11px;
+      color: var(--gray);
+    }
+    .trust-badge-item { display: flex; align-items: center; gap: 8px; }
+
+    /* Order Complete Modal */
+    .order-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.65);
+      z-index: 10000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      backdrop-filter: blur(4px);
+    }
+    .order-modal-overlay.active { display: flex; }
+    .order-modal {
+      background: white;
+      border-radius: 20px;
+      max-width: 500px;
+      width: 100%;
+      padding: 36px 30px;
+      text-align: center;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid rgba(201,168,76,0.3);
+      animation: modalPop 0.3s ease;
+    }
+    @keyframes modalPop {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    .order-success-icon {
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      margin: 0 auto 18px;
+      box-shadow: 0 8px 20px rgba(37,211,102,0.35);
+    }
+
+    /* Footer */
+    .site-footer { background: var(--charcoal); color: white; padding: 70px 0 30px; border-top: 1px solid rgba(201,168,76,0.25); }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 40px; margin-bottom: 50px; }
+    .footer-title { font-family: var(--font-heading); font-size: 17px; font-weight: 600; color: var(--gold-light); margin-bottom: 16px; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 12px; color: var(--light-gray); }
+    .footer-links a { color: var(--light-gray); text-decoration: none; transition: var(--transition); }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 12px; color: var(--gray); flex-wrap: wrap; gap: 12px; }
+
+    @media (max-width: 900px) {
+      .site-header .nav-links { display: none !important; }
+      .site-header .mobile-toggle-btn { display: flex !important; }
+      .checkout-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr !important; gap: 30px !important; }
+    }
+    @media (max-width: 600px) {
+      .form-grid { grid-template-columns: 1fr; }
+      .checkout-card, .summary-card { padding: 20px; }
+      .top-bar-inner { flex-direction: column; gap: 4px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Alert Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-badge">
+        <span>✨ 26 UK Salon Locations</span>
+        <span>•</span>
+        <span>🚗 FREE UK Tracked Delivery on Orders Over £40</span>
+      </div>
+      <div>
+        <a href="https://wa.me/447477154228?text=Hello%20A%20Luxe%20Beauty%2C%20I%20have%20a%20question%20about%20my%20order" target="_blank" class="top-bar-link">
+          💬 Order Support WhatsApp: +44 7477 154228
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-nav">
+      <a href="/" class="logo">
+        <span class="logo-script">A</span>
+        <span class="logo-main">LUXE BEAUTY</span>
+        <span class="logo-sub">26 UK BRANCHES & DOORSTEP SALON</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/branches/">26 Branches</a></li>
+        <li><a href="/shop/">Shop 🛒</a></li>
+        <li><a href="/packages/">Packages</a></li>
+        <li><a href="/academy/">Academy</a></li>
+        <li><a href="/careers/">Careers</a></li>
+        <li><a href="/franchise/">Franchise</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/book-now/">Book Now</a></li>
+      </ul>
+
+      <div class="header-actions">
+        <a href="/shop/" class="btn btn-outline btn-sm">
+          ← Return to Shop
+        </a>
+        <button class="mobile-toggle-btn" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Overlay & Drawer -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay" onclick="toggleMobileMenu()"></div>
+  <nav class="mobile-menu-drawer" id="mobileMenuDrawer" aria-label="Mobile Navigation">
+    <div class="mobile-menu-header">
+      <div class="logo">
+        <span class="logo-script">A</span>
+        <span class="logo-main">LUXE BEAUTY</span>
+      </div>
+      <button class="mobile-menu-close" onclick="toggleMobileMenu()" aria-label="Close menu">&times;</button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="/services/" onclick="toggleMobileMenu()">💅 Services & Prices</a></li>
+      <li><a href="/branches/" onclick="toggleMobileMenu()">📍 26 UK Branches</a></li>
+      <li><a href="/shop/" onclick="toggleMobileMenu()">🛒 Beauty Shop</a></li>
+      <li><a href="/packages/" onclick="toggleMobileMenu()">🎁 Packages & Bundles</a></li>
+      <li><a href="/academy/" onclick="toggleMobileMenu()">🎓 Training Academy</a></li>
+      <li><a href="/careers/" onclick="toggleMobileMenu()">💼 Salon Careers</a></li>
+      <li><a href="/franchise/" onclick="toggleMobileMenu()">🏬 Franchise</a></li>
+      <li><a href="/blog/" onclick="toggleMobileMenu()">📖 Beauty Blog</a></li>
+      <li><a href="/book-now/" onclick="toggleMobileMenu()" class="mobile-book-btn">✨ Book Appointment</a></li>
+    </ul>
+    <div class="mobile-menu-footer">
+      <p>📞 <a href="tel:07477154228">07477 154228</a></p>
+      <p>💬 <a href="https://wa.me/447477154228?text=Hello%20A%20Luxe%20Beauty" target="_blank">WhatsApp Direct Booking</a></p>
+    </div>
+  </nav>
+
+  <!-- Checkout Hero Header -->
+  <section class="checkout-header">
+    <div class="container">
+      <div class="checkout-badge">🔒 256-Bit SSL Encrypted Checkout</div>
+      <h1 class="checkout-title">Complete Your <span>Order</span></h1>
+      <div class="checkout-breadcrumbs">
+        <a href="/">Home</a>
+        <span>›</span>
+        <a href="/shop/">Shop</a>
+        <span>›</span>
+        <span>Checkout</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Checkout Section -->
+  <main class="checkout-section">
+    <div class="container">
+      <form id="checkoutForm" onsubmit="handlePlaceOrder(event)">
+        <div class="checkout-grid">
+          
+          <!-- Left Column: Customer & Delivery Details -->
+          <div>
+            <!-- Step 1: Customer Info -->
+            <div class="checkout-card">
+              <h2 class="card-heading">
+                <span class="step-num">1</span>
+                <span>Customer Contact Information</span>
+              </h2>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="custFirstName">First Name <span class="req">*</span></label>
+                  <input type="text" id="custFirstName" class="form-control" placeholder="e.g. Sarah" required>
+                </div>
+                <div class="form-group">
+                  <label for="custLastName">Last Name <span class="req">*</span></label>
+                  <input type="text" id="custLastName" class="form-control" placeholder="e.g. Jenkins" required>
+                </div>
+                <div class="form-group">
+                  <label for="custEmail">Email Address <span class="req">*</span></label>
+                  <input type="email" id="custEmail" class="form-control" placeholder="sarah@example.co.uk" required>
+                </div>
+                <div class="form-group">
+                  <label for="custPhone">Phone / WhatsApp <span class="req">*</span></label>
+                  <input type="tel" id="custPhone" class="form-control" placeholder="+44 7123 456789" required>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2: Shipping & UK Country / City Dependent Selector -->
+            <div class="checkout-card">
+              <h2 class="card-heading">
+                <span class="step-num">2</span>
+                <span>UK Delivery Address</span>
+              </h2>
+
+              <div class="form-group">
+                <label for="custAddress">Street Address <span class="req">*</span></label>
+                <input type="text" id="custAddress" class="form-control" placeholder="House number and street name" required>
+              </div>
+
+              <div class="form-group">
+                <label for="custApartment">Apartment, Suite, Unit (Optional)</label>
+                <input type="text" id="custApartment" class="form-control" placeholder="Apt 4B, Floor 2">
+              </div>
+
+              <!-- Dependent UK Country & City Dropdowns -->
+              <div class="country-city-box">
+                <div class="form-grid">
+                  <div class="form-group" style="margin-bottom:0;">
+                    <label for="custCountry">Country / Region <span class="req">*</span></label>
+                    <select id="custCountry" class="form-control" onchange="onCountryChange(this.value)" required>
+                      <option value="England" selected>England</option>
+                      <option value="Scotland">Scotland</option>
+                      <option value="Wales">Wales</option>
+                      <option value="Northern Ireland">Northern Ireland</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group" style="margin-bottom:0;">
+                    <label for="custCity">City / Town <span class="req">*</span></label>
+                    <select id="custCity" class="form-control" required>
+                      <!-- Dynamically populated based on selected country -->
+                    </select>
+                  </div>
+                </div>
+                <div class="country-city-note">
+                  <span>📍</span>
+                  <span id="countryCityHelpText">Showing major cities across England. Select your city or nearest regional hub.</span>
+                </div>
+              </div>
+
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="custPostcode">UK Postcode <span class="req">*</span></label>
+                  <input type="text" id="custPostcode" class="form-control" placeholder="e.g. W1D 1BS" required style="text-transform:uppercase;">
+                </div>
+                <div class="form-group">
+                  <label for="custDeliveryType">Delivery Speed</label>
+                  <select id="custDeliveryType" class="form-control" onchange="updateTotals()">
+                    <option value="standard" selected>Royal Mail Tracked 48 (£4.50 or FREE over £40)</option>
+                    <option value="express">Next-Day Special Delivery (£7.50)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group" style="margin-bottom:0;">
+                <label for="orderNotes">Order / Delivery Instructions (Optional)</label>
+                <textarea id="orderNotes" class="form-control" rows="2" placeholder="e.g. Leave in safe porch or delivery ring bell"></textarea>
+              </div>
+            </div>
+
+            <!-- Step 3: Payment Method -->
+            <div class="checkout-card">
+              <h2 class="card-heading">
+                <span class="step-num">3</span>
+                <span>Select Payment Method</span>
+              </h2>
+
+              <div class="payment-methods">
+                <label class="payment-option active" id="payOptCard" onclick="selectPaymentMethod('card')">
+                  <input type="radio" name="paymentMethod" value="card" checked>
+                  <div class="payment-details">
+                    <span class="payment-title">💳 Credit / Debit Card (Instant Online)</span>
+                    <span class="payment-sub">Visa, Mastercard, Maestro, American Express. Encrypted 256-bit SSL gateway.</span>
+                  </div>
+                </label>
+
+                <label class="payment-option" id="payOptWa" onclick="selectPaymentMethod('whatsapp')">
+                  <input type="radio" name="paymentMethod" value="whatsapp">
+                  <div class="payment-details">
+                    <span class="payment-title">💬 WhatsApp 1-Click Concierge Checkout</span>
+                    <span class="payment-sub">Direct order sent to salon team with invoice link or bank transfer.</span>
+                  </div>
+                </label>
+
+                <label class="payment-option" id="payOptCod" onclick="selectPaymentMethod('doorstep')">
+                  <input type="radio" name="paymentMethod" value="doorstep">
+                  <div class="payment-details">
+                    <span class="payment-title">🚗 Pay on Doorstep / Branch Collection</span>
+                    <span class="payment-sub">Pay contactless card or cash when therapist arrives or collect at any 26 UK branch.</span>
+                  </div>
+                </div>
+
+                <!-- Simulated Card Fields (visible if card selected) -->
+                <div id="cardFieldsBox" style="background:#FAFAF8; border:1px solid #ECECF2; border-radius:12px; padding:18px; margin-top:14px;">
+                  <div class="form-group">
+                    <label>Card Number</label>
+                    <input type="text" class="form-control" placeholder="•••• •••• •••• 4242" value="4532 •••• •••• 8821" maxlength="19">
+                  </div>
+                  <div class="form-grid">
+                    <div class="form-group" style="margin-bottom:0;">
+                      <label>Expiry Date</label>
+                      <input type="text" class="form-control" placeholder="MM / YY" value="12 / 28" maxlength="7">
+                    </div>
+                    <div class="form-group" style="margin-bottom:0;">
+                      <label>Security CVC</label>
+                      <input type="password" class="form-control" placeholder="CVC" value="894" maxlength="4">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Order Review & Pricing Summary -->
+          <div>
+            <div class="summary-card">
+              <h2 class="card-heading" style="font-size:1.3rem; margin-bottom:16px;">
+                <span>🛒 Order Summary</span>
+                <span id="summaryItemCount" style="font-size:12px; font-weight:600; color:var(--gold-dark); background:var(--gold-pale); padding:2px 8px; border-radius:20px;">0 items</span>
+              </h2>
+
+              <!-- Free UK Shipping Bar -->
+              <div class="shipping-bar-box">
+                <div id="shippingStatusText">Add £40.00 for FREE UK Tracked Delivery</div>
+                <div class="shipping-progress">
+                  <div id="shippingProgressFill" class="shipping-progress-fill"></div>
+                </div>
+              </div>
+
+              <!-- List of Items in Cart -->
+              <div class="order-items-list" id="orderItemsContainer">
+                <!-- Dynamically rendered -->
+              </div>
+
+              <!-- Coupon Code -->
+              <div class="coupon-box">
+                <input type="text" id="couponCodeInput" placeholder="Promo code (Try: GLOW10)">
+                <button type="button" onclick="applyCoupon()">Apply</button>
+              </div>
+              <div id="couponNotice" style="display:none; font-size:11px; margin-top:-14px; margin-bottom:14px; font-weight:600;"></div>
+
+              <!-- Totals Breakdown -->
+              <div class="price-summary">
+                <div class="price-row">
+                  <span>Subtotal:</span>
+                  <span id="subtotalVal">£0.00</span>
+                </div>
+                <div class="price-row" id="discountRow" style="display:none; color:#2E7D32;">
+                  <span>Promo Discount (GLOW10 - 10%):</span>
+                  <span id="discountVal">-£0.00</span>
+                </div>
+                <div class="price-row">
+                  <span>UK Tracked Delivery:</span>
+                  <span id="deliveryVal">£4.50</span>
+                </div>
+                <div class="price-row">
+                  <span>VAT (20% included):</span>
+                  <span id="vatVal">£0.00</span>
+                </div>
+                <div class="price-row total">
+                  <span>Total Amount:</span>
+                  <span class="total-amount" id="grandTotalVal">£0.00</span>
+                </div>
+              </div>
+
+              <!-- Primary Submit -->
+              <button type="submit" class="place-order-btn" id="submitOrderBtn">
+                <span>🔒 CONFIRM & PLACE ORDER</span>
+                <span id="btnTotalBadge">£0.00</span>
+              </button>
+
+              <!-- Secondary WhatsApp Instant Quick Checkout -->
+              <button type="button" class="place-wa-btn" onclick="submitViaWhatsApp()">
+                <span>💬 Quick Buy on WhatsApp</span>
+              </button>
+
+              <div class="trust-badges">
+                <div class="trust-badge-item">
+                  <span>🚚</span>
+                  <span>Fast UK Tracked Shipping</span>
+                </div>
+                <div class="trust-badge-item">
+                  <span>✨</span>
+                  <span>100% Genuine Salon Kits</span>
+                </div>
+                <div class="trust-badge-item">
+                  <span>📍</span>
+                  <span>26 UK Branch Network</span>
+                </div>
+                <div class="trust-badge-item">
+                  <span>🛡️</span>
+                  <span>Encrypted Safe Checkout</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- Order Confirmation Modal -->
+  <div class="order-modal-overlay" id="orderSuccessModal">
+    <div class="order-modal">
+      <div class="order-success-icon">✓</div>
+      <h3 style="font-family:var(--font-heading); font-size:1.8rem; color:var(--charcoal); margin-bottom:8px;">Order Successfully Placed!</h3>
+      <p style="font-size:13px; color:var(--dark-gray); margin-bottom:18px;">
+        Thank you <strong id="modalCustName">Client</strong>. Your luxury beauty order has been received and registered.
+      </p>
+
+      <div style="background:#FAF8F5; border:1px solid #ECECF2; border-radius:12px; padding:16px; text-align:left; font-size:12px; margin-bottom:20px;">
+        <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
+          <span style="color:var(--gray);">Order Reference:</span>
+          <strong id="modalOrderRef" style="color:var(--gold-dark);">#ALUXE-94821</strong>
+        </div>
+        <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
+          <span style="color:var(--gray);">Delivery To:</span>
+          <strong id="modalDeliveryDest">London, England</strong>
+        </div>
+        <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
+          <span style="color:var(--gray);">Estimated Arrival:</span>
+          <strong>2 - 3 Working Days</strong>
+        </div>
+        <div style="display:flex; justify-content:space-between;">
+          <span style="color:var(--gray);">Total Paid / Due:</span>
+          <strong id="modalTotalPaid" style="color:var(--gold-dark); font-size:14px;">£0.00</strong>
+        </div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        <button type="button" class="btn btn-whatsapp" style="width:100%;" onclick="sendOrderReceiptToWhatsApp()">
+          💬 Open WhatsApp Order Receipt
+        </button>
+        <a href="/shop/" class="btn btn-gold" style="width:100%;">
+          Continue Shopping
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3 style="font-family:var(--font-heading); font-size:24px; color:white; margin-bottom:12px;">A Luxe Beauty</h3>
+          <p style="font-size:12px; color:var(--light-gray); line-height:1.7;">
+            Operating across 26 UK salon branches and doorstep mobile treatments within 2 miles. Certified beauty professionals, clinical hygiene, and radiant results.
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/branches/">26 Branches</a></li>
+            <li><a href="/shop/">Shop 🛒</a></li>
+            <li><a href="/packages/">Packages</a></li>
+            <li><a href="/academy/">Academy</a></li>
+            <li><a href="/careers/">Careers</a></li>
+            <li><a href="/franchise/">Franchise</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/book-now/">Book Now</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Customer Care</h4>
+          <ul class="footer-links">
+            <li><a href="/checkout/">Checkout & Delivery</a></li>
+            <li><a href="/book-now/">Track Your Order</a></li>
+            <li><a href="/book-now/">Returns & Refunds</a></li>
+            <li><a href="/book-now/">Hygiene & Safety Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Direct Contact</h4>
+          <p style="font-size:12px; color:var(--light-gray); margin-bottom:6px;">📱 WhatsApp: +44 7477 154228</p>
+          <p style="font-size:12px; color:var(--light-gray); margin-bottom:6px;">💌 shop@aluxebeauty.co.uk</p>
+          <p style="font-size:12px; color:var(--light-gray);">📍 26 UK Salons Nationwide</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 A Luxe Beauty. All rights reserved. Enhance your beauty, embrace your glow.</p>
+        <p>🔒 256-Bit SSL Secured Checkout</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/447477154228?text=Hello%20A%20Luxe%20Beauty%2C%20I%20have%20a%20question%20about%20checkout" target="_blank" class="wa-float" style="position:fixed; bottom:24px; right:24px; z-index:9990; display:flex; align-items:center; gap:8px; background:linear-gradient(135deg, #25D366, #128C7E); color:white; padding:12px 20px; border-radius:50px; font-size:13px; font-weight:700; box-shadow:0 10px 30px rgba(37,211,102,0.45); text-decoration:none;">
+    <span style="font-size:18px;">💬</span>
+    <span>Checkout Help</span>
+  </a>
+
+  <script>
+    // UK Regions & Comprehensive City Lists
+    var UK_CITIES = {
+      'England': [
+        'London', 'Birmingham', 'Manchester', 'Leeds', 'Liverpool',
+        'Sheffield', 'Bristol', 'Newcastle upon Tyne', 'Nottingham',
+        'Leicester', 'Coventry', 'Bradford', 'Southampton', 'Portsmouth',
+        'Brighton & Hove', 'Reading', 'Oxford', 'Cambridge', 'York',
+        'Bath', 'Derby', 'Exeter', 'Plymouth', 'Norwich', 'Colchester',
+        'Canterbury', 'Milton Keynes', 'Bournemouth', 'Middlesbrough', 'Hull'
+      ],
+      'Scotland': [
+        'Edinburgh', 'Glasgow', 'Aberdeen', 'Dundee', 'Inverness',
+        'Stirling', 'Perth', 'Dunfermline', 'Paisley', 'East Kilbride',
+        'Livingston', 'Hamilton', 'Cumbernauld', 'Kirkcaldy', 'Ayr'
+      ],
+      'Wales': [
+        'Cardiff', 'Swansea', 'Newport', 'Wrexham', 'Bangor',
+        'St Davids', 'Barry', 'Bridgend', 'Neath', 'Cwmbran',
+        'Llanelli', 'Merthyr Tydfil', 'Rhyl'
+      ],
+      'Northern Ireland': [
+        'Belfast', 'Derry (Londonderry)', 'Lisburn', 'Newry', 'Armagh',
+        'Bangor', 'Coleraine', 'Newtownards', 'Craigavon', 'Ballymena',
+        'Carrickfergus', 'Enniskillen', 'Omagh'
+      ]
+    };
+
+    // Default or LocalStorage Cart
+    var defaultCart = [
+      { name: "BIAB Pro Starter Kit", price: 45.00, icon: "💅", qty: 1 },
+      { name: "Luxury Brow Lamination Set", price: 38.00, icon: "✨", qty: 1 }
+    ];
+
+    var cart = [];
+    var discountPercent = 0;
+    var lastOrderDetails = null;
+
+    function initCart() {
+      var saved = localStorage.getItem('aluxe_beauty_cart');
+      if (saved) {
+        try {
+          var parsed = JSON.parse(saved);
+          if (Array.isArray(parsed) && parsed.length > 0) {
+            cart = parsed;
+          } else {
+            cart = defaultCart;
+          }
+        } catch(e) {
+          cart = defaultCart;
+        }
+      } else {
+        cart = defaultCart;
+      }
+      renderOrderItems();
+      populateCities('England');
+      updateTotals();
+    }
+
+    function onCountryChange(country) {
+      populateCities(country);
+      var help = document.getElementById('countryCityHelpText');
+      if (help) {
+        help.textContent = 'Showing major cities across ' + country + '. Select your city or nearest regional hub.';
+      }
+    }
+
+    function populateCities(country) {
+      var citySelect = document.getElementById('custCity');
+      if (!citySelect) return;
+      citySelect.innerHTML = '';
+
+      var list = UK_CITIES[country] || UK_CITIES['England'];
+      
+      var defaultOpt = document.createElement('option');
+      defaultOpt.value = '';
+      defaultOpt.textContent = 'Select ' + country + ' City *';
+      citySelect.appendChild(defaultOpt);
+
+      list.forEach(function(cityName) {
+        var opt = document.createElement('option');
+        opt.value = cityName;
+        opt.textContent = cityName;
+        citySelect.appendChild(opt);
+      });
+
+      // Default select first real city for customer convenience
+      if (list.length > 0) {
+        citySelect.selectedIndex = 1;
+      }
+    }
+
+    function renderOrderItems() {
+      var container = document.getElementById('orderItemsContainer');
+      var badge = document.getElementById('summaryItemCount');
+      if (!container) return;
+
+      container.innerHTML = '';
+      var totalItems = 0;
+
+      if (cart.length === 0) {
+        container.innerHTML = '<div style="text-align:center; padding:30px 0; color:var(--gray); font-size:13px;">Your cart is empty.<br><a href="/shop/" style="color:var(--gold-dark); font-weight:700; margin-top:8px; display:inline-block;">Explore Products →</a></div>';
+        if (badge) badge.textContent = '0 items';
+        return;
+      }
+
+      cart.forEach(function(item, idx) {
+        totalItems += (item.qty || 1);
+        var row = document.createElement('div');
+        row.className = 'order-item-row';
+        row.innerHTML = 
+          '<div class="item-thumb">' + (item.icon || '🛍️') + '</div>' +
+          '<div class="item-meta">' +
+            '<div class="item-name">' + item.name + '</div>' +
+            '<div class="item-price">£' + (item.price * (item.qty || 1)).toFixed(2) + '</div>' +
+          '</div>' +
+          '<div class="item-qty-stepper">' +
+            '<button type="button" onclick="changeItemQty(' + idx + ', -1)">−</button>' +
+            '<span class="item-qty-val">' + (item.qty || 1) + '</span>' +
+            '<button type="button" onclick="changeItemQty(' + idx + ', 1)">+</button>' +
+          '</div>' +
+          '<button type="button" class="item-remove-btn" onclick="removeItem(' + idx + ')" title="Remove item">&times;</button>';
+        container.appendChild(row);
+      });
+
+      if (badge) badge.textContent = totalItems + (totalItems === 1 ? ' item' : ' items');
+      localStorage.setItem('aluxe_beauty_cart', JSON.stringify(cart));
+    }
+
+    function changeItemQty(idx, delta) {
+      if (cart[idx]) {
+        cart[idx].qty = (cart[idx].qty || 1) + delta;
+        if (cart[idx].qty <= 0) {
+          cart.splice(idx, 1);
+        }
+        renderOrderItems();
+        updateTotals();
+      }
+    }
+
+    function removeItem(idx) {
+      if (cart[idx]) {
+        cart.splice(idx, 1);
+        renderOrderItems();
+        updateTotals();
+      }
+    }
+
+    function applyCoupon() {
+      var input = document.getElementById('couponCodeInput');
+      var notice = document.getElementById('couponNotice');
+      if (!input || !notice) return;
+      var code = input.value.trim().toUpperCase();
+
+      if (code === 'GLOW10' || code === 'ALUXE10') {
+        discountPercent = 0.10;
+        notice.style.display = 'block';
+        notice.style.color = '#2E7D32';
+        notice.textContent = '✓ Promo code applied! 10% discount on products.';
+      } else if (code === '') {
+        discountPercent = 0;
+        notice.style.display = 'none';
+      } else {
+        discountPercent = 0;
+        notice.style.display = 'block';
+        notice.style.color = '#D32F2F';
+        notice.textContent = '✕ Invalid promo code. Try "GLOW10" for 10% off.';
+      }
+      updateTotals();
+    }
+
+    function updateTotals() {
+      var subtotal = cart.reduce(function(acc, item) {
+        return acc + (item.price * (item.qty || 1));
+      }, 0);
+
+      var discountVal = subtotal * discountPercent;
+      var discountedSubtotal = subtotal - discountVal;
+
+      var deliverySelect = document.getElementById('custDeliveryType');
+      var isExpress = deliverySelect && deliverySelect.value === 'express';
+
+      var deliveryCost = 0;
+      if (isExpress) {
+        deliveryCost = 7.50;
+      } else {
+        deliveryCost = (discountedSubtotal >= 40.00 || discountedSubtotal === 0) ? 0.00 : 4.50;
+      }
+
+      var grandTotal = discountedSubtotal + deliveryCost;
+      var vatAmount = grandTotal * 0.20;
+
+      // Update elements
+      document.getElementById('subtotalVal').textContent = '£' + subtotal.toFixed(2);
+      
+      var discRow = document.getElementById('discountRow');
+      if (discountVal > 0) {
+        discRow.style.display = 'flex';
+        document.getElementById('discountVal').textContent = '-£' + discountVal.toFixed(2);
+      } else {
+        discRow.style.display = 'none';
+      }
+
+      var delText = (deliveryCost === 0.00) ? 'FREE (Orders over £40)' : '£' + deliveryCost.toFixed(2);
+      document.getElementById('deliveryVal').textContent = delText;
+      document.getElementById('vatVal').textContent = '£' + vatAmount.toFixed(2);
+      document.getElementById('grandTotalVal').textContent = '£' + grandTotal.toFixed(2);
+      document.getElementById('btnTotalBadge').textContent = '£' + grandTotal.toFixed(2);
+
+      // Shipping progress bar
+      var statusText = document.getElementById('shippingStatusText');
+      var fillBar = document.getElementById('shippingProgressFill');
+      if (discountedSubtotal >= 40.00) {
+        statusText.innerHTML = '🎉 You qualified for <strong>FREE UK Tracked Delivery!</strong>';
+        fillBar.style.width = '100%';
+        fillBar.style.background = '#2E7D32';
+      } else {
+        var needed = (40.00 - discountedSubtotal).toFixed(2);
+        statusText.innerHTML = 'Add <strong>£' + needed + '</strong> for FREE UK Tracked Delivery';
+        var pct = Math.min(100, Math.round((discountedSubtotal / 40.00) * 100));
+        fillBar.style.width = pct + '%';
+        fillBar.style.background = 'var(--gold)';
+      }
+    }
+
+    function selectPaymentMethod(type) {
+      document.querySelectorAll('.payment-option').forEach(function(el) { el.classList.remove('active'); });
+      var cardBox = document.getElementById('cardFieldsBox');
+      
+      if (type === 'card') {
+        document.getElementById('payOptCard').classList.add('active');
+        if (cardBox) cardBox.style.display = 'block';
+      } else if (type === 'whatsapp') {
+        document.getElementById('payOptWa').classList.add('active');
+        if (cardBox) cardBox.style.display = 'none';
+      } else {
+        document.getElementById('payOptCod').classList.add('active');
+        if (cardBox) cardBox.style.display = 'none';
+      }
+    }
+
+    function handlePlaceOrder(e) {
+      e.preventDefault();
+
+      if (cart.length === 0) {
+        alert("Your cart is empty! Please add some items before checking out.");
+        return;
+      }
+
+      var firstName = document.getElementById('custFirstName').value.trim();
+      var lastName = document.getElementById('custLastName').value.trim();
+      var email = document.getElementById('custEmail').value.trim();
+      var phone = document.getElementById('custPhone').value.trim();
+      var address = document.getElementById('custAddress').value.trim();
+      var apartment = document.getElementById('custApartment').value.trim();
+      var country = document.getElementById('custCountry').value;
+      var city = document.getElementById('custCity').value;
+      var postcode = document.getElementById('custPostcode').value.trim().toUpperCase();
+      var notes = document.getElementById('orderNotes').value.trim();
+      var grandTotal = document.getElementById('grandTotalVal').textContent;
+
+      if (!city) {
+        alert("Please select your UK City.");
+        document.getElementById('custCity').focus();
+        return;
+      }
+
+      var orderRef = "#ALUXE-" + Math.floor(10000 + Math.random() * 90000);
+
+      lastOrderDetails = {
+        orderRef: orderRef,
+        customerName: firstName + " " + lastName,
+        email: email,
+        phone: phone,
+        address: address + (apartment ? ", " + apartment : ""),
+        city: city,
+        country: country,
+        postcode: postcode,
+        notes: notes || "None",
+        items: cart,
+        total: grandTotal
+      };
+
+      var selectedPay = document.querySelector('input[name="paymentMethod"]:checked').value;
+
+      if (selectedPay === 'whatsapp') {
+        submitViaWhatsApp();
+      } else {
+        // Show confirmation modal
+        document.getElementById('modalCustName').textContent = firstName + " " + lastName;
+        document.getElementById('modalOrderRef').textContent = orderRef;
+        document.getElementById('modalDeliveryDest').textContent = city + ", " + country + " (" + postcode + ")";
+        document.getElementById('modalTotalPaid').textContent = grandTotal;
+        document.getElementById('orderSuccessModal').classList.add('active');
+
+        // Clear cart
+        localStorage.removeItem('aluxe_beauty_cart');
+      }
+    }
+
+    function submitViaWhatsApp() {
+      if (cart.length === 0) {
+        alert("Your cart is empty! Please add items to checkout.");
+        return;
+      }
+
+      var firstName = document.getElementById('custFirstName').value.trim() || "Customer";
+      var lastName = document.getElementById('custLastName').value.trim() || "";
+      var phone = document.getElementById('custPhone').value.trim() || "N/A";
+      var address = document.getElementById('custAddress').value.trim() || "Local Branch Collection";
+      var country = document.getElementById('custCountry').value;
+      var city = document.getElementById('custCity').value || "London";
+      var postcode = document.getElementById('custPostcode').value.trim().toUpperCase() || "UK";
+      var notes = document.getElementById('orderNotes').value.trim();
+      var grandTotal = document.getElementById('grandTotalVal').textContent;
+      var orderRef = "#ALUXE-" + Math.floor(10000 + Math.random() * 90000);
+
+      var itemsList = cart.map(function(item) {
+        return "• " + (item.qty || 1) + "x " + item.name + " (£" + (item.price * (item.qty || 1)).toFixed(2) + ")";
+      }).join("%0A");
+
+      var msg = "🌟 *A LUXE BEAUTY - NEW ORDER " + orderRef + "*%0A%0A" +
+                "*Customer:* " + encodeURIComponent(firstName + " " + lastName) + "%0A" +
+                "*Phone:* " + encodeURIComponent(phone) + "%0A" +
+                "*Country:* " + encodeURIComponent(country) + "%0A" +
+                "*City:* " + encodeURIComponent(city) + "%0A" +
+                "*Address:* " + encodeURIComponent(address) + "%0A" +
+                "*Postcode:* " + encodeURIComponent(postcode) + "%0A" +
+                (notes ? "*Instructions:* " + encodeURIComponent(notes) + "%0A" : "") +
+                "%0A*Ordered Items:*%0A" + itemsList + "%0A%0A" +
+                "*Order Total:* " + encodeURIComponent(grandTotal) + "%0A" +
+                "*Payment Method:* WhatsApp Order / Card Invoice%0A%0A" +
+                "Please confirm my order dispatch date and tracking link!";
+
+      window.open("https://wa.me/447477154228?text=" + msg, "_blank");
+
+      // Show modal
+      document.getElementById('modalCustName').textContent = firstName + " " + lastName;
+      document.getElementById('modalOrderRef').textContent = orderRef;
+      document.getElementById('modalDeliveryDest').textContent = city + ", " + country + " (" + postcode + ")";
+      document.getElementById('modalTotalPaid').textContent = grandTotal;
+      document.getElementById('orderSuccessModal').classList.add('active');
+
+      localStorage.removeItem('aluxe_beauty_cart');
+    }
+
+    function sendOrderReceiptToWhatsApp() {
+      if (!lastOrderDetails) {
+        window.open("https://wa.me/447477154228?text=Hello%20A%20Luxe%20Beauty%2C%20I%20have%20an%20order%20inquiry", "_blank");
+        return;
+      }
+      var o = lastOrderDetails;
+      var itemsList = o.items.map(function(item) {
+        return "• " + (item.qty || 1) + "x " + item.name + " (£" + (item.price * (item.qty || 1)).toFixed(2) + ")";
+      }).join("%0A");
+
+      var msg = "📄 *A LUXE BEAUTY ORDER RECEIPT " + o.orderRef + "*%0A%0A" +
+                "*Name:* " + encodeURIComponent(o.customerName) + "%0A" +
+                "*Delivery To:* " + encodeURIComponent(o.city + ", " + o.country + " (" + o.postcode + ")") + "%0A" +
+                "*Address:* " + encodeURIComponent(o.address) + "%0A%0A" +
+                "*Items:*%0A" + itemsList + "%0A%0A" +
+                "*Total:* " + encodeURIComponent(o.total);
+
+      window.open("https://wa.me/447477154228?text=" + msg, "_blank");
+    }
+
+    function toggleMobileMenu() {
+      var drawer = document.getElementById('mobileMenuDrawer');
+      var overlay = document.getElementById('mobileMenuOverlay');
+      var btn = document.querySelector('.mobile-toggle-btn');
+      if (drawer && overlay) {
+        drawer.classList.toggle('active');
+        overlay.classList.toggle('active');
+        if (btn) btn.classList.toggle('active');
+        document.body.style.overflow = drawer.classList.contains('active') ? 'hidden' : '';
+      }
+    }
+
+    // Initialize on page load
+    window.addEventListener('DOMContentLoaded', initCart);
+  </script>
+</body>
+</html>

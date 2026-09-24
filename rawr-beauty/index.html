@@ -955,8 +955,11 @@
         <span>Total:</span>
         <span id="cartTotalVal" style="color:#C9A84C;">£0.00</span>
       </div>
-      <button class="btn btn-gold" style="width:100%; padding:14px; border-radius:50px; font-weight:800; border:none; cursor:pointer;" onclick="startCheckoutFromDrawer()">
+      <button class="btn btn-gold" style="width:100%; padding:14px; border-radius:50px; font-weight:800; border:none; cursor:pointer; margin-bottom:8px;" onclick="startCheckoutFromDrawer()">
         🔒 PROCEED TO CHECKOUT
+      </button>
+      <button class="btn btn-whatsapp" style="width:100%; padding:12px; border-radius:50px; font-weight:700; border:none; cursor:pointer; font-size:12px;" onclick="orderViaWhatsAppDirect()">
+        💬 Instant WhatsApp Order
       </button>
     </div>
   </aside>
@@ -1009,45 +1012,36 @@
       </div>
 
       <div style="margin-bottom:12px;">
-        <label style="display:block; font-size:12px; font-weight:700; margin-bottom:4px;">Country *</label>
-        <select id="qbCustomerCountry" style="width:100%; padding:10px 14px; border:1px solid #D5D5E2; border-radius:8px; font-size:14px; background:#fff; outline:none;">
-          <option value="United Kingdom" selected>United Kingdom</option>
-          <option value="Ireland">Ireland</option>
+        <label style="display:block; font-size:12px; font-weight:700; margin-bottom:4px;">UK Country / Region *</label>
+        <select id="qbCustomerCountry" onchange="onQuickBuyCountryChange(this.value)" style="width:100%; padding:10px 14px; border:1px solid #D5D5E2; border-radius:8px; font-size:14px; background:#fff; outline:none;" required>
+          <option value="England" selected>England</option>
+          <option value="Scotland">Scotland</option>
+          <option value="Wales">Wales</option>
+          <option value="Northern Ireland">Northern Ireland</option>
         </select>
       </div>
 
       <div style="margin-bottom:16px;">
-        <label style="display:block; font-size:12px; font-weight:700; margin-bottom:4px;">UK City *</label>
+        <label style="display:block; font-size:12px; font-weight:700; margin-bottom:4px;">UK City / Town *</label>
         <select id="qbCustomerCity" required style="width:100%; padding:10px 14px; border:1px solid #D5D5E2; border-radius:8px; font-size:14px; background:#fff; outline:none;">
-          <option value="">Select UK City</option>
-          <option value="London">London</option>
+          <option value="London" selected>London</option>
           <option value="Birmingham">Birmingham</option>
           <option value="Manchester">Manchester</option>
-          <option value="Liverpool">Liverpool</option>
           <option value="Leeds">Leeds</option>
+          <option value="Liverpool">Liverpool</option>
           <option value="Sheffield">Sheffield</option>
           <option value="Bristol">Bristol</option>
-          <option value="Glasgow">Glasgow</option>
-          <option value="Edinburgh">Edinburgh</option>
-          <option value="Cardiff">Cardiff</option>
-          <option value="Belfast">Belfast</option>
           <option value="Newcastle upon Tyne">Newcastle upon Tyne</option>
           <option value="Nottingham">Nottingham</option>
           <option value="Leicester">Leicester</option>
           <option value="Coventry">Coventry</option>
-          <option value="Bradford">Bradford</option>
           <option value="Southampton">Southampton</option>
-          <option value="Portsmouth">Portsmouth</option>
-          <option value="Brighton">Brighton</option>
+          <option value="Brighton & Hove">Brighton & Hove</option>
+          <option value="Reading">Reading</option>
           <option value="Oxford">Oxford</option>
           <option value="Cambridge">Cambridge</option>
           <option value="York">York</option>
           <option value="Bath">Bath</option>
-          <option value="Derby">Derby</option>
-          <option value="Exeter">Exeter</option>
-          <option value="Norwich">Norwich</option>
-          <option value="Plymouth">Plymouth</option>
-          <option value="Reading">Reading</option>
           <option value="Colchester">Colchester</option>
           <option value="Canterbury">Canterbury</option>
         </select>
@@ -1228,7 +1222,34 @@
       }
     }
 
+    var UK_QB_CITIES = {
+      'England': ['London', 'Birmingham', 'Manchester', 'Leeds', 'Liverpool', 'Sheffield', 'Bristol', 'Newcastle upon Tyne', 'Nottingham', 'Leicester', 'Coventry', 'Southampton', 'Brighton & Hove', 'Reading', 'Oxford', 'Cambridge', 'York', 'Bath', 'Colchester', 'Canterbury', 'Milton Keynes', 'Bournemouth', 'Norwich', 'Exeter'],
+      'Scotland': ['Edinburgh', 'Glasgow', 'Aberdeen', 'Dundee', 'Inverness', 'Stirling', 'Perth', 'Dunfermline', 'Paisley', 'East Kilbride', 'Livingston', 'Ayr'],
+      'Wales': ['Cardiff', 'Swansea', 'Newport', 'Wrexham', 'Bangor', 'St Davids', 'Barry', 'Bridgend', 'Llanelli', 'Neath'],
+      'Northern Ireland': ['Belfast', 'Derry (Londonderry)', 'Lisburn', 'Newry', 'Armagh', 'Bangor', 'Coleraine', 'Ballymena', 'Enniskillen']
+    };
+
+    function onQuickBuyCountryChange(country) {
+      var citySelect = document.getElementById('qbCustomerCity');
+      if (!citySelect) return;
+      citySelect.innerHTML = '<option value="">Select City</option>';
+      var list = UK_QB_CITIES[country] || UK_QB_CITIES['England'];
+      list.forEach(function(c) {
+        var opt = document.createElement('option');
+        opt.value = c;
+        opt.textContent = c;
+        citySelect.appendChild(opt);
+      });
+      if (list.length > 0) citySelect.selectedIndex = 1;
+    }
+
     function startCheckoutFromDrawer() {
+      if (cart.length === 0) return alert('Your cart is empty!');
+      localStorage.setItem('aluxe_beauty_cart', JSON.stringify(cart));
+      window.location.href = '/checkout/';
+    }
+
+    function orderViaWhatsAppDirect() {
       if (cart.length === 0) return alert('Your cart is empty!');
       var itemsTxt = cart.map(function(i) { return '• ' + i.qty + 'x ' + i.name + ' (£' + (i.price * i.qty).toFixed(2) + ')'; }).join('%0A');
       var total = cart.reduce(function(a, b) { return a + (b.price * b.qty); }, 0);
