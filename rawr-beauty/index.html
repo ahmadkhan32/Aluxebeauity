@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ayesha Luxe Beauty | Luxury Doorstep Beauty Treatments London</title>
-  <meta name="description" content="Luxury salon treatments delivered directly to your doorstep in London. Certified beautician providing bespoke Hydra Facials, painless waxing, threading, laser hair removal & full body massages. FREE home service within 2 miles.">
-  <meta name="keywords" content="doorstep beauty treatments, mobile beautician London, home facial service, threading London, hydra facial, waxing London, Ayesha Luxe Beauty, RAWR beauty wordpress theme">
+  <title>RAWR Beauty & Ayesha Luxe | Salon Treatments, 26 Branches & E-Commerce</title>
+  <meta name="description" content="Luxury salon treatments, 26 UK branches, accredited training academy, e-commerce beauty shop, and mobile doorstep services. Book online or on WhatsApp.">
+  <meta name="keywords" content="RAWR beauty, Ayesha Luxe Beauty, 26 branches, beauty salon UK, nail salon, brows and lashes, beauty academy, franchise, doorstep beauty, e-commerce beauty shop">
   
   <!-- Open Graph -->
-  <meta property="og:title" content="Ayesha Luxe Beauty | Luxury Doorstep Beauty Treatments">
-  <meta property="og:description" content="Luxury salon treatments delivered straight to your home. FREE home service within 2 miles. Book on WhatsApp.">
+  <meta property="og:title" content="RAWR Beauty & Ayesha Luxe | 26 UK Branches & E-Commerce Shop">
+  <meta property="og:description" content="Nails, Brows, Lashes, Facials, 26 UK Branches, Professional Training Academy, and Beauty E-Commerce.">
   <meta property="og:type" content="website">
   
   <!-- Google Fonts -->
@@ -53,26 +53,31 @@
     body { font-family: var(--font-body); color: var(--charcoal); background: var(--white); line-height: 1.6; overflow-x: hidden; }
     a { text-decoration: none; color: inherit; transition: var(--transition); }
     img { max-width: 100%; height: auto; display: block; }
-    .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .container { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 24px; }
 
     /* Top Bar */
-    .top-bar { background: var(--charcoal); color: var(--white); padding: 9px 0; font-size: 12px; border-bottom: 1px solid rgba(201,168,76,0.25); }
+    .top-bar { background: var(--charcoal); color: var(--white); padding: 8px 0; font-size: 12px; border-bottom: 1px solid rgba(201,168,76,0.25); }
     .top-bar-inner { display: flex; justify-content: space-between; align-items: center; }
     .top-bar-badge { display: inline-flex; align-items: center; gap: 8px; font-weight: 500; }
     .top-bar-link { color: var(--gold-light); font-weight: 700; text-decoration: none; }
     .top-bar-link:hover { color: var(--white); }
 
     /* Header */
-    .site-header { position: sticky; top: 0; z-index: 1000; background: rgba(255,255,255,0.96); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(201,168,76,0.15); padding: 14px 0; }
+    .site-header { position: sticky; top: 0; z-index: 1000; background: rgba(255,255,255,0.96); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(201,168,76,0.15); padding: 12px 0; }
     .header-nav { display: flex; justify-content: space-between; align-items: center; }
     .logo { display: flex; flex-direction: column; text-decoration: none; line-height: 1; }
     .logo-script { font-family: var(--font-script); font-size: 26px; color: var(--gold-dark); margin-left: 2px; }
     .logo-main { font-family: var(--font-heading); font-size: 22px; font-weight: 700; letter-spacing: 3px; color: var(--charcoal); }
     .logo-sub { font-size: 8px; font-weight: 700; letter-spacing: 2px; color: var(--pink); text-transform: uppercase; margin-top: 2px; }
-    .nav-links { display: flex; align-items: center; gap: 24px; list-style: none; }
-    .nav-links a { font-size: 13px; font-weight: 600; color: var(--charcoal); position: relative; padding: 4px 0; }
+    
+    .nav-links { display: flex; align-items: center; gap: 16px; list-style: none; }
+    .nav-links a { font-size: 12px; font-weight: 600; color: var(--charcoal); position: relative; padding: 6px 0; }
     .nav-links a:hover { color: var(--gold-dark); }
     .header-actions { display: flex; align-items: center; gap: 12px; }
+
+    /* Cart Button */
+    .cart-btn { background: var(--gold-pale); border: 1px solid rgba(201,168,76,0.3); border-radius: 50px; padding: 8px 14px; display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 700; cursor: pointer; color: var(--charcoal); }
+    .cart-count { background: var(--gold); color: #1A1A2E; border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 800; }
 
     /* Buttons */
     .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 28px; border-radius: var(--border-radius-pill); font-size: 13px; font-weight: 700; cursor: pointer; transition: var(--transition); border: 2px solid transparent; text-align: center; }
@@ -84,123 +89,94 @@
     .btn-outline:hover { background: var(--gradient-gold); color: var(--charcoal); transform: translateY(-3px); }
     .btn-dark { background: var(--charcoal); color: white; }
     .btn-dark:hover { background: var(--dark-gray); transform: translateY(-3px); }
-    .btn-sm { padding: 8px 18px; font-size: 12px; }
+    .btn-sm { padding: 8px 16px; font-size: 11px; }
     .btn-lg { padding: 16px 36px; font-size: 15px; }
 
     /* Hero */
-    .hero { position: relative; background: var(--gradient-hero); color: white; padding: 100px 0 80px; text-align: center; overflow: hidden; }
+    .hero { position: relative; background: var(--gradient-hero); color: white; padding: 90px 0 80px; text-align: center; overflow: hidden; }
     .hero::before { content: ''; position: absolute; top: -100px; left: 15%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(201,168,76,0.2) 0%, transparent 70%); pointer-events: none; }
     .hero::after { content: ''; position: absolute; bottom: -120px; right: 15%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(232,130,154,0.18) 0%, transparent 70%); pointer-events: none; }
-    .hero-content { position: relative; z-index: 2; max-width: 860px; margin: 0 auto; }
-    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(201,168,76,0.15); border: 1px solid rgba(201,168,76,0.4); color: var(--gold-light); padding: 7px 20px; border-radius: 50px; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 24px; }
-    .hero-title { font-family: var(--font-heading); font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 700; line-height: 1.12; margin-bottom: 20px; }
+    .hero-content { position: relative; z-index: 2; max-width: 900px; margin: 0 auto; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(201,168,76,0.15); border: 1px solid rgba(201,168,76,0.4); color: var(--gold-light); padding: 6px 18px; border-radius: 50px; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 20px; }
+    .hero-title { font-family: var(--font-heading); font-size: clamp(2.5rem, 5.5vw, 4.2rem); font-weight: 700; line-height: 1.12; margin-bottom: 20px; }
     .hero-title span { background: var(--gradient-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .hero-desc { font-size: clamp(15px, 2vw, 18px); color: rgba(255,255,255,0.85); line-height: 1.7; max-width: 680px; margin: 0 auto 32px; }
-    .usp-row { display: flex; justify-content: center; gap: 16px; margin-bottom: 36px; flex-wrap: wrap; }
+    .hero-desc { font-size: clamp(15px, 2vw, 17px); color: rgba(255,255,255,0.85); line-height: 1.7; max-width: 720px; margin: 0 auto 30px; }
+    
+    .usp-row { display: flex; justify-content: center; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
     .usp-pill { display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); padding: 10px 18px; border-radius: 12px; font-size: 13px; text-align: left; }
     .usp-pill strong { display: block; font-size: 13px; color: white; }
     .usp-pill span { font-size: 11px; color: var(--gold-light); }
-    .hero-ctas { display: flex; justify-content: center; gap: 16px; margin-bottom: 48px; flex-wrap: wrap; }
-    .hero-stats { display: flex; justify-content: center; align-items: center; gap: 36px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.12); }
-    .stat-item h3 { font-family: var(--font-heading); font-size: 28px; color: var(--gold-light); font-weight: 700; }
+    .hero-ctas { display: flex; justify-content: center; gap: 14px; margin-bottom: 40px; flex-wrap: wrap; }
+    .hero-stats { display: flex; justify-content: center; align-items: center; gap: 32px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.12); }
+    .stat-item h3 { font-family: var(--font-heading); font-size: 26px; color: var(--gold-light); font-weight: 700; }
     .stat-item p { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.7); }
 
     /* Section Headers */
-    .section { padding: 90px 0; }
-    .section-header { text-align: center; margin-bottom: 50px; }
-    .section-tag { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); background: var(--gold-pale); border: 1px solid rgba(201,168,76,0.3); padding: 6px 18px; border-radius: 20px; margin-bottom: 14px; }
-    .section-title { font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 700; color: var(--charcoal); margin-bottom: 14px; }
+    .section { padding: 80px 0; }
+    .section-header { text-align: center; margin-bottom: 45px; }
+    .section-tag { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); background: var(--gold-pale); border: 1px solid rgba(201,168,76,0.3); padding: 5px 16px; border-radius: 20px; margin-bottom: 12px; }
+    .section-title { font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--charcoal); margin-bottom: 12px; }
     .section-title span { background: var(--gradient-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .section-subtitle { font-size: 15px; color: var(--dark-gray); max-width: 620px; margin: 0 auto; line-height: 1.7; }
+    .section-subtitle { font-size: 15px; color: var(--dark-gray); max-width: 640px; margin: 0 auto; line-height: 1.7; }
 
-    /* Services Tabs & Grid */
-    .service-tabs { display: flex; justify-content: center; gap: 10px; margin-bottom: 36px; flex-wrap: wrap; }
-    .tab-btn { padding: 10px 22px; border-radius: var(--border-radius-pill); border: 2px solid rgba(201,168,76,0.25); background: white; font-size: 13px; font-weight: 700; color: var(--dark-gray); cursor: pointer; transition: var(--transition); }
-    .tab-btn:hover, .tab-btn.active { background: var(--gradient-gold); color: var(--charcoal); border-color: transparent; }
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 24px; }
-    .service-card { background: white; border-radius: var(--border-radius); padding: 26px; border: 1px solid rgba(201,168,76,0.14); box-shadow: var(--shadow-sm); transition: var(--transition); display: flex; flex-direction: column; justify-content: space-between; }
-    .service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); border-color: rgba(201,168,76,0.35); }
-    .card-top { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid var(--light-gray); }
-    .card-icon { width: 52px; height: 52px; border-radius: 14px; background: var(--gold-pale); display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; }
-    .card-title { font-family: var(--font-heading); font-size: 1.4rem; font-weight: 700; color: var(--charcoal); }
-    .card-desc { font-size: 12px; color: var(--dark-gray); margin-top: 2px; }
-    .price-list { list-style: none; margin-bottom: 20px; display: flex; flex-direction: column; gap: 10px; }
+    /* Services Grid */
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+    .service-card { background: white; border-radius: var(--border-radius); padding: 24px; border: 1px solid rgba(201,168,76,0.15); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between; }
+    .card-top { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; padding-bottom: 14px; border-bottom: 1px solid var(--light-gray); }
+    .card-icon { width: 48px; height: 48px; border-radius: 12px; background: var(--gold-pale); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
+    .card-title { font-family: var(--font-heading); font-size: 1.3rem; font-weight: 700; color: var(--charcoal); }
+    .price-list { list-style: none; margin-bottom: 16px; display: flex; flex-direction: column; gap: 9px; }
     .price-item { display: flex; justify-content: space-between; align-items: center; font-size: 13px; }
-    .price-name { font-weight: 600; color: var(--charcoal); display: flex; align-items: center; gap: 6px; }
-    .price-badge { font-size: 9px; font-weight: 800; text-transform: uppercase; padding: 2px 6px; border-radius: 10px; background: var(--pink-pale); color: var(--pink); }
     .price-dots { flex: 1; border-bottom: 1px dotted rgba(201,168,76,0.3); margin: 0 8px; }
     .price-val { font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; color: var(--gold-dark); }
 
-    /* Packages */
-    .packages-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
-    .pkg-card { background: white; border-radius: var(--border-radius); padding: 32px 24px; border: 1px solid rgba(201,168,76,0.18); box-shadow: var(--shadow-sm); text-align: center; position: relative; transition: var(--transition); display: flex; flex-direction: column; justify-content: space-between; }
-    .pkg-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
-    .pkg-card.featured { border: 2px solid var(--gold); box-shadow: var(--shadow-gold); }
-    .pkg-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--gradient-gold); color: var(--charcoal); font-size: 10px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; padding: 4px 14px; border-radius: 20px; }
-    .pkg-icon { font-size: 38px; margin-bottom: 12px; }
-    .pkg-name { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--charcoal); margin-bottom: 10px; }
-    .pkg-desc { font-size: 12px; color: var(--dark-gray); line-height: 1.6; margin-bottom: 20px; }
-    .pkg-price { margin-bottom: 24px; }
-    .pkg-current { font-family: var(--font-heading); font-size: 2.4rem; font-weight: 700; color: var(--gold-dark); }
-    .pkg-orig { font-size: 14px; color: var(--gray); text-decoration: line-through; margin-left: 6px; }
+    /* E-Commerce Shop Grid */
+    .shop-filter-tabs { display: flex; justify-content: center; gap: 10px; margin-bottom: 30px; flex-wrap: wrap; }
+    .shop-tab { padding: 8px 20px; border-radius: 30px; border: 1px solid rgba(201,168,76,0.3); background: #fff; font-size: 12px; font-weight: 700; cursor: pointer; color: var(--dark-gray); }
+    .shop-tab.active { background: var(--gradient-gold); color: #1A1A2E; border-color: transparent; }
+    .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+    .product-card { background: white; border-radius: 16px; border: 1px solid rgba(201,168,76,0.18); overflow: hidden; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between; transition: var(--transition); }
+    .product-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+    .product-img-box { height: 180px; background: linear-gradient(135deg, var(--gold-pale), var(--pink-pale)); display: flex; align-items: center; justify-content: center; font-size: 56px; }
+    .product-info { padding: 20px; }
+    .product-cat { font-size: 10px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); }
+    .product-name { font-family: var(--font-heading); font-size: 1.25rem; font-weight: 600; color: #1A1A2E; margin: 4px 0 8px; }
+    .product-price-row { display: flex; justify-content: space-between; align-items: center; margin-top: 14px; border-top: 1px solid var(--light-gray); padding-top: 14px; }
+    .product-price { font-family: var(--font-heading); font-size: 1.3rem; font-weight: 700; color: var(--gold-dark); }
 
-    /* Free Home Service Banner */
-    .service-banner { background: linear-gradient(135deg, #1A1A2E, #2A4032); border-radius: 24px; padding: 48px; color: white; margin: 40px 0; border: 1px solid rgba(201,168,76,0.3); display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
-    .banner-left { max-width: 650px; }
-    .banner-badge { display: inline-block; background: var(--green); color: white; font-size: 11px; font-weight: 800; letter-spacing: 1px; padding: 5px 14px; border-radius: 20px; text-transform: uppercase; margin-bottom: 12px; }
-    .banner-title { font-family: var(--font-heading); font-size: 2.2rem; font-weight: 700; margin-bottom: 10px; }
-    .banner-text { font-size: 14px; color: rgba(255,255,255,0.85); line-height: 1.7; }
+    /* Cart Drawer (Slide-out) */
+    .cart-drawer-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 9998; opacity: 0; pointer-events: none; transition: var(--transition); }
+    .cart-drawer-overlay.active { opacity: 1; pointer-events: auto; }
+    .cart-drawer { position: fixed; top: 0; right: 0; bottom: 0; width: 100%; max-width: 400px; background: #fff; z-index: 9999; box-shadow: -10px 0 30px rgba(0,0,0,0.2); transform: translateX(100%); transition: var(--transition); display: flex; flex-direction: column; }
+    .cart-drawer.active { transform: translateX(0); }
+    .cart-header { padding: 20px; border-bottom: 1px solid #E8E8F0; display: flex; justify-content: space-between; align-items: center; }
+    .cart-items { flex: 1; padding: 20px; overflow-y: auto; display: flex; flex-direction: column; gap: 14px; }
+    .cart-item { display: flex; justify-content: space-between; align-items: center; background: #FAFAF8; padding: 12px; border-radius: 10px; }
+    .cart-footer { padding: 20px; border-top: 1px solid #E8E8F0; background: #FDF8EE; }
 
-    /* Flyers Gallery */
-    .flyers-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-    .flyer-card { background: white; border-radius: 14px; overflow: hidden; border: 1px solid rgba(201,168,76,0.15); box-shadow: var(--shadow-sm); cursor: pointer; transition: var(--transition); }
-    .flyer-card:hover { transform: scale(1.03); box-shadow: var(--shadow-md); }
-    .flyer-img { width: 100%; height: 320px; object-fit: cover; }
-    .flyer-caption { padding: 14px; text-align: center; font-size: 12px; font-weight: 700; color: var(--charcoal); }
-
-    /* Booking Form Box */
-    .booking-box { background: white; border-radius: 24px; padding: 48px; border: 1px solid rgba(201,168,76,0.25); box-shadow: var(--shadow-md); max-width: 780px; margin: 0 auto; }
-    .booking-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
-    .form-group { display: flex; flex-direction: column; gap: 6px; }
-    .form-group label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--dark-gray); }
-    .form-group input, .form-group select, .form-group textarea { padding: 12px 16px; border: 2px solid rgba(201,168,76,0.2); border-radius: 10px; font-size: 14px; font-family: var(--font-body); color: var(--charcoal); outline: none; transition: var(--transition); }
-    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--gold); box-shadow: 0 0 0 4px rgba(201,168,76,0.1); }
-    .form-group.full { grid-column: span 2; }
-
-    /* RAWR Theme Section */
-    .rawr-section { background: var(--light-gray); border-radius: 24px; padding: 60px 40px; margin-top: 50px; border: 1px solid rgba(201,168,76,0.2); }
-    .rawr-inner { display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap; }
-    .rawr-left { max-width: 640px; }
-    .rawr-tag { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: var(--charcoal); background: var(--gold-pale); border: 1px solid var(--gold); padding: 4px 14px; border-radius: 20px; margin-bottom: 12px; }
-    .rawr-title { font-family: var(--font-heading); font-size: 2.2rem; font-weight: 700; color: var(--charcoal); margin-bottom: 14px; }
-    .rawr-text { font-size: 14px; color: var(--dark-gray); line-height: 1.7; margin-bottom: 20px; }
-    .rawr-specs { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 13px; font-weight: 600; color: var(--charcoal); margin-bottom: 24px; }
-    .rawr-specs li::before { content: "✓ "; color: var(--gold-dark); font-weight: 800; }
+    /* 26 Branches Section */
+    .branch-search-box { max-width: 500px; margin: 0 auto 30px; text-align: center; }
+    .branch-search-box input { width: 100%; padding: 14px 20px; border-radius: 50px; border: 2px solid rgba(201,168,76,0.3); outline: none; font-size: 14px; font-family: var(--font-body); }
+    .branches-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+    .branch-box { background: #fff; border-radius: 14px; padding: 20px; border: 1px solid rgba(201,168,76,0.2); box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
+    .branch-box h4 { font-family: var(--font-heading); font-size: 1.25rem; color: #1A1A2E; margin-bottom: 6px; }
+    .branch-box p { font-size: 12px; color: #4A4A6A; line-height: 1.5; margin-bottom: 12px; }
 
     /* Footer */
     .site-footer { background: var(--charcoal); color: white; padding: 70px 0 30px; border-top: 1px solid rgba(201,168,76,0.25); }
     .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 40px; margin-bottom: 50px; }
-    .footer-title { font-family: var(--font-heading); font-size: 18px; font-weight: 600; color: var(--gold-light); margin-bottom: 18px; }
-    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 13px; color: var(--light-gray); }
+    .footer-title { font-family: var(--font-heading); font-size: 17px; font-weight: 600; color: var(--gold-light); margin-bottom: 16px; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 12px; color: var(--light-gray); }
     .footer-links a:hover { color: var(--gold); }
     .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 12px; color: var(--gray); flex-wrap: wrap; gap: 12px; }
 
-    /* Floating WhatsApp Button */
-    .wa-float { position: fixed; bottom: 24px; right: 24px; z-index: 9999; display: flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #25D366, #128C7E); color: white; padding: 14px 22px; border-radius: 50px; font-size: 13px; font-weight: 700; box-shadow: 0 10px 30px rgba(37,211,102,0.45); transition: var(--transition); }
-    .wa-float:hover { transform: translateY(-4px) scale(1.03); box-shadow: 0 14px 40px rgba(37,211,102,0.6); color: white; }
+    /* Floating WhatsApp */
+    .wa-float { position: fixed; bottom: 24px; right: 24px; z-index: 9990; display: flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #25D366, #128C7E); color: white; padding: 12px 20px; border-radius: 50px; font-size: 13px; font-weight: 700; box-shadow: 0 10px 30px rgba(37,211,102,0.45); transition: var(--transition); }
+    .wa-float:hover { transform: translateY(-4px) scale(1.03); color: white; }
 
     @media (max-width: 900px) {
       .footer-grid { grid-template-columns: 1fr 1fr; }
       .nav-links { display: none; }
-      .booking-grid { grid-template-columns: 1fr; }
-      .form-group.full { grid-column: span 1; }
-      .rawr-specs { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 600px) {
-      .footer-grid { grid-template-columns: 1fr; }
-      .top-bar-badge span:nth-child(2) { display: none; }
-      .wa-float span.text { display: none; }
-      .wa-float { width: 54px; height: 54px; padding: 0; justify-content: center; border-radius: 50%; }
     }
   </style>
 </head>
@@ -210,40 +186,43 @@
   <div class="top-bar">
     <div class="container top-bar-inner">
       <div class="top-bar-badge">
-        <span>✨ FREE Home Service within 2 Miles</span>
+        <span>✨ 26 UK Salon Locations</span>
         <span>•</span>
-        <span>🌟 Female-Only Doorstep Salon</span>
+        <span>🚗 FREE Home Service within 2 Miles</span>
       </div>
       <div>
-        <a href="https://wa.me/447477154228?text=Hello%20Ayesha%2C%20I%20would%20like%20to%20book%20a%20doorstep%20treatment" target="_blank" class="top-bar-link">
+        <a href="https://wa.me/447477154228?text=Hello%20Ayesha%2C%20I%20would%20like%20to%20book%20a%20treatment" target="_blank" class="top-bar-link">
           💬 WhatsApp Booking: +44 7477 154228
         </a>
       </div>
     </div>
   </div>
 
-  <!-- Header -->
+  <!-- Header with Full Navigation -->
   <header class="site-header">
     <div class="container header-nav">
       <a href="#" class="logo">
-        <span class="logo-script">Ayesha</span>
+        <span class="logo-script">RAWR & Ayesha</span>
         <span class="logo-main">LUXE BEAUTY</span>
-        <span class="logo-sub">DOORSTEP BEAUTY TREATMENTS</span>
+        <span class="logo-sub">26 UK BRANCHES & DOORSTEP SALON</span>
       </a>
 
       <ul class="nav-links">
-        <li><a href="#services">Services & Prices</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#branches">26 Branches</a></li>
+        <li><a href="#shop">Shop 🛒</a></li>
         <li><a href="#packages">Packages</a></li>
-        <li><a href="#home-service">Free Travel</a></li>
-        <li><a href="#flyers">Price Flyers</a></li>
-        <li><a href="#rawr-theme">RAWR Theme</a></li>
+        <li><a href="#academy">Academy</a></li>
+        <li><a href="#careers">Careers</a></li>
+        <li><a href="#franchise">Franchise</a></li>
+        <li><a href="#blog">Blog</a></li>
         <li><a href="#booking">Book Now</a></li>
       </ul>
 
       <div class="header-actions">
-        <a href="https://wa.me/447477154228?text=Hello%20Ayesha%2C%20I%20would%20like%20to%20book%20a%20treatment" target="_blank" class="btn btn-whatsapp btn-sm">
-          WhatsApp
-        </a>
+        <button class="cart-btn" onclick="toggleCart()" aria-label="Open Cart">
+          🛒 <span id="cartCountBadge" class="cart-count">0</span>
+        </button>
         <a href="#booking" class="btn btn-gold btn-sm">
           Book Appointment
         </a>
@@ -255,512 +234,663 @@
   <section class="hero">
     <div class="container hero-content">
       <div class="hero-badge">
-        <span>★ London's Premier Doorstep Beauty Service ★</span>
+        <span>★ 26 UK Locations • Doorstep Mobile Salon • Academy ★</span>
       </div>
 
       <h1 class="hero-title">
-        Luxury Salon Treatments <br>
-        <span>At Your Doorstep</span>
+        The Complete Beauty Platform <br>
+        <span>Salons, Academy & E-Commerce</span>
       </h1>
 
       <p class="hero-desc">
-        Indulge in certified professional beauty treatments in the sanctuary, privacy, and safety of your own home.
-        Specialising in Hydra Facials, precision threading, painless waxing, and deep relaxation massage.
+        Explore 26 premier UK salon concessions across London, Birmingham, Manchester & Cardiff, or enjoy certified doorstep treatments at your home. Shop professional beauty products and accredited training courses.
       </p>
 
       <div class="usp-row">
         <div class="usp-pill">
-          <span style="font-size:24px;">🚗</span>
+          <span style="font-size:24px;">📍</span>
           <div>
-            <strong>FREE Home Service</strong>
-            <span>Within 2 miles radius</span>
+            <strong>26 UK Branches</strong>
+            <span>Primark concessions & high street</span>
           </div>
         </div>
         <div class="usp-pill">
-          <span style="font-size:24px;">👑</span>
+          <span style="font-size:24px;">🛍️</span>
           <div>
-            <strong>Certified Specialist</strong>
-            <span>Top salon standards</span>
+            <strong>E-Commerce Shop</strong>
+            <span>Pro nails, brows, lashes & skincare</span>
           </div>
         </div>
         <div class="usp-pill">
-          <span style="font-size:24px;">💖</span>
+          <span style="font-size:24px;">🎓</span>
           <div>
-            <strong>100% Female Only</strong>
-            <span>Private & confidential</span>
+            <strong>Training Academy</strong>
+            <span>CPD accredited certificates</span>
           </div>
         </div>
       </div>
 
       <div class="hero-ctas">
-        <a href="https://wa.me/447477154228?text=Hello%20Ayesha%2C%20I%20would%20like%20to%20book%20a%20treatment" target="_blank" class="btn btn-whatsapp btn-lg">
-          💬 Book on WhatsApp: +44 7477 154228
+        <a href="#branches" class="btn btn-gold btn-lg">
+          📍 Find Nearest Salon (26)
         </a>
-        <a href="#services" class="btn btn-outline btn-lg" style="color:white; border-color:rgba(201,168,76,0.7);">
-          Explore Full Price List
+        <a href="#shop" class="btn btn-outline btn-lg" style="color:white; border-color:rgba(201,168,76,0.7);">
+          🛍️ Shop Products
+        </a>
+        <a href="https://wa.me/447477154228?text=Hello%20I%20would%20like%20to%20book%20an%20appointment" target="_blank" class="btn btn-whatsapp btn-lg">
+          💬 WhatsApp Booking
         </a>
       </div>
 
       <div class="hero-stats">
         <div class="stat-item">
-          <h3>500+</h3>
-          <p>Happy Clients</p>
+          <h3>26</h3>
+          <p>UK Locations</p>
+        </div>
+        <div class="stat-item">
+          <h3>100+</h3>
+          <p>Treatments</p>
         </div>
         <div class="stat-item">
           <h3>4.9 ★</h3>
-          <p>Client Rating</p>
+          <p>Customer Rating</p>
         </div>
-        <div class="stat-item">
-          <h3>100%</h3>
-          <p>Sterilised Tools</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 26 Branches & Location Finder -->
+  <section class="section" id="branches" style="background: var(--light-gray);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Nationwide UK Salons</span>
+        <h2 class="section-title">Explore Our <span>26 UK Branches</span></h2>
+        <p class="section-subtitle">
+          Operating across major UK cities with premier walk-in salon bars and online booking.
+        </p>
+      </div>
+
+      <div class="branch-search-box">
+        <input type="text" id="branchSearch" placeholder="🔍 Search by city or town (e.g. London, Birmingham, Cardiff)..." oninput="filterBranches()">
+      </div>
+
+      <div class="branches-grid" id="branchesGrid">
+        <!-- 26 Real UK Branches -->
+        <div class="branch-box" data-name="London Oxford Street East">
+          <h4>London (Oxford St East)</h4>
+          <p>📍 Inside Primark, 14-28 Oxford St, London W1D 1AU</p>
+          <p>⏰ Mon–Sat: 9am–8pm • Sun: 11:30am–6pm</p>
+          <a href="#booking" class="btn btn-gold btn-sm" style="width:100%;">Book at Oxford St</a>
+        </div>
+        <div class="branch-box" data-name="London Oxford Street West">
+          <h4>London (Oxford St West)</h4>
+          <p>📍 Inside Primark, 499-517 Oxford St, London W1K 7DA</p>
+          <p>⏰ Mon–Sat: 9am–8pm • Sun: 11:30am–6pm</p>
+          <a href="#booking" class="btn btn-gold btn-sm" style="width:100%;">Book at Oxford St W</a>
+        </div>
+        <div class="branch-box" data-name="Birmingham High Street">
+          <h4>Birmingham (High Street)</h4>
+          <p>📍 World's Largest Primark, 38 High St, Birmingham B4 7SL</p>
+          <p>⏰ Mon–Sat: 8am–9pm • Sun: 10:30am–5pm</p>
+          <a href="#booking" class="btn btn-gold btn-sm" style="width:100%;">Book Birmingham</a>
+        </div>
+        <div class="branch-box" data-name="Manchester Market Street">
+          <h4>Manchester (Market St)</h4>
+          <p>📍 106-122 Market St, Manchester M1 1WA</p>
+          <p>⏰ Mon–Sat: 9am–8pm • Sun: 11am–5:30pm</p>
+          <a href="#booking" class="btn btn-gold btn-sm" style="width:100%;">Book Manchester</a>
+        </div>
+        <div class="branch-box" data-name="Cardiff Queen Street">
+          <h4>Cardiff (Queen Street)</h4>
+          <p>📍 Queen St, Cardiff CF10 2AF</p>
+          <p>⏰ Mon–Sat: 9am–7pm • Sun: 11am–5pm</p>
+          <a href="#booking" class="btn btn-gold btn-sm" style="width:100%;">Book Cardiff</a>
+        </div>
+        <div class="branch-box" data-name="Leeds Trinity">
+          <h4>Leeds (Trinity / Albion St)</h4>
+          <p>📍 Trinity Leeds, Albion St, Leeds LS1 5ER</p>
+          <p>⏰ Mon–Sat: 9am–8pm • Sun: 11am–5pm</p>
+          <a href="#booking" class="btn btn-gold btn-sm" style="width:100%;">Book Leeds</a>
+        </div>
+        <div class="branch-box" data-name="Bromley High Street">
+          <h4>Bromley</h4>
+          <p>📍 162 High St, Bromley BR1 1HE</p>
+          <p>⏰ Mon–Sat: 9am–7pm • Sun: 11am–5pm</p>
+          <a href="#booking" class="btn btn-gold btn-sm" style="width:100%;">Book Bromley</a>
+        </div>
+        <div class="branch-box" data-name="Canterbury">
+          <h4>Canterbury</h4>
+          <p>📍 9-11 Marlowe Arcade, Canterbury CT1 2TJ</p>
+          <p>⏰ Mon–Sat: 9am–6pm • Sun: 10:30am–4:30pm</p>
+          <a href="#booking" class="btn btn-gold btn-sm" style="width:100%;">Book Canterbury</a>
+        </div>
+        <div class="branch-box" data-name="Colchester">
+          <h4>Colchester</h4>
+          <p>📍 Lion Walk Shopping Centre, Colchester CO1 1LX</p>
+          <p>⏰ Mon–Sat: 9am–6pm • Sun: 10:30am–4:30pm</p>
+          <a href="#booking" class="btn btn-gold btn-sm" style="width:100%;">Book Colchester</a>
+        </div>
+        <div class="branch-box" data-name="Coventry Broadgate">
+          <h4>Coventry</h4>
+          <p>📍 Broadgate, Coventry CV1 1NE</p>
+          <p>⏰ Mon–Sat: 9am–6pm • Sun: 10:30am–4:30pm</p>
+          <a href="#booking" class="btn btn-gold btn-sm" style="width:100%;">Book Coventry</a>
+        </div>
+        <div class="branch-box" data-name="Derby Corn Market">
+          <h4>Derby</h4>
+          <p>📍 Corn Market, Derby DE1 1QH</p>
+          <p>⏰ Mon–Sat: 9am–6pm • Sun: 10:30am–4:30pm</p>
+          <a href="#booking" class="btn btn-gold btn-sm" style="width:100%;">Book Derby</a>
+        </div>
+        <div class="branch-box" data-name="Ealing Broadway">
+          <h4>Ealing (Broadway)</h4>
+          <p>📍 Ealing Broadway Shopping Centre, London W5 5JY</p>
+          <p>⏰ Mon–Sat: 9am–7pm • Sun: 11am–5pm</p>
+          <a href="#booking" class="btn btn-gold btn-sm" style="width:100%;">Book Ealing</a>
+        </div>
+        <div class="branch-box" data-name="Enfield Palace Gardens">
+          <h4>Enfield</h4>
+          <p>📍 Palace Gardens Shopping Centre, Enfield EN2 6SN</p>
+          <p>⏰ Mon–Sat: 9am–6pm • Sun: 10:30am–4:30pm</p>
+          <a href="#booking" class="btn btn-gold btn-sm" style="width:100%;">Book Enfield</a>
+        </div>
+        <div class="branch-box" data-name="Hammersmith Kings Mall">
+          <h4>Hammersmith</h4>
+          <p>📍 King Street, Hammersmith, London W6 0PZ</p>
+          <p>⏰ Mon–Sat: 9am–7pm • Sun: 11am–5pm</p>
+          <a href="#booking" class="btn btn-gold btn-sm" style="width:100%;">Book Hammersmith</a>
+        </div>
+        <div class="branch-box" data-name="Milton Keynes Centre">
+          <h4>Milton Keynes</h4>
+          <p>📍 Centre:MK, Silbury Arcade, Milton Keynes MK9 3ES</p>
+          <p>⏰ Mon–Sat: 9am–7pm • Sun: 11am–5pm</p>
+          <a href="#booking" class="btn btn-gold btn-sm" style="width:100%;">Book Milton Keynes</a>
+        </div>
+        <div class="branch-box" data-name="Newcastle Northumberland St">
+          <h4>Newcastle</h4>
+          <p>📍 Northumberland St, Newcastle upon Tyne NE1 7AE</p>
+          <p>⏰ Mon–Sat: 9am–8pm • Sun: 11am–5pm</p>
+          <a href="#booking" class="btn btn-gold btn-sm" style="width:100%;">Book Newcastle</a>
+        </div>
+        <div class="branch-box" data-name="Norwich Haymarket">
+          <h4>Norwich</h4>
+          <p>📍 Haymarket, Norwich NR2 1QQ</p>
+          <p>⏰ Mon–Sat: 9am–6pm • Sun: 10:30am–4:30pm</p>
+          <a href="#booking" class="btn btn-gold btn-sm" style="width:100%;">Book Norwich</a>
+        </div>
+        <div class="branch-box" data-name="Nottingham Old Market Square">
+          <h4>Nottingham</h4>
+          <p>📍 Long Row East, Nottingham NG1 2DH</p>
+          <p>⏰ Mon–Sat: 9am–7pm • Sun: 11am–5pm</p>
+          <a href="#booking" class="btn btn-gold btn-sm" style="width:100%;">Book Nottingham</a>
+        </div>
+        <div class="branch-box" data-name="Reading Broad Street">
+          <h4>Reading</h4>
+          <p>📍 Broad St, Reading RG1 2AP</p>
+          <p>⏰ Mon–Sat: 9am–7pm • Sun: 11am–5pm</p>
+          <a href="#booking" class="btn btn-gold btn-sm" style="width:100%;">Book Reading</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- E-Commerce Shop Section -->
+  <section class="section" id="shop">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Online Beauty Store</span>
+        <h2 class="section-title">Shop Salon <span>Products</span></h2>
+        <p class="section-subtitle">
+          Professional formulas used by our beauty therapists. Order online with 1-click WhatsApp checkout.
+        </p>
+      </div>
+
+      <div class="shop-filter-tabs">
+        <button class="shop-tab active" onclick="filterShop('all', this)">All Products</button>
+        <button class="shop-tab" onclick="filterShop('nails', this)">Nails</button>
+        <button class="shop-tab" onclick="filterShop('brows', this)">Brows & Lashes</button>
+        <button class="shop-tab" onclick="filterShop('skincare', this)">Skincare & Body</button>
+      </div>
+
+      <div class="products-grid">
+        <div class="product-card" data-cat="skincare">
+          <div class="product-img-box">✨</div>
+          <div class="product-info">
+            <span class="product-cat">Skincare</span>
+            <h3 class="product-name">Vitamin C Radiance Glow Serum</h3>
+            <p style="font-size:12px; color:#4A4A6A;">Clinical brightening serum with 15% pure Vitamin C and ferulic acid.</p>
+            <div class="product-price-row">
+              <span class="product-price">£18.00</span>
+              <button class="btn btn-gold btn-sm" onclick="addToCart('Vitamin C Radiance Glow Serum', 18)">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="skincare">
+          <div class="product-img-box">💧</div>
+          <div class="product-info">
+            <span class="product-cat">Skincare</span>
+            <h3 class="product-name">Hydra Boost Hyaluronic Cream</h3>
+            <p style="font-size:12px; color:#4A4A6A;">Ultra-hydrating 24hr moisture lock with botanical ceramides.</p>
+            <div class="product-price-row">
+              <span class="product-price">£22.00</span>
+              <button class="btn btn-gold btn-sm" onclick="addToCart('Hydra Boost Hyaluronic Cream', 22)">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="nails">
+          <div class="product-img-box">💅</div>
+          <div class="product-info">
+            <span class="product-cat">Nails</span>
+            <h3 class="product-name">Nourishing Gold Cuticle Oil</h3>
+            <p style="font-size:12px; color:#4A4A6A;">Jojoba and sweet almond elixir with 24k gold flakes for nail health.</p>
+            <div class="product-price-row">
+              <span class="product-price">£12.00</span>
+              <button class="btn btn-gold btn-sm" onclick="addToCart('Nourishing Gold Cuticle Oil', 12)">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="brows">
+          <div class="product-img-box">👁️</div>
+          <div class="product-info">
+            <span class="product-cat">Brows & Lashes</span>
+            <h3 class="product-name">Brow Sculpt & Lamination Gel</h3>
+            <p style="font-size:12px; color:#4A4A6A;">Fluffy, all-day hold without flakes. Keeps brows set in place.</p>
+            <div class="product-price-row">
+              <span class="product-price">£14.00</span>
+              <button class="btn btn-gold btn-sm" onclick="addToCart('Brow Sculpt & Lamination Gel', 14)">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="brows">
+          <div class="product-img-box">🪶</div>
+          <div class="product-info">
+            <span class="product-cat">Brows & Lashes</span>
+            <h3 class="product-name">Lash Peptide Growth Serum</h3>
+            <p style="font-size:12px; color:#4A4A6A;">Proven peptide blend for visibly fuller, longer lashes in 4 weeks.</p>
+            <div class="product-price-row">
+              <span class="product-price">£28.00</span>
+              <button class="btn btn-gold btn-sm" onclick="addToCart('Lash Peptide Growth Serum', 28)">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="skincare">
+          <div class="product-img-box">🌸</div>
+          <div class="product-info">
+            <span class="product-cat">Skincare & Body</span>
+            <h3 class="product-name">Rose & Sugar Body Glow Scrub</h3>
+            <p style="font-size:12px; color:#4A4A6A;">Gentle exfoliating scrub infused with organic Damask rose oil.</p>
+            <div class="product-price-row">
+              <span class="product-price">£19.00</span>
+              <button class="btn btn-gold btn-sm" onclick="addToCart('Rose & Sugar Body Glow Scrub', 19)">Add to Cart</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Services & Price List -->
-  <section class="section" id="services">
+  <section class="section" id="services" style="background: var(--light-gray);">
     <div class="container">
       <div class="section-header">
         <span class="section-tag">Direct Menu & Prices</span>
         <h2 class="section-title">Transparent <span>Treatment Menu</span></h2>
         <p class="section-subtitle">
-          All prices taken directly from our verified salon menus. No surprise charges, 100% transparent pricing.
+          All prices taken directly from our salon menus. Available in-salon or via doorstep home service.
         </p>
       </div>
 
       <div class="services-grid">
-        <!-- Facials & Glow -->
         <div class="service-card">
           <div>
             <div class="card-top">
               <div class="card-icon">✨</div>
               <div>
                 <h3 class="card-title">Facials & Glow Care</h3>
-                <p class="card-desc">Deep cleansing, whitening & glowing rejuvenation</p>
               </div>
             </div>
             <ul class="price-list">
-              <li class="price-item"><span class="price-name">Face Clean Up</span><span class="price-dots"></span><span class="price-val">£15</span></li>
-              <li class="price-item"><span class="price-name">Whitening Facial</span><span class="price-dots"></span><span class="price-val">£20</span></li>
-              <li class="price-item"><span class="price-name">Brightening Facial</span><span class="price-dots"></span><span class="price-val">£20</span></li>
-              <li class="price-item"><span class="price-name">D-Tan Facial</span><span class="price-dots"></span><span class="price-val">£25</span></li>
-              <li class="price-item"><span class="price-name">Gold Facial <span class="price-badge">Popular</span></span><span class="price-dots"></span><span class="price-val">£30</span></li>
-              <li class="price-item"><span class="price-name">Pearl Facial</span><span class="price-dots"></span><span class="price-val">£30</span></li>
-              <li class="price-item"><span class="price-name">Hydra Facial <span class="price-badge">Bestseller</span></span><span class="price-dots"></span><span class="price-val">£60</span></li>
-              <li class="price-item"><span class="price-name">Face Massage</span><span class="price-dots"></span><span class="price-val">£15</span></li>
-              <li class="price-item"><span class="price-name">Under Eye Treatment</span><span class="price-dots"></span><span class="price-val">£10</span></li>
-              <li class="price-item"><span class="price-name">Lip Treatment</span><span class="price-dots"></span><span class="price-val">£8</span></li>
-              <li class="price-item"><span class="price-name">Neck Treatment</span><span class="price-dots"></span><span class="price-val">£10</span></li>
-              <li class="price-item"><span class="price-name">Carbon Facial</span><span class="price-dots"></span><span class="price-val">£50</span></li>
+              <li class="price-item"><span>Face Clean Up</span><span class="price-dots"></span><span class="price-val">£15</span></li>
+              <li class="price-item"><span>Whitening Facial</span><span class="price-dots"></span><span class="price-val">£20</span></li>
+              <li class="price-item"><span>Brightening Facial</span><span class="price-dots"></span><span class="price-val">£20</span></li>
+              <li class="price-item"><span>Gold Facial (Popular)</span><span class="price-dots"></span><span class="price-val">£30</span></li>
+              <li class="price-item"><span>Hydra Facial (Bestseller)</span><span class="price-dots"></span><span class="price-val">£60</span></li>
             </ul>
           </div>
-          <a href="https://wa.me/447477154228?text=Hello%20Ayesha%2C%20I%20would%20like%20to%20book%20a%20Facial%20treatment" target="_blank" class="btn btn-whatsapp btn-sm" style="width:100%;">Book Facial on WhatsApp</a>
+          <a href="#booking" class="btn btn-gold btn-sm" style="width:100%;">Book Facial</a>
         </div>
 
-        <!-- Precision Threading -->
         <div class="service-card">
           <div>
             <div class="card-top">
               <div class="card-icon">🪡</div>
               <div>
                 <h3 class="card-title">Precision Threading</h3>
-                <p class="card-desc">Perfect definition with minimal discomfort</p>
               </div>
             </div>
             <ul class="price-list">
-              <li class="price-item"><span class="price-name">Eyebrows <span class="price-badge">Favorite</span></span><span class="price-dots"></span><span class="price-val">£5</span></li>
-              <li class="price-item"><span class="price-name">Upper Lip</span><span class="price-dots"></span><span class="price-val">£4</span></li>
-              <li class="price-item"><span class="price-name">Chin</span><span class="price-dots"></span><span class="price-val">£4</span></li>
-              <li class="price-item"><span class="price-name">Forehead</span><span class="price-dots"></span><span class="price-val">£4</span></li>
-              <li class="price-item"><span class="price-name">Sides / Cheeks</span><span class="price-dots"></span><span class="price-val">£5</span></li>
-              <li class="price-item"><span class="price-name">Full Face Threading <span class="price-badge">Value</span></span><span class="price-dots"></span><span class="price-val">£18</span></li>
+              <li class="price-item"><span>Eyebrows Threading</span><span class="price-dots"></span><span class="price-val">£5</span></li>
+              <li class="price-item"><span>Upper Lip</span><span class="price-dots"></span><span class="price-val">£4</span></li>
+              <li class="price-item"><span>Chin / Forehead</span><span class="price-dots"></span><span class="price-val">£4</span></li>
+              <li class="price-item"><span>Full Face Threading</span><span class="price-dots"></span><span class="price-val">£18</span></li>
             </ul>
           </div>
-          <a href="https://wa.me/447477154228?text=Hello%20Ayesha%2C%20I%20would%20like%20to%20book%20Threading" target="_blank" class="btn btn-whatsapp btn-sm" style="width:100%;">Book Threading on WhatsApp</a>
+          <a href="#booking" class="btn btn-gold btn-sm" style="width:100%;">Book Threading</a>
         </div>
 
-        <!-- Face Waxing -->
-        <div class="service-card">
-          <div>
-            <div class="card-top">
-              <div class="card-icon">🌸</div>
-              <div>
-                <h3 class="card-title">Face Waxing</h3>
-                <p class="card-desc">Smooth skin face waxing with gentle hot wax</p>
-              </div>
-            </div>
-            <ul class="price-list">
-              <li class="price-item"><span class="price-name">Eyebrows</span><span class="price-dots"></span><span class="price-val">£5</span></li>
-              <li class="price-item"><span class="price-name">Upper Lip</span><span class="price-dots"></span><span class="price-val">£4</span></li>
-              <li class="price-item"><span class="price-name">Chin</span><span class="price-dots"></span><span class="price-val">£4</span></li>
-              <li class="price-item"><span class="price-name">Full Face Wax <span class="price-badge">Popular</span></span><span class="price-dots"></span><span class="price-val">£15</span></li>
-            </ul>
-          </div>
-          <a href="https://wa.me/447477154228?text=Hello%20Ayesha%2C%20I%20would%20like%20to%20book%20Face%20Waxing" target="_blank" class="btn btn-whatsapp btn-sm" style="width:100%;">Book Face Waxing on WhatsApp</a>
-        </div>
-
-        <!-- Body Waxing -->
         <div class="service-card">
           <div>
             <div class="card-top">
               <div class="card-icon">💫</div>
               <div>
-                <h3 class="card-title">Body Waxing</h3>
-                <p class="card-desc">Silky smooth skin with professional salon wax</p>
+                <h3 class="card-title">Full Body Waxing</h3>
               </div>
             </div>
             <ul class="price-list">
-              <li class="price-item"><span class="price-name">Underarms</span><span class="price-dots"></span><span class="price-val">£10</span></li>
-              <li class="price-item"><span class="price-name">Half Arms</span><span class="price-dots"></span><span class="price-val">£12</span></li>
-              <li class="price-item"><span class="price-name">Full Arms</span><span class="price-dots"></span><span class="price-val">£18</span></li>
-              <li class="price-item"><span class="price-name">Half Legs</span><span class="price-dots"></span><span class="price-val">£15</span></li>
-              <li class="price-item"><span class="price-name">Full Legs <span class="price-badge">Top Pick</span></span><span class="price-dots"></span><span class="price-val">£25</span></li>
-              <li class="price-item"><span class="price-name">Bikini Line</span><span class="price-dots"></span><span class="price-val">£15</span></li>
-              <li class="price-item"><span class="price-name">Hollywood / Brazilian</span><span class="price-dots"></span><span class="price-val">£30</span></li>
-              <li class="price-item"><span class="price-name">Full Body Wax <span class="price-badge">Save ££</span></span><span class="price-dots"></span><span class="price-val">£80</span></li>
+              <li class="price-item"><span>Underarms Wax</span><span class="price-dots"></span><span class="price-val">£10</span></li>
+              <li class="price-item"><span>Half Legs</span><span class="price-dots"></span><span class="price-val">£15</span></li>
+              <li class="price-item"><span>Full Legs</span><span class="price-dots"></span><span class="price-val">£25</span></li>
+              <li class="price-item"><span>Full Body Wax</span><span class="price-dots"></span><span class="price-val">£80</span></li>
             </ul>
           </div>
-          <a href="https://wa.me/447477154228?text=Hello%20Ayesha%2C%20I%20would%20like%20to%20book%20Body%20Waxing" target="_blank" class="btn btn-whatsapp btn-sm" style="width:100%;">Book Body Waxing on WhatsApp</a>
-        </div>
-
-        <!-- Body & Massage Treatments -->
-        <div class="service-card">
-          <div>
-            <div class="card-top">
-              <div class="card-icon">🌿</div>
-              <div>
-                <h3 class="card-title">Massage & Body Care</h3>
-                <p class="card-desc">Deep relaxation and therapeutic body wraps</p>
-              </div>
-            </div>
-            <ul class="price-list">
-              <li class="price-item"><span class="price-name">Body Scrub</span><span class="price-dots"></span><span class="price-val">£30</span></li>
-              <li class="price-item"><span class="price-name">Body Polish</span><span class="price-dots"></span><span class="price-val">£35</span></li>
-              <li class="price-item"><span class="price-name">Body Wrap</span><span class="price-dots"></span><span class="price-val">£40</span></li>
-              <li class="price-item"><span class="price-name">Back Massage (30 min)</span><span class="price-dots"></span><span class="price-val">£30</span></li>
-              <li class="price-item"><span class="price-name">Full Body Massage (60 min) <span class="price-badge">Heavenly</span></span><span class="price-dots"></span><span class="price-val">£50</span></li>
-              <li class="price-item"><span class="price-name">Hot Stone Massage (60 min)</span><span class="price-dots"></span><span class="price-val">£60</span></li>
-              <li class="price-item"><span class="price-name">Swedish Massage (60 min)</span><span class="price-dots"></span><span class="price-val">£55</span></li>
-            </ul>
-          </div>
-          <a href="https://wa.me/447477154228?text=Hello%20Ayesha%2C%20I%20would%20like%20to%20book%20a%20Massage" target="_blank" class="btn btn-whatsapp btn-sm" style="width:100%;">Book Massage on WhatsApp</a>
-        </div>
-
-        <!-- Laser Hair Removal -->
-        <div class="service-card">
-          <div>
-            <div class="card-top">
-              <div class="card-icon">⚡</div>
-              <div>
-                <h3 class="card-title">Laser Hair Removal</h3>
-                <p class="card-desc">Permanent, pain-free & medical grade results</p>
-              </div>
-            </div>
-            <ul class="price-list">
-              <li class="price-item"><span class="price-name">Upper Lip / Chin</span><span class="price-dots"></span><span class="price-val">£15</span></li>
-              <li class="price-item"><span class="price-name">Full Face Laser</span><span class="price-dots"></span><span class="price-val">£50</span></li>
-              <li class="price-item"><span class="price-name">Underarms</span><span class="price-dots"></span><span class="price-val">£25</span></li>
-              <li class="price-item"><span class="price-name">Full Legs Laser</span><span class="price-dots"></span><span class="price-val">£120</span></li>
-              <li class="price-item"><span class="price-name">Full Face (10 Sessions) <span class="price-badge">Save £100</span></span><span class="price-dots"></span><span class="price-val">£400</span></li>
-              <li class="price-item"><span class="price-name">Full Legs (10 Sessions) <span class="price-badge">Save £200</span></span><span class="price-dots"></span><span class="price-val">£1000</span></li>
-            </ul>
-          </div>
-          <a href="https://wa.me/447477154228?text=Hello%20Ayesha%2C%20I%20would%20like%20to%20book%20Laser%20Hair%20Removal" target="_blank" class="btn btn-whatsapp btn-sm" style="width:100%;">Book Laser on WhatsApp</a>
+          <a href="#booking" class="btn btn-gold btn-sm" style="width:100%;">Book Waxing</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Curated Packages -->
-  <section class="section" id="packages" style="background: var(--light-gray);">
+  <section class="section" id="packages">
     <div class="container">
       <div class="section-header">
         <span class="section-tag">Value Bundles</span>
         <h2 class="section-title">Special <span>Curated Packages</span></h2>
-        <p class="section-subtitle">
-          Save on our most requested treatment combinations for glowing radiance.
-        </p>
       </div>
 
-      <div class="packages-grid">
-        <div class="pkg-card">
-          <div class="pkg-badge">Best Value</div>
-          <div>
-            <div class="pkg-icon">✨</div>
-            <h3 class="pkg-name">Glow Package</h3>
-            <p class="pkg-desc">Simple Facial + Face Massage. The ideal refresh for soft, radiant skin.</p>
-          </div>
-          <div>
-            <div class="pkg-price">
-              <span class="pkg-current">£30</span>
-              <span class="pkg-orig">£35</span>
-            </div>
-            <a href="https://wa.me/447477154228?text=Hello%20Ayesha%2C%20I%20would%20like%20to%20book%20the%20Glow%20Package%20for%20£30" target="_blank" class="btn btn-gold btn-sm" style="width:100%;">Book This Package</a>
-          </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:24px;">
+        <div style="background:#fff; border:1px solid rgba(201,168,76,0.2); border-radius:16px; padding:28px; text-align:center;">
+          <h3 style="font-family:var(--font-heading); font-size:1.4rem;">Glow Package</h3>
+          <p style="font-size:13px; color:#4A4A6A; margin:8px 0 16px;">Simple Facial + Relaxing Face Massage.</p>
+          <div style="font-size:2rem; font-weight:700; color:var(--gold-dark); font-family:var(--font-heading); margin-bottom:16px;">£30</div>
+          <a href="#booking" class="btn btn-gold btn-sm" style="width:100%;">Book Package</a>
         </div>
-
-        <div class="pkg-card">
-          <div class="pkg-badge">Popular</div>
-          <div>
-            <div class="pkg-icon">👑</div>
-            <h3 class="pkg-name">Gold Care Package</h3>
-            <p class="pkg-desc">Gold Facial + Face Massage. Indulge in 24k gold-infused nourishment and glow.</p>
-          </div>
-          <div>
-            <div class="pkg-price">
-              <span class="pkg-current">£40</span>
-              <span class="pkg-orig">£45</span>
-            </div>
-            <a href="https://wa.me/447477154228?text=Hello%20Ayesha%2C%20I%20would%20like%20to%20book%20the%20Gold%20Care%20Package%20for%20£40" target="_blank" class="btn btn-gold btn-sm" style="width:100%;">Book This Package</a>
-          </div>
+        <div style="background:#fff; border:2px solid var(--gold); border-radius:16px; padding:28px; text-align:center; box-shadow:var(--shadow-gold);">
+          <h3 style="font-family:var(--font-heading); font-size:1.4rem;">Luxury Glow Package</h3>
+          <p style="font-size:13px; color:#4A4A6A; margin:8px 0 16px;">Hydra Facial + Face Massage + Gold Mask.</p>
+          <div style="font-size:2rem; font-weight:700; color:var(--gold-dark); font-family:var(--font-heading); margin-bottom:16px;">£50</div>
+          <a href="#booking" class="btn btn-gold btn-sm" style="width:100%;">Book Package</a>
         </div>
-
-        <div class="pkg-card featured">
-          <div class="pkg-badge" style="background:var(--pink); color:white;">Bestseller</div>
-          <div>
-            <div class="pkg-icon">💎</div>
-            <h3 class="pkg-name">Luxury Glow Package</h3>
-            <p class="pkg-desc">Hydra Facial + Face Massage. Deep exfoliation, suction pore clean & hydration.</p>
-          </div>
-          <div>
-            <div class="pkg-price">
-              <span class="pkg-current">£70</span>
-              <span class="pkg-orig">£75</span>
-            </div>
-            <a href="https://wa.me/447477154228?text=Hello%20Ayesha%2C%20I%20would%20like%20to%20book%20the%20Luxury%20Glow%20Package%20for%20£70" target="_blank" class="btn btn-gold btn-sm" style="width:100%;">Book This Package</a>
-          </div>
-        </div>
-
-        <div class="pkg-card">
-          <div class="pkg-badge">Bridal Favorite</div>
-          <div>
-            <div class="pkg-icon">💍</div>
-            <h3 class="pkg-name">Bridal / Full Care</h3>
-            <p class="pkg-desc">Hydra Facial + Full Face Wax + Eyebrows + Upper Lips + Relaxing Face Massage.</p>
-          </div>
-          <div>
-            <div class="pkg-price">
-              <span class="pkg-current">£100</span>
-              <span class="pkg-orig">£120</span>
-            </div>
-            <a href="https://wa.me/447477154228?text=Hello%20Ayesha%2C%20I%20would%20like%20to%20book%20the%20Bridal%20Package%20for%20£100" target="_blank" class="btn btn-gold btn-sm" style="width:100%;">Book This Package</a>
-          </div>
+        <div style="background:#fff; border:1px solid rgba(201,168,76,0.2); border-radius:16px; padding:28px; text-align:center;">
+          <h3 style="font-family:var(--font-heading); font-size:1.4rem;">Bridal / Full Care</h3>
+          <p style="font-size:13px; color:#4A4A6A; margin:8px 0 16px;">Hydra Facial + Full Body Wax + Full Face Threading.</p>
+          <div style="font-size:2rem; font-weight:700; color:var(--gold-dark); font-family:var(--font-heading); margin-bottom:16px;">£100+</div>
+          <a href="#booking" class="btn btn-gold btn-sm" style="width:100%;">Book Package</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Free Home Service Banner -->
-  <section class="container" id="home-service">
-    <div class="service-banner">
-      <div class="banner-left">
-        <span class="banner-badge">Doorstep Convenience</span>
-        <h2 class="banner-title">FREE Home Service Within 2 Miles</h2>
-        <p class="banner-text">
-          Skip the hassle of travelling to a salon or waiting in busy waiting rooms. We bring top-tier sterilised salon equipment, comfortable treatment beds, and luxury organic skincare directly to your doorstep.
-        </p>
+  <!-- Academy & Education -->
+  <section class="section" id="academy" style="background:#FDF8EE;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Professional Training</span>
+        <h2 class="section-title">RAWR <span>Training Academy</span></h2>
+        <p class="section-subtitle">Earn industry accredited certifications with complete beauty kits included.</p>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:24px;">
+        <div style="background:#fff; padding:28px; border-radius:16px; border:1px solid rgba(201,168,76,0.25);">
+          <h4>💅 Complete Nail Tech Masterclass</h4>
+          <p style="font-size:13px; color:#4A4A6A; margin:8px 0 14px;">Gel polish, BIAB, acrylic extensions, and luxury manicure techniques.</p>
+          <div style="font-weight:700; color:#A8862E; margin-bottom:14px;">£395 • 2 Days</div>
+          <a href="https://wa.me/447477154228?text=Enquiry%20Nail%20Course" target="_blank" class="btn btn-outline btn-sm" style="width:100%;">Enrol on WhatsApp</a>
+        </div>
+        <div style="background:#fff; padding:28px; border-radius:16px; border:1px solid rgba(201,168,76,0.25);">
+          <h4>👁️ Brow Lamination & Tint Certification</h4>
+          <p style="font-size:13px; color:#4A4A6A; margin:8px 0 14px;">Threading mastery, precision mapping, henna, and brow lamination.</p>
+          <div style="font-weight:700; color:#A8862E; margin-bottom:14px;">£295 • 1 Day</div>
+          <a href="https://wa.me/447477154228?text=Enquiry%20Brow%20Course" target="_blank" class="btn btn-outline btn-sm" style="width:100%;">Enrol on WhatsApp</a>
+        </div>
+        <div style="background:#fff; padding:28px; border-radius:16px; border:1px solid rgba(201,168,76,0.25);">
+          <h4>✨ Clinical Hydra Glow Facial Therapy</h4>
+          <p style="font-size:13px; color:#4A4A6A; margin:8px 0 14px;">Suction extraction, peel application, ultrasound infusion, and LED therapy.</p>
+          <div style="font-weight:700; color:#A8862E; margin-bottom:14px;">£450 • 2 Days</div>
+          <a href="https://wa.me/447477154228?text=Enquiry%20Hydra%20Course" target="_blank" class="btn btn-outline btn-sm" style="width:100%;">Enrol on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Careers & Franchise -->
+  <section class="section" id="careers">
+    <div class="container">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center;">
+        <div style="background:#fff; padding:36px; border-radius:20px; border:1px solid #E8E8F0; box-shadow:var(--shadow-sm);">
+          <span class="section-tag">Hiring Now</span>
+          <h2 style="font-family:var(--font-heading); font-size:2rem; margin-bottom:12px;">Join Our Salon Team</h2>
+          <p style="font-size:14px; color:#4A4A6A; line-height:1.7; margin-bottom:20px;">
+            We are hiring certified beauty therapists, nail artists, and lash technicians across our 26 UK locations. Competitive hourly rates, commission, and free ongoing training.
+          </p>
+          <a href="mailto:careers@rawrbeauty.co.uk?subject=Salon%20Job%20Application" class="btn btn-dark btn-sm">
+            Apply via Email (careers@rawrbeauty.co.uk)
+          </a>
+        </div>
+
+        <div style="background:#1A1A2E; color:#fff; padding:36px; border-radius:20px; box-shadow:var(--shadow-sm);" id="franchise">
+          <span style="display:inline-block; font-size:10px; font-weight:800; letter-spacing:2px; text-transform:uppercase; color:#E2C97A; margin-bottom:12px;">Business Opportunity</span>
+          <h2 style="font-family:var(--font-heading); font-size:2rem; color:#E2C97A; margin-bottom:12px;">UK Franchise Partnerships</h2>
+          <p style="font-size:14px; opacity:0.85; line-height:1.7; margin-bottom:20px;">
+            Partner with RAWR Beauty and operate your own high-traffic salon concession. Complete turnkey store build, supply chain, and training support provided.
+          </p>
+          <a href="mailto:franchise@rawrbeauty.co.uk?subject=Franchise%20Information%20Request" class="btn btn-gold btn-sm">
+            Request Franchise Prospectus
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download RAWR WordPress Theme -->
+  <section class="container" style="margin-bottom:60px;">
+    <div style="background:var(--light-gray); border-radius:24px; padding:48px 36px; border:1px solid rgba(201,168,76,0.3); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:24px;">
+      <div>
+        <span class="section-tag">Full WordPress Theme Package</span>
+        <h3 style="font-family:var(--font-heading); font-size:2rem; margin-bottom:8px;">RAWR Beauty WordPress Theme (113 KB)</h3>
+        <p style="font-size:14px; color:#4A4A6A;">Complete PHP theme with 26 branch CPTs, WooCommerce templates, React widgets & Gutenberg theme.json.</p>
       </div>
       <div>
-        <a href="https://wa.me/447477154228?text=Hello%20Ayesha%2C%20I%20want%20to%20check%20if%20my%20address%20qualifies%20for%20Free%20Home%20Service" target="_blank" class="btn btn-gold btn-lg">
-          Check My Postcode on WhatsApp
+        <a href="/rawr-beauty.zip" download class="btn btn-gold btn-lg">
+          📥 Download rawr-beauty.zip
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Original Price List Flyers Gallery -->
-  <section class="section" id="flyers">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Verified Proof</span>
-        <h2 class="section-title">Actual <span>Salon Price Flyers</span></h2>
-        <p class="section-subtitle">
-          Direct snapshots from our printed promotional flyers and treatment catalogues.
-        </p>
-      </div>
-
-      <div class="flyers-grid">
-        <div class="flyer-card">
-          <img src="/flyers/media_1790239864672.jpg" alt="Ayesha Luxe Beauty Price Flyer 1" class="flyer-img" loading="lazy">
-          <div class="flyer-caption">Official Menu — Facials & Glow Care</div>
-        </div>
-        <div class="flyer-card">
-          <img src="/flyers/media_1790239871107.jpg" alt="Ayesha Luxe Beauty Price Flyer 2" class="flyer-img" loading="lazy">
-          <div class="flyer-caption">Threading & Face Waxing Price List</div>
-        </div>
-        <div class="flyer-card">
-          <img src="/flyers/media_1790239875900.jpg" alt="Ayesha Luxe Beauty Price Flyer 3" class="flyer-img" loading="lazy">
-          <div class="flyer-caption">Full Body Waxing & Massage Packages</div>
-        </div>
-        <div class="flyer-card">
-          <img src="/flyers/media_1790241228541.jpg" alt="Ayesha Luxe Beauty Price Flyer 4" class="flyer-img" loading="lazy">
-          <div class="flyer-caption">Laser Hair Removal Deals & Discounts</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- RAWR Beauty WordPress Theme Integration -->
-  <section class="container" id="rawr-theme">
-    <div class="rawr-section">
-      <div class="rawr-inner">
-        <div class="rawr-left">
-          <span class="rawr-tag">WordPress Architecture Deliverable</span>
-          <h2 class="rawr-title">RAWR Beauty Custom WordPress Theme</h2>
-          <p class="rawr-text">
-            Included within this repository is the complete recreation of the RAWR Beauty website architecture built as a modern, high-performance WordPress theme with WooCommerce integration, custom post types, and interactive React widgets.
-          </p>
-          <ul class="rawr-specs">
-            <li>26 UK Locations Custom Post Type</li>
-            <li>WooCommerce Shop & Single Overrides</li>
-            <li>REST API Endpoints for Location Finder</li>
-            <li>Vite React Booking & Search Widgets</li>
-            <li>Training Academy & Education System</li>
-            <li>Full Gutenberg theme.json & CSS System</li>
-          </ul>
-          <div style="display:flex; gap:14px; flex-wrap:wrap;">
-            <a href="/rawr-beauty.zip" download class="btn btn-gold btn-sm">
-              📥 Download rawr-beauty.zip (105 KB)
-            </a>
-            <a href="https://github.com/ahmadkhan32/Aluxebeauity/tree/main/rawr-beauty" target="_blank" class="btn btn-dark btn-sm">
-              View Theme Files in GitHub →
-            </a>
-          </div>
-        </div>
-        <div style="background:var(--charcoal); padding:28px; border-radius:18px; color:white; font-size:12px; max-width:320px;">
-          <h4 style="color:var(--gold-light); margin-bottom:10px; font-family:var(--font-heading); font-size:1.2rem;">Quick WordPress Setup</h4>
-          <p style="margin-bottom:12px; color:var(--light-gray);">1. Download <code style="color:var(--gold-light);">rawr-beauty.zip</code></p>
-          <p style="margin-bottom:12px; color:var(--light-gray);">2. In WordPress: Appearance → Themes → Add New → Upload Theme</p>
-          <p style="margin-bottom:12px; color:var(--light-gray);">3. Activate RAWR Beauty Theme</p>
-          <p style="color:var(--gold-light); font-weight:700;">Ready to run with WooCommerce & CPTs!</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Interactive WhatsApp Booking Form -->
-  <section class="section" id="booking">
+  <!-- Booking Form Box -->
+  <section class="section" id="booking" style="background:#FAFAF8;">
     <div class="container">
       <div class="section-header">
         <span class="section-tag">Instant Reservation</span>
-        <h2 class="section-title">Book Your <span>Home Treatment</span></h2>
-        <p class="section-subtitle">
-          Fill in your details below and your booking request will open directly in WhatsApp for instant confirmation.
-        </p>
+        <h2 class="section-title">Book an <span>Appointment</span></h2>
       </div>
 
-      <div class="booking-box">
-        <form id="bookingForm" onsubmit="handleBooking(event)">
-          <div class="booking-grid">
-            <div class="form-group">
-              <label for="clientName">Your Full Name</label>
-              <input type="text" id="clientName" placeholder="e.g. Sarah Khan" required>
-            </div>
-            <div class="form-group">
-              <label for="clientPhone">Phone Number</label>
-              <input type="tel" id="clientPhone" placeholder="e.g. 07477 154228" required>
-            </div>
-            <div class="form-group">
-              <label for="treatmentSelect">Select Treatment</label>
-              <select id="treatmentSelect" required>
-                <option value="">-- Choose Treatment --</option>
-                <option value="Hydra Facial (£60)">Hydra Facial (£60)</option>
-                <option value="Gold Facial (£30)">Gold Facial (£30)</option>
-                <option value="Whitening Facial (£20)">Whitening Facial (£20)</option>
-                <option value="Full Face Threading (£18)">Full Face Threading (£18)</option>
-                <option value="Eyebrows Threading (£5)">Eyebrows Threading (£5)</option>
-                <option value="Full Face Wax (£15)">Full Face Wax (£15)</option>
-                <option value="Full Body Wax (£80)">Full Body Wax (£80)</option>
-                <option value="Full Body Massage 60 min (£50)">Full Body Massage 60 min (£50)</option>
-                <option value="Luxury Glow Package (£70)">Luxury Glow Package (£70)</option>
-                <option value="Bridal / Full Care Package (£100)">Bridal / Full Care Package (£100)</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="preferredDate">Preferred Date</label>
-              <input type="date" id="preferredDate" required>
-            </div>
-            <div class="form-group full">
-              <label for="clientAddress">Your Full Home Address (Postcode)</label>
-              <input type="text" id="clientAddress" placeholder="e.g. 42 High Street, London E1 6AN" required>
-            </div>
-            <div class="form-group full">
-              <label for="clientNotes">Special Requests / Skin Concerns</label>
-              <textarea id="clientNotes" rows="3" placeholder="Tell us if you have sensitive skin, allergies, or timing preferences..."></textarea>
-            </div>
+      <div style="background:white; border-radius:24px; padding:40px; border:1px solid rgba(201,168,76,0.25); box-shadow:var(--shadow-md); max-width:700px; margin:0 auto;">
+        <form onsubmit="handleBooking(event)">
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:18px;">
+            <input type="text" id="clientName" placeholder="Your Name" required style="padding:12px; border:1px solid #ccc; border-radius:8px;">
+            <input type="tel" id="clientPhone" placeholder="Phone Number" required style="padding:12px; border:1px solid #ccc; border-radius:8px;">
+            <select id="treatmentSelect" required style="padding:12px; border:1px solid #ccc; border-radius:8px;">
+              <option value="">Select Treatment / Package</option>
+              <option value="Hydra Facial (£60)">Hydra Facial (£60)</option>
+              <option value="Gold Facial (£30)">Gold Facial (£30)</option>
+              <option value="Full Face Threading (£18)">Full Face Threading (£18)</option>
+              <option value="Full Body Wax (£80)">Full Body Wax (£80)</option>
+              <option value="Luxury Glow Package (£50)">Luxury Glow Package (£50)</option>
+              <option value="Bridal Package (£100+)">Bridal Package (£100+)</option>
+            </select>
+            <input type="date" id="preferredDate" required style="padding:12px; border:1px solid #ccc; border-radius:8px;">
+            <input type="text" id="clientAddress" placeholder="Address or Salon Branch" style="grid-column:span 2; padding:12px; border:1px solid #ccc; border-radius:8px;" required>
           </div>
           <button type="submit" class="btn btn-whatsapp btn-lg" style="width:100%;">
-            💬 Send Booking Request on WhatsApp
+            💬 Send Booking on WhatsApp
           </button>
         </form>
       </div>
     </div>
   </section>
 
+  <!-- Slide-Out Shopping Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3 style="font-family:var(--font-heading); font-size:1.4rem;">Your Beauty Cart</h3>
+      <button onclick="toggleCart()" style="border:none; background:none; font-size:22px; cursor:pointer;">✕</button>
+    </div>
+    <div class="cart-items" id="cartItemsList">
+      <p style="text-align:center; color:#8888AA; margin-top:40px;">Your cart is currently empty.</p>
+    </div>
+    <div class="cart-footer">
+      <div style="display:flex; justify-content:space-between; font-weight:700; font-size:16px; margin-bottom:14px;">
+        <span>Total:</span>
+        <span id="cartTotalVal">£0.00</span>
+      </div>
+      <button class="btn btn-whatsapp" style="width:100%;" onclick="checkoutWhatsApp()">
+        💬 Order via WhatsApp
+      </button>
+    </div>
+  </aside>
+
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
         <div>
-          <div class="logo" style="margin-bottom:14px;">
-            <span class="logo-script" style="color:var(--gold-light);">Ayesha</span>
-            <span class="logo-main" style="color:white;">LUXE BEAUTY</span>
-          </div>
-          <p style="font-size:13px; color:var(--gray); line-height:1.7; margin-bottom:16px;">
-            London's premier female-only doorstep beauty service. Certified treatments delivered to your door with 100% sterilized tools.
-          </p>
-          <p style="font-size:12px; color:var(--gold-light); font-weight:700;">
-            🚗 FREE Travel within 2 miles
+          <h3 style="font-family:var(--font-heading); font-size:24px; color:white; margin-bottom:12px;">RAWR & Ayesha Luxe</h3>
+          <p style="font-size:12px; color:var(--light-gray); line-height:1.7;">
+            Operating across 26 UK salon branches and doorstep mobile treatments. Dedicated to high standards, hygiene, and radiant results.
           </p>
         </div>
-
-        <div>
-          <h4 class="footer-title">Treatments</h4>
-          <ul class="footer-links">
-            <li><a href="#services">Facials & Glow</a></li>
-            <li><a href="#services">Precision Threading</a></li>
-            <li><a href="#services">Face & Body Waxing</a></li>
-            <li><a href="#services">Relaxation Massage</a></li>
-            <li><a href="#services">Laser Hair Removal</a></li>
-          </ul>
-        </div>
-
         <div>
           <h4 class="footer-title">Navigation</h4>
           <ul class="footer-links">
-            <li><a href="#services">Price Lists</a></li>
-            <li><a href="#packages">Curated Packages</a></li>
-            <li><a href="#home-service">Doorstep Travel</a></li>
-            <li><a href="#rawr-theme">RAWR Theme</a></li>
-            <li><a href="#booking">Book Online</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#branches">26 Branches</a></li>
+            <li><a href="#shop">E-Commerce Shop</a></li>
+            <li><a href="#academy">Training Academy</a></li>
+            <li><a href="#franchise">Franchise</a></li>
           </ul>
         </div>
-
+        <div>
+          <h4 class="footer-title">Legal & Policies</h4>
+          <ul class="footer-links">
+            <li><a href="#booking">Privacy Policy</a></li>
+            <li><a href="#booking">Terms & Conditions</a></li>
+            <li><a href="#booking">Covid-19 Safety</a></li>
+            <li><a href="#booking">Delivery & Returns</a></li>
+          </ul>
+        </div>
         <div>
           <h4 class="footer-title">Direct Contact</h4>
-          <p style="font-size:13px; color:var(--light-gray); margin-bottom:8px;">📱 WhatsApp: +44 7477 154228</p>
-          <p style="font-size:13px; color:var(--light-gray); margin-bottom:8px;">💌 info@aluxebeauty.co.uk</p>
-          <p style="font-size:13px; color:var(--light-gray); margin-bottom:8px;">📍 Greater London, United Kingdom</p>
-          <p style="font-size:13px; color:var(--light-gray);">⏰ Mon – Sat: 9:00 AM – 8:00 PM</p>
+          <p style="font-size:12px; color:var(--light-gray); margin-bottom:6px;">📱 WhatsApp: +44 7477 154228</p>
+          <p style="font-size:12px; color:var(--light-gray); margin-bottom:6px;">💌 info@aluxebeauty.co.uk</p>
+          <p style="font-size:12px; color:var(--light-gray);">📍 London, UK Nationwide</p>
         </div>
       </div>
-
       <div class="footer-bottom">
-        <p>© 2026 Ayesha Luxe Beauty. All rights reserved.</p>
-        <p>WordPress Theme Deliverable: <a href="/rawr-beauty.zip" style="color:var(--gold-light); font-weight:700;">rawr-beauty.zip</a></p>
+        <p>© 2026 RAWR Beauty & Ayesha Luxe Beauty. All rights reserved.</p>
+        <p><a href="/rawr-beauty.zip" style="color:var(--gold-light);">Download rawr-beauty.zip</a></p>
       </div>
     </div>
   </footer>
 
-  <!-- Floating WhatsApp Action -->
-  <a href="https://wa.me/447477154228?text=Hello%20Ayesha%2C%20I%20would%20like%20to%20book%20a%20treatment" target="_blank" class="wa-float" aria-label="Book on WhatsApp">
-    <span style="font-size:20px;">💬</span>
-    <span class="text">Book on WhatsApp</span>
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/447477154228?text=Hello%20Ayesha%2C%20I%20would%20like%20to%20book%20a%20treatment" target="_blank" class="wa-float">
+    <span style="font-size:18px;">💬</span>
+    <span>Book on WhatsApp</span>
   </a>
 
-  <!-- Booking Script -->
+  <!-- Interactive Scripts (Cart, Branches Filter, Booking) -->
   <script>
+    var cart = [];
+
+    function toggleCart() {
+      document.getElementById('cartDrawer').classList.toggle('active');
+      document.getElementById('cartOverlay').classList.toggle('active');
+    }
+
+    function addToCart(name, price) {
+      cart.push({ name: name, price: price });
+      updateCartUI();
+      toggleCart();
+    }
+
+    function updateCartUI() {
+      document.getElementById('cartCountBadge').textContent = cart.length;
+      var list = document.getElementById('cartItemsList');
+      if (cart.length === 0) {
+        list.innerHTML = '<p style="text-align:center; color:#8888AA; margin-top:40px;">Your cart is currently empty.</p>';
+        document.getElementById('cartTotalVal').textContent = '£0.00';
+        return;
+      }
+      var total = 0;
+      var html = '';
+      cart.forEach(function(item, idx) {
+        total += item.price;
+        html += '<div class="cart-item">' +
+                '<div><strong>' + item.name + '</strong><br><span style="color:#A8862E; font-size:12px;">£' + item.price.toFixed(2) + '</span></div>' +
+                '<button onclick="removeFromCart(' + idx + ')" style="border:none; background:#ff4d4f; color:#fff; border-radius:50%; width:22px; height:22px; cursor:pointer;">✕</button>' +
+                '</div>';
+      });
+      list.innerHTML = html;
+      document.getElementById('cartTotalVal').textContent = '£' + total.toFixed(2);
+    }
+
+    function removeFromCart(idx) {
+      cart.splice(idx, 1);
+      updateCartUI();
+    }
+
+    function checkoutWhatsApp() {
+      if (cart.length === 0) return alert('Your cart is empty!');
+      var itemsTxt = cart.map(function(i) { return '• ' + i.name + ' (£' + i.price + ')'; }).join('%0A');
+      var total = cart.reduce(function(a, b) { return a + b.price; }, 0);
+      var msg = "Hello! I would like to order the following products from your online shop:%0A%0A" + itemsTxt + "%0A%0A*Total:* £" + total.toFixed(2) + "%0A%0APlease confirm delivery details!";
+      window.open("https://wa.me/447477154228?text=" + msg, "_blank");
+    }
+
+    function filterShop(cat, btn) {
+      var buttons = document.querySelectorAll('.shop-tab');
+      buttons.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      var cards = document.querySelectorAll('.product-card');
+      cards.forEach(function(card) {
+        if (cat === 'all' || card.getAttribute('data-cat') === cat) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function filterBranches() {
+      var query = document.getElementById('branchSearch').value.toLowerCase();
+      var boxes = document.querySelectorAll('.branch-box');
+      boxes.forEach(function(box) {
+        var name = box.getAttribute('data-name').toLowerCase();
+        if (name.indexOf(query) !== -1) {
+          box.style.display = 'block';
+        } else {
+          box.style.display = 'none';
+        }
+      });
+    }
+
     function handleBooking(e) {
       e.preventDefault();
       var name = document.getElementById('clientName').value;
@@ -768,17 +898,13 @@
       var treatment = document.getElementById('treatmentSelect').value;
       var date = document.getElementById('preferredDate').value;
       var address = document.getElementById('clientAddress').value;
-      var notes = document.getElementById('clientNotes').value;
 
-      var msg = "Hello Ayesha! I would like to book a doorstep beauty treatment:%0A%0A" +
+      var msg = "Hello! I would like to book a salon/doorstep appointment:%0A%0A" +
                 "👤 *Name:* " + encodeURIComponent(name) + "%0A" +
                 "📞 *Phone:* " + encodeURIComponent(phone) + "%0A" +
                 "✨ *Treatment:* " + encodeURIComponent(treatment) + "%0A" +
                 "📅 *Date:* " + encodeURIComponent(date) + "%0A" +
-                "📍 *Address:* " + encodeURIComponent(address) + "%0A" +
-                (notes ? ("📝 *Notes:* " + encodeURIComponent(notes) + "%0A") : "") +
-                "%0APlease confirm your availability!";
-
+                "📍 *Location:* " + encodeURIComponent(address);
       window.open("https://wa.me/447477154228?text=" + msg, "_blank");
     }
   </script>
