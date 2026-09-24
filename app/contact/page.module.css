@@ -1,0 +1,41 @@
+.page{padding-bottom:80px;}
+.hero{background:var(--gradient-hero);padding:120px 0 70px;text-align:center;position:relative;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(201,168,76,0.12) 0%,transparent 60%);}
+.title{font-family:var(--font-heading);font-size:clamp(2.5rem,5vw,4rem);font-weight:700;color:white;margin-bottom:16px;position:relative;}
+.title span{background:var(--gradient-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.sub{font-size:16px;color:rgba(255,255,255,0.7);position:relative;}
+
+/* GRID */
+.grid{display:grid;grid-template-columns:1fr 1.5fr;gap:60px;padding:60px 0;}
+.cards{display:flex;flex-direction:column;gap:16px;}
+.contactCard{display:flex;align-items:center;gap:18px;background:white;border-radius:var(--border-radius);padding:22px;border:1px solid rgba(201,168,76,0.12);box-shadow:var(--shadow-sm);text-decoration:none;transition:var(--transition-bounce);}
+.contactCard:hover{transform:translateX(8px);box-shadow:var(--shadow-md);border-color:rgba(201,168,76,0.25);}
+.cardIcon{width:60px;height:60px;border-radius:16px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.cardTitle{font-weight:800;font-size:15px;color:var(--charcoal);margin-bottom:2px;}
+.cardValue{font-family:var(--font-heading);font-size:1.1rem;font-weight:600;color:var(--gold-dark);margin-bottom:2px;}
+.cardNote{font-size:11px;color:var(--gray);font-weight:500;}
+
+/* FORM */
+.formWrap{background:white;border-radius:var(--border-radius);padding:40px;border:1px solid rgba(201,168,76,0.12);box-shadow:var(--shadow-sm);}
+.formTitle{font-family:var(--font-heading);font-size:2rem;font-weight:600;color:var(--charcoal);margin-bottom:28px;}
+.form{display:flex;flex-direction:column;gap:16px;}
+.formRow{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.formGroup{display:flex;flex-direction:column;gap:6px;}
+.formGroup label{font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--dark-gray);}
+.formGroup input,.formGroup select,.formGroup textarea{width:100%;padding:12px 16px;border:2px solid rgba(201,168,76,0.2);border-radius:10px;font-size:14px;font-family:var(--font-body);color:var(--charcoal);background:var(--off-white);transition:var(--transition);outline:none;}
+.formGroup input:focus,.formGroup select:focus,.formGroup textarea:focus{border-color:var(--gold);background:white;box-shadow:0 0 0 4px rgba(201,168,76,0.1);}
+.formGroup textarea{resize:vertical;min-height:120px;}
+.formBtns{display:flex;gap:12px;flex-wrap:wrap;}
+
+/* HOURS */
+.hours{background:white;border-radius:var(--border-radius);padding:40px;border:1px solid rgba(201,168,76,0.1);margin-top:48px;}
+.hoursTitle{font-family:var(--font-heading);font-size:1.8rem;font-weight:600;color:var(--charcoal);margin-bottom:24px;text-align:center;}
+.hoursGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.hourRow{background:var(--gold-pale);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:8px;align-items:center;text-align:center;}
+.hourDay{font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold-dark);}
+.hourTime{font-family:var(--font-heading);font-size:1.1rem;font-weight:600;color:var(--charcoal);}
+
+@media(max-width:1024px){.grid{grid-template-columns:1fr;}
+.hoursGrid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:640px){.formRow{grid-template-columns:1fr;}
+.hoursGrid{grid-template-columns:1fr;}}
