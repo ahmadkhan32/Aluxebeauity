@@ -12,7 +12,7 @@ define('RAWR_THEME_DIR', get_template_directory());
 define('RAWR_THEME_URI', get_template_directory_uri());
 
 // Core Includes
-require_once RAWR_THEME_DIR . '/inc/setup.php';
+require_once RAWR_THEME_DIR . '/inc/theme-setup.php';
 require_once RAWR_THEME_DIR . '/inc/enqueue.php';
 require_once RAWR_THEME_DIR . '/inc/menus.php';
 require_once RAWR_THEME_DIR . '/inc/widgets.php';
@@ -20,22 +20,35 @@ require_once RAWR_THEME_DIR . '/inc/customizer.php';
 require_once RAWR_THEME_DIR . '/inc/security.php';
 require_once RAWR_THEME_DIR . '/inc/seo.php';
 require_once RAWR_THEME_DIR . '/inc/helpers.php';
+require_once RAWR_THEME_DIR . '/inc/template-functions.php';
 require_once RAWR_THEME_DIR . '/inc/api.php';
 require_once RAWR_THEME_DIR . '/inc/ajax.php';
 
+// WooCommerce eCommerce Modules
+require_once RAWR_THEME_DIR . '/inc/ecommerce/cart.php';
+require_once RAWR_THEME_DIR . '/inc/ecommerce/cart-fragments.php';
+require_once RAWR_THEME_DIR . '/inc/ecommerce/checkout.php';
+require_once RAWR_THEME_DIR . '/inc/ecommerce/quick-buy.php';
+require_once RAWR_THEME_DIR . '/inc/ecommerce/quantity.php';
+require_once RAWR_THEME_DIR . '/inc/ecommerce/pricing.php';
+require_once RAWR_THEME_DIR . '/inc/ecommerce/orders.php';
+require_once RAWR_THEME_DIR . '/inc/ecommerce/shipping.php';
+require_once RAWR_THEME_DIR . '/inc/ecommerce/validation.php';
+
 // Custom Post Types
-require_once RAWR_THEME_DIR . '/post-types/services.php';
-require_once RAWR_THEME_DIR . '/post-types/locations.php';
-require_once RAWR_THEME_DIR . '/post-types/courses.php';
-require_once RAWR_THEME_DIR . '/post-types/careers.php';
+require_once RAWR_THEME_DIR . '/post-types/branch.php';
+require_once RAWR_THEME_DIR . '/post-types/service.php';
+require_once RAWR_THEME_DIR . '/post-types/course.php';
+require_once RAWR_THEME_DIR . '/post-types/career.php';
 require_once RAWR_THEME_DIR . '/post-types/press.php';
-require_once RAWR_THEME_DIR . '/post-types/testimonials.php';
+require_once RAWR_THEME_DIR . '/post-types/testimonial.php';
 
 // Taxonomies
 require_once RAWR_THEME_DIR . '/taxonomies/service-category.php';
-require_once RAWR_THEME_DIR . '/taxonomies/location-region.php';
+require_once RAWR_THEME_DIR . '/taxonomies/branch-region.php';
 require_once RAWR_THEME_DIR . '/taxonomies/course-category.php';
 require_once RAWR_THEME_DIR . '/taxonomies/press-category.php';
+
 
 /**
  * Setup Theme features

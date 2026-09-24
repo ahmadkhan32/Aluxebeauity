@@ -24,9 +24,12 @@ function rawr_beauty_scripts() {
     // Core Theme JS
     wp_enqueue_script('rawr-main-js', RAWR_THEME_URI . '/assets/js/main.js', array(), $version, true);
     wp_enqueue_script('rawr-navigation-js', RAWR_THEME_URI . '/assets/js/navigation.js', array(), $version, true);
+    wp_enqueue_script('rawr-ajax-cart-js', RAWR_THEME_URI . '/assets/js/ajax-cart.js', array(), $version, true);
+    wp_enqueue_script('rawr-quick-buy-js', RAWR_THEME_URI . '/assets/js/quick-buy.js', array('rawr-ajax-cart-js'), $version, true);
     wp_enqueue_script('rawr-booking-js', RAWR_THEME_URI . '/assets/js/booking.js', array(), $version, true);
     wp_enqueue_script('rawr-locations-js', RAWR_THEME_URI . '/assets/js/locations.js', array(), $version, true);
     wp_enqueue_script('rawr-forms-js', RAWR_THEME_URI . '/assets/js/forms.js', array(), $version, true);
+
 
     // Enqueue Compiled React Bundle
     if (file_exists(RAWR_THEME_DIR . '/assets/dist/react-app.js')) {
