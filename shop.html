@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beauty E-Commerce Shop 🛒 | Ayesha Luxe Beauty - Professional Salon Products</title>
+  <meta name="description" content="Shop salon-grade beauty products: BIAB builder gel kits, lash growth serums, brow styling balms, and luxury skincare with tracked UK delivery.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700;800&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --gold: #C9A84C;
+      --gold-light: #E2C97A;
+      --gold-dark: #A8862E;
+      --gold-pale: #FDF8EE;
+      --pink: #E8829A;
+      --pink-pale: #FFF0F4;
+      --charcoal: #1A1A2E;
+      --dark-gray: #4A4A6A;
+      --gray: #8888AA;
+      --light-gray: #F0F0F5;
+      --white: #FFFFFF;
+      --gradient-gold: linear-gradient(135deg, #E2C97A 0%, #C9A84C 50%, #A8862E 100%);
+      --gradient-hero: linear-gradient(160deg, #1A1A2E 0%, #16213E 50%, #0F3460 100%);
+      --font-heading: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'Montserrat', sans-serif;
+      --font-script: 'Great Vibes', cursive;
+      --border-radius: 16px;
+      --border-radius-pill: 50px;
+      --shadow-sm: 0 4px 14px rgba(26,26,46,0.06);
+      --shadow-md: 0 10px 30px rgba(26,26,46,0.1);
+      --shadow-lg: 0 20px 50px rgba(26,26,46,0.15);
+      --shadow-gold: 0 8px 30px rgba(201,168,76,0.3);
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: var(--font-body); color: var(--charcoal); background: var(--white); line-height: 1.6; overflow-x: hidden; }
+    a { text-decoration: none; color: inherit; transition: var(--transition); }
+    .container { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+
+    .top-bar { background: var(--charcoal); color: var(--white); padding: 8px 0; font-size: 12px; border-bottom: 1px solid rgba(201,168,76,0.25); }
+    .top-bar-inner { display: flex; justify-content: space-between; align-items: center; }
+    .top-bar-link { color: var(--gold-light); font-weight: 700; }
+
+    .site-header { position: sticky; top: 0; z-index: 1000; background: rgba(255,255,255,0.96); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(201,168,76,0.15); padding: 12px 0; }
+    .header-nav { display: flex; justify-content: space-between; align-items: center; }
+    .logo { display: flex; flex-direction: column; text-decoration: none; line-height: 1; }
+    .logo-script { font-family: var(--font-script); font-size: 26px; color: var(--gold-dark); margin-left: 2px; }
+    .logo-main { font-family: var(--font-heading); font-size: 22px; font-weight: 700; letter-spacing: 3px; color: var(--charcoal); }
+    .logo-sub { font-size: 8px; font-weight: 700; letter-spacing: 2px; color: var(--pink); text-transform: uppercase; margin-top: 2px; }
+    
+    .nav-links { display: flex; align-items: center; gap: 16px; list-style: none; }
+    .nav-links a { font-size: 12px; font-weight: 600; color: var(--charcoal); position: relative; padding: 6px 0; }
+    .nav-links a:hover, .nav-links a.active { color: var(--gold-dark); }
+    .nav-links a.active::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--gold); border-radius: 2px; }
+
+    .cart-btn { background: var(--gold-pale); border: 1px solid rgba(201,168,76,0.3); border-radius: 50px; padding: 8px 14px; display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 700; cursor: pointer; color: var(--charcoal); }
+    .cart-count { background: var(--gold); color: #1A1A2E; border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 800; }
+
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 28px; border-radius: var(--border-radius-pill); font-size: 13px; font-weight: 700; cursor: pointer; transition: var(--transition); border: 2px solid transparent; }
+    .btn-gold { background: var(--gradient-gold); color: var(--charcoal); box-shadow: var(--shadow-gold); }
+    .btn-gold:hover { transform: translateY(-3px); }
+    .btn-outline { background: transparent; border-color: var(--gold); color: var(--gold-dark); }
+    .btn-outline:hover { background: var(--gradient-gold); color: var(--charcoal); }
+    .btn-dark { background: var(--charcoal); color: white; }
+    .btn-sm { padding: 8px 16px; font-size: 11px; }
+
+    .shop-hero { background: var(--gradient-hero); color: white; padding: 80px 0; text-align: center; }
+    .section-tag { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); background: var(--gold-pale); border: 1px solid rgba(201,168,76,0.3); padding: 5px 16px; border-radius: 20px; margin-bottom: 12px; }
+    .section-title { font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; margin-bottom: 12px; }
+    .section-title span { background: var(--gradient-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+    .shop-filter-tabs { display: flex; justify-content: center; gap: 10px; margin: 30px 0 40px; flex-wrap: wrap; }
+    .shop-tab { padding: 10px 22px; border-radius: 30px; border: 1px solid rgba(201,168,76,0.3); background: #fff; font-size: 12px; font-weight: 700; cursor: pointer; color: var(--dark-gray); }
+    .shop-tab.active, .shop-tab:hover { background: var(--gradient-gold); color: #1A1A2E; border-color: transparent; }
+
+    .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 24px; }
+    .product-card { background: white; border-radius: 16px; border: 1px solid rgba(201,168,76,0.18); overflow: hidden; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between; transition: var(--transition); }
+    .product-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+    .product-img-box { height: 180px; background: linear-gradient(135deg, var(--gold-pale), var(--pink-pale)); display: flex; align-items: center; justify-content: center; font-size: 56px; }
+    .product-info { padding: 20px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+    .product-cat { font-size: 10px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); }
+    .product-name { font-family: var(--font-heading); font-size: 1.3rem; font-weight: 600; color: #1A1A2E; margin: 4px 0 8px; }
+    .product-desc { font-size: 12px; color: var(--dark-gray); margin-bottom: 12px; line-height: 1.5; }
+    .product-price-row { display: flex; justify-content: space-between; align-items: center; margin-top: 14px; border-top: 1px solid var(--light-gray); padding-top: 14px; }
+    .product-price { font-family: var(--font-heading); font-size: 1.35rem; font-weight: 700; color: var(--gold-dark); }
+
+    /* Cart Drawer */
+    .cart-drawer-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 9998; opacity: 0; pointer-events: none; transition: var(--transition); }
+    .cart-drawer-overlay.active { opacity: 1; pointer-events: auto; }
+    .cart-drawer { position: fixed; top: 0; right: 0; bottom: 0; width: 100%; max-width: 400px; background: #fff; z-index: 9999; box-shadow: -10px 0 30px rgba(0,0,0,0.2); transform: translateX(100%); transition: var(--transition); display: flex; flex-direction: column; }
+    .cart-drawer.active { transform: translateX(0); }
+    .cart-header { padding: 20px; border-bottom: 1px solid #E8E8F0; display: flex; justify-content: space-between; align-items: center; }
+    .cart-items { flex: 1; padding: 20px; overflow-y: auto; display: flex; flex-direction: column; gap: 14px; }
+    .cart-item { display: flex; justify-content: space-between; align-items: center; background: #FAFAF8; padding: 12px; border-radius: 10px; }
+    .cart-footer { padding: 20px; border-top: 1px solid #E8E8F0; background: #FDF8EE; }
+
+    /* Quick Buy Modal */
+    .qb-modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.65); z-index: 10000; opacity: 0; pointer-events: none; transition: var(--transition); display: flex; align-items: center; justify-content: center; padding: 20px; }
+    .qb-modal-overlay.active { opacity: 1; pointer-events: auto; }
+    .qb-modal { background: #fff; width: 100%; max-width: 520px; border-radius: 20px; border: 1px solid rgba(201,168,76,0.3); box-shadow: var(--shadow-lg); overflow: hidden; transform: translateY(20px); transition: var(--transition); }
+    .qb-modal-overlay.active .qb-modal { transform: translateY(0); }
+    .qb-header { background: #1A1A2E; color: white; padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; }
+    .qb-body { padding: 24px; max-height: 80vh; overflow-y: auto; }
+
+    .site-footer { background: var(--charcoal); color: white; padding: 70px 0 30px; border-top: 1px solid rgba(201,168,76,0.25); }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 40px; margin-bottom: 50px; }
+    .footer-title { font-family: var(--font-heading); font-size: 17px; font-weight: 600; color: var(--gold-light); margin-bottom: 16px; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 12px; color: var(--light-gray); }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 12px; color: var(--gray); flex-wrap: wrap; gap: 12px; }
+
+    .wa-float { position: fixed; bottom: 24px; right: 24px; z-index: 9990; display: flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #25D366, #128C7E); color: white; padding: 12px 20px; border-radius: 50px; font-size: 13px; font-weight: 700; box-shadow: 0 10px 30px rgba(37,211,102,0.45); }
+
+    @media (max-width: 900px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div>🛍️ Free Tracked UK Shipping Over £40 · Dispatched Same Day</div>
+      <div><a href="https://wa.me/447477154228" target="_blank" class="top-bar-link">💬 Order on WhatsApp: +44 7477 154228</a></div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-nav">
+      <a href="/" class="logo">
+        <span class="logo-script">Ayesha</span>
+        <span class="logo-main">LUXE BEAUTY</span>
+        <span class="logo-sub">26 UK BRANCHES & SALON SHOP</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/branches/">26 Branches</a></li>
+        <li><a href="/shop/" class="active">Shop 🛒</a></li>
+        <li><a href="/packages/">Packages</a></li>
+        <li><a href="/academy/">Academy</a></li>
+        <li><a href="/careers/">Careers</a></li>
+        <li><a href="/franchise/">Franchise</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/book-now/">Book Now</a></li>
+      </ul>
+
+      <div class="header-actions">
+        <button class="cart-btn" onclick="toggleCart()">
+          🛒 <span id="cartCountBadge" class="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="shop-hero">
+    <div class="container">
+      <span class="section-tag" style="background:rgba(201,168,76,0.2); color:var(--gold-light);">WooCommerce Beauty Range</span>
+      <h1 class="section-title" style="color:white;">Professional <span>Beauty Shop</span></h1>
+      <p style="color:rgba(255,255,255,0.85); max-width:650px; margin:0 auto;">
+        Salon-formulated nail treatments, lash-nourishing serums, botanical skincare, and grooming accessories delivered to your doorstep.
+      </p>
+    </div>
+  </section>
+
+  <main class="container" style="padding: 60px 24px;">
+    <div class="shop-filter-tabs">
+      <button class="shop-tab active" onclick="filterCategory('all')">All Products</button>
+      <button class="shop-tab" onclick="filterCategory('nails')">Nail Care & BIAB</button>
+      <button class="shop-tab" onclick="filterCategory('brows')">Brows & Lashes</button>
+      <button class="shop-tab" onclick="filterCategory('skincare')">Clinical Skincare</button>
+      <button class="shop-tab" onclick="filterCategory('tools')">Accessories & Tools</button>
+    </div>
+
+    <div class="products-grid">
+      <!-- 1 -->
+      <div class="product-card" data-category="nails">
+        <div class="product-img-box">💅</div>
+        <div class="product-info">
+          <div>
+            <span class="product-cat">Nail Care</span>
+            <h3 class="product-name">24K Gold Cuticle Elixir</h3>
+            <p class="product-desc">Infused with pure jojoba oil, vitamin E, and 24K gold flakes for intensive cuticle hydration and nail growth.</p>
+          </div>
+          <div>
+            <div class="product-price-row">
+              <span class="product-price">£18.00</span>
+              <div style="display:flex; gap:8px;">
+                <button onclick="addToCart('24K Gold Cuticle Elixir', 18.00, '💅')" class="btn btn-outline btn-sm">Add</button>
+                <button onclick="openQuickBuy('24K Gold Cuticle Elixir', 18.00, '💅')" class="btn btn-gold btn-sm">⚡ Buy</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="product-card" data-category="brows">
+        <div class="product-img-box">👁️</div>
+        <div class="product-info">
+          <div>
+            <span class="product-cat">Brows & Lashes</span>
+            <h3 class="product-name">Peptide Lash Growth Serum</h3>
+            <p class="product-desc">Multi-peptide formula proven to lengthen, thicken, and condition natural lashes in 28 days. Safe with lash extensions.</p>
+          </div>
+          <div>
+            <div class="product-price-row">
+              <span class="product-price">£34.00</span>
+              <div style="display:flex; gap:8px;">
+                <button onclick="addToCart('Peptide Lash Growth Serum', 34.00, '👁️')" class="btn btn-outline btn-sm">Add</button>
+                <button onclick="openQuickBuy('Peptide Lash Growth Serum', 34.00, '👁️')" class="btn btn-gold btn-sm">⚡ Buy</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="product-card" data-category="brows">
+        <div class="product-img-box">✨</div>
+        <div class="product-info">
+          <div>
+            <span class="product-cat">Brow Styling</span>
+            <h3 class="product-name">Sculpting Brow Soap Wax</h3>
+            <p class="product-desc">Fluffy, 24-hour laminated hold without flaking or stiffness. Includes precision micro-spoolie applicator.</p>
+          </div>
+          <div>
+            <div class="product-price-row">
+              <span class="product-price">£16.00</span>
+              <div style="display:flex; gap:8px;">
+                <button onclick="addToCart('Sculpting Brow Soap Wax', 16.00, '✨')" class="btn btn-outline btn-sm">Add</button>
+                <button onclick="openQuickBuy('Sculpting Brow Soap Wax', 16.00, '✨')" class="btn btn-gold btn-sm">⚡ Buy</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="product-card" data-category="skincare">
+        <div class="product-img-box">💧</div>
+        <div class="product-info">
+          <div>
+            <span class="product-cat">Clinical Skincare</span>
+            <h3 class="product-name">Hydra-Infusion Glow Mist</h3>
+            <p class="product-desc">Triple molecular weight hyaluronic acid, rose damascena water, and niacinamide for an instant dewy glass-skin finish.</p>
+          </div>
+          <div>
+            <div class="product-price-row">
+              <span class="product-price">£26.00</span>
+              <div style="display:flex; gap:8px;">
+                <button onclick="addToCart('Hydra-Infusion Glow Mist', 26.00, '💧')" class="btn btn-outline btn-sm">Add</button>
+                <button onclick="openQuickBuy('Hydra-Infusion Glow Mist', 26.00, '💧')" class="btn btn-gold btn-sm">⚡ Buy</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="product-card" data-category="nails">
+        <div class="product-img-box">🌟</div>
+        <div class="product-info">
+          <div>
+            <span class="product-cat">Nail Care</span>
+            <h3 class="product-name">BIAB Builder Gel Starter Kit</h3>
+            <p class="product-desc">Complete at-home strengthening system: primer, nude builder base, no-wipe top coat, and salon mini LED light.</p>
+          </div>
+          <div>
+            <div class="product-price-row">
+              <span class="product-price">£48.00</span>
+              <div style="display:flex; gap:8px;">
+                <button onclick="addToCart('BIAB Builder Gel Starter Kit', 48.00, '🌟')" class="btn btn-outline btn-sm">Add</button>
+                <button onclick="openQuickBuy('BIAB Builder Gel Starter Kit', 48.00, '🌟')" class="btn btn-gold btn-sm">⚡ Buy</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="product-card" data-category="tools">
+        <div class="product-img-box">🎀</div>
+        <div class="product-info">
+          <div>
+            <span class="product-cat">Accessories</span>
+            <h3 class="product-name">Mulberry Silk Pillowcase & Scrunchie</h3>
+            <p class="product-desc">100% 22-momme pure mulberry silk. Protects lash extensions during sleep and prevents hair friction breakage.</p>
+          </div>
+          <div>
+            <div class="product-price-row">
+              <span class="product-price">£32.00</span>
+              <div style="display:flex; gap:8px;">
+                <button onclick="addToCart('Mulberry Silk Set', 32.00, '🎀')" class="btn btn-outline btn-sm">Add</button>
+                <button onclick="openQuickBuy('Mulberry Silk Set', 32.00, '🎀')" class="btn btn-gold btn-sm">⚡ Buy</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3 style="font-family:var(--font-heading); font-size:1.4rem;">Your Beauty Cart</h3>
+      <button onclick="toggleCart()" style="border:none; background:none; font-size:24px; cursor:pointer;">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div style="text-align:center; padding:40px 0; color:var(--gray);">Your cart is empty.</div>
+    </div>
+    <div class="cart-footer">
+      <div style="display:flex; justify-content:space-between; margin-bottom:12px; font-weight:700;">
+        <span>Subtotal:</span>
+        <span id="cartSubtotal">£0.00</span>
+      </div>
+      <button onclick="startCheckout()" class="btn btn-gold" style="width:100%; margin-bottom:8px;">Proceed to WhatsApp Checkout</button>
+      <p style="font-size:11px; text-align:center; color:var(--gray);">Tracked UK delivery · Secure payment options</p>
+    </div>
+  </div>
+
+  <!-- Quick Buy Modal -->
+  <div class="qb-modal-overlay" id="qbModalOverlay">
+    <div class="qb-modal">
+      <div class="qb-header">
+        <h3 style="font-family:var(--font-heading); font-size:1.3rem;">⚡ Quick Buy Direct Order</h3>
+        <button onclick="closeQuickBuy()" style="background:none; border:none; color:white; font-size:24px; cursor:pointer;">&times;</button>
+      </div>
+      <div class="qb-body">
+        <div style="display:flex; align-items:center; gap:16px; margin-bottom:18px; padding-bottom:14px; border-bottom:1px solid #eee;">
+          <div id="qbImg" style="font-size:36px; width:50px; height:50px; background:var(--gold-pale); border-radius:10px; display:flex; align-items:center; justify-content:center;">💅</div>
+          <div>
+            <h4 id="qbName" style="font-family:var(--font-heading); font-size:1.2rem;">Product Name</h4>
+            <div id="qbPrice" style="color:var(--gold-dark); font-weight:700; font-size:1.1rem;">£0.00</div>
+          </div>
+        </div>
+
+        <form onsubmit="handleQuickBuy(event)">
+          <div style="margin-bottom:14px;">
+            <label style="display:block; font-size:12px; font-weight:700; margin-bottom:4px;">Full Name *</label>
+            <input type="text" id="qbFullName" required style="width:100%; padding:10px; border:1px solid #ccc; border-radius:8px;">
+          </div>
+          <div style="margin-bottom:14px;">
+            <label style="display:block; font-size:12px; font-weight:700; margin-bottom:4px;">Phone / WhatsApp *</label>
+            <input type="tel" id="qbPhone" required style="width:100%; padding:10px; border:1px solid #ccc; border-radius:8px;">
+          </div>
+          <div style="margin-bottom:14px;">
+            <label style="display:block; font-size:12px; font-weight:700; margin-bottom:4px;">Delivery Address & Postcode *</label>
+            <input type="text" id="qbAddress" required style="width:100%; padding:10px; border:1px solid #ccc; border-radius:8px;">
+          </div>
+          <button type="submit" class="btn btn-gold" style="width:100%;">Confirm Order on WhatsApp</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3 style="font-family:var(--font-heading); font-size:24px; color:white; margin-bottom:12px;">Ayesha Luxe Beauty</h3>
+          <p style="font-size:12px; color:var(--light-gray); line-height:1.7;">
+            Operating across 26 UK salon branches and doorstep mobile treatments within 2 miles.
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/branches/">26 Branches</a></li>
+            <li><a href="/shop/">Shop 🛒</a></li>
+            <li><a href="/packages/">Packages</a></li>
+            <li><a href="/academy/">Academy</a></li>
+            <li><a href="/careers/">Careers</a></li>
+            <li><a href="/franchise/">Franchise</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/book-now/">Book Now</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Direct Contact</h4>
+          <p style="font-size:12px; color:var(--light-gray); margin-bottom:6px;">📱 WhatsApp: +44 7477 154228</p>
+          <p style="font-size:12px; color:var(--light-gray); margin-bottom:6px;">💌 shop@aluxebeauty.co.uk</p>
+          <p style="font-size:12px; color:var(--light-gray);">📍 26 UK Salons Nationwide</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Ayesha Luxe Beauty. All rights reserved. Enhance your beauty, embrace your glow.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/447477154228?text=Hello%20Ayesha%2C%20I%20have%20a%20question%20about%20your%20products" target="_blank" class="wa-float">
+    <span style="font-size:18px;">💬</span>
+    <span>Shop Support</span>
+  </a>
+
+  <script>
+    var cart = [];
+    var qbProduct = null;
+
+    function filterCategory(cat) {
+      document.querySelectorAll('.shop-tab').forEach(function(t) { t.classList.remove('active'); });
+      event.target.classList.add('active');
+      var cards = document.querySelectorAll('.product-card');
+      cards.forEach(function(c) {
+        if (cat === 'all' || c.getAttribute('data-category') === cat) {
+          c.style.display = 'flex';
+        } else {
+          c.style.display = 'none';
+        }
+      });
+    }
+
+    function toggleCart() {
+      document.getElementById('cartDrawer').classList.toggle('active');
+      document.getElementById('cartOverlay').classList.toggle('active');
+    }
+
+    function addToCart(name, price, img) {
+      var existing = cart.find(function(i) { return i.name === name; });
+      if (existing) {
+        existing.qty++;
+      } else {
+        cart.push({ name: name, price: price, img: img, qty: 1 });
+      }
+      renderCart();
+      toggleCart();
+    }
+
+    function changeQty(name, delta) {
+      var item = cart.find(function(i) { return i.name === name; });
+      if (item) {
+        item.qty += delta;
+        if (item.qty <= 0) cart = cart.filter(function(i) { return i.name !== name; });
+        renderCart();
+      }
+    }
+
+    function renderCart() {
+      var container = document.getElementById('cartItems');
+      var countBadge = document.getElementById('cartCountBadge');
+      var subtotalEl = document.getElementById('cartSubtotal');
+
+      var totalCount = cart.reduce(function(acc, i) { return acc + i.qty; }, 0);
+      countBadge.textContent = totalCount;
+
+      if (cart.length === 0) {
+        container.innerHTML = '<div style="text-align:center; padding:40px 0; color:var(--gray);">Your cart is empty.</div>';
+        subtotalEl.textContent = '£0.00';
+        return;
+      }
+
+      var total = 0;
+      var html = '';
+      cart.forEach(function(item) {
+        total += item.price * item.qty;
+        html += '<div class="cart-item">' +
+                  '<div style="display:flex; align-items:center; gap:10px;">' +
+                    '<span style="font-size:24px;">' + item.img + '</span>' +
+                    '<div>' +
+                      '<div style="font-weight:700; font-size:13px;">' + item.name + '</div>' +
+                      '<div style="font-size:12px; color:var(--gold-dark);">£' + (item.price * item.qty).toFixed(2) + '</div>' +
+                    '</div>' +
+                  '</div>' +
+                  '<div style="display:flex; align-items:center; gap:8px;">' +
+                    '<button onclick="changeQty(\'' + item.name + '\', -1)" style="width:24px; height:24px; border:1px solid #ccc; background:#fff; border-radius:4px; cursor:pointer;">-</button>' +
+                    '<span style="font-weight:700; font-size:12px;">' + item.qty + '</span>' +
+                    '<button onclick="changeQty(\'' + item.name + '\', 1)" style="width:24px; height:24px; border:1px solid #ccc; background:#fff; border-radius:4px; cursor:pointer;">+</button>' +
+                  '</div>' +
+                '</div>';
+      });
+      container.innerHTML = html;
+      subtotalEl.textContent = '£' + total.toFixed(2);
+    }
+
+    function startCheckout() {
+      if (cart.length === 0) return alert('Your cart is empty!');
+      var itemsTxt = cart.map(function(i) { return '• ' + i.qty + 'x ' + i.name + ' (£' + (i.price * i.qty).toFixed(2) + ')'; }).join('%0A');
+      var total = cart.reduce(function(a, b) { return a + (b.price * b.qty); }, 0);
+      var msg = "Hello Ayesha Luxe Beauty! I want to complete my shop order:%0A%0A" + itemsTxt + "%0A%0A*Total:* £" + total.toFixed(2) + "%0A%0APlease arrange UK delivery!";
+      window.open("https://wa.me/447477154228?text=" + msg, "_blank");
+    }
+
+    function openQuickBuy(name, price, img) {
+      qbProduct = { name: name, price: price, img: img };
+      document.getElementById('qbName').textContent = name;
+      document.getElementById('qbPrice').textContent = '£' + price.toFixed(2);
+      document.getElementById('qbImg').textContent = img;
+      document.getElementById('qbModalOverlay').classList.add('active');
+    }
+
+    function closeQuickBuy() {
+      document.getElementById('qbModalOverlay').classList.remove('active');
+    }
+
+    function handleQuickBuy(e) {
+      e.preventDefault();
+      var name = document.getElementById('qbFullName').value;
+      var phone = document.getElementById('qbPhone').value;
+      var addr = document.getElementById('qbAddress').value;
+
+      var msg = "⚡ QUICK BUY ORDER:%0A%0A" +
+                "*Product:* " + qbProduct.name + " (£" + qbProduct.price.toFixed(2) + ")%0A" +
+                "*Name:* " + name + "%0A" +
+                "*Phone:* " + phone + "%0A" +
+                "*Address:* " + addr + "%0A%0A" +
+                "Please send payment link and dispatch order!";
+      window.open("https://wa.me/447477154228?text=" + msg, "_blank");
+      closeQuickBuy();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Salon Appointment Online | Ayesha Luxe Beauty - 26 UK Branches & Doorstep</title>
+  <meta name="description" content="Book your beauty treatment online. Choose from our 26 UK branch concessions or book certified doorstep mobile beauty to your home within 2 miles.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700;800&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --gold: #C9A84C;
+      --gold-light: #E2C97A;
+      --gold-dark: #A8862E;
+      --gold-pale: #FDF8EE;
+      --pink: #E8829A;
+      --charcoal: #1A1A2E;
+      --dark-gray: #4A4A6A;
+      --gray: #8888AA;
+      --light-gray: #F0F0F5;
+      --white: #FFFFFF;
+      --gradient-gold: linear-gradient(135deg, #E2C97A 0%, #C9A84C 50%, #A8862E 100%);
+      --gradient-hero: linear-gradient(160deg, #1A1A2E 0%, #16213E 50%, #0F3460 100%);
+      --font-heading: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'Montserrat', sans-serif;
+      --font-script: 'Great Vibes', cursive;
+      --border-radius: 16px;
+      --border-radius-pill: 50px;
+      --shadow-sm: 0 4px 14px rgba(26,26,46,0.06);
+      --shadow-md: 0 10px 30px rgba(26,26,46,0.1);
+      --shadow-gold: 0 8px 30px rgba(201,168,76,0.3);
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: var(--font-body); color: var(--charcoal); background: var(--white); line-height: 1.6; overflow-x: hidden; }
+    a { text-decoration: none; color: inherit; transition: var(--transition); }
+    .container { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+
+    .top-bar { background: var(--charcoal); color: var(--white); padding: 8px 0; font-size: 12px; border-bottom: 1px solid rgba(201,168,76,0.25); }
+    .top-bar-inner { display: flex; justify-content: space-between; align-items: center; }
+    .top-bar-link { color: var(--gold-light); font-weight: 700; }
+
+    .site-header { position: sticky; top: 0; z-index: 1000; background: rgba(255,255,255,0.96); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(201,168,76,0.15); padding: 12px 0; }
+    .header-nav { display: flex; justify-content: space-between; align-items: center; }
+    .logo { display: flex; flex-direction: column; text-decoration: none; line-height: 1; }
+    .logo-script { font-family: var(--font-script); font-size: 26px; color: var(--gold-dark); margin-left: 2px; }
+    .logo-main { font-family: var(--font-heading); font-size: 22px; font-weight: 700; letter-spacing: 3px; color: var(--charcoal); }
+    .logo-sub { font-size: 8px; font-weight: 700; letter-spacing: 2px; color: var(--pink); text-transform: uppercase; margin-top: 2px; }
+    
+    .nav-links { display: flex; align-items: center; gap: 16px; list-style: none; }
+    .nav-links a { font-size: 12px; font-weight: 600; color: var(--charcoal); position: relative; padding: 6px 0; }
+    .nav-links a:hover, .nav-links a.active { color: var(--gold-dark); }
+    .nav-links a.active::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--gold); border-radius: 2px; }
+
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 28px; border-radius: var(--border-radius-pill); font-size: 13px; font-weight: 700; cursor: pointer; transition: var(--transition); border: 2px solid transparent; }
+    .btn-gold { background: var(--gradient-gold); color: var(--charcoal); box-shadow: var(--shadow-gold); }
+    .btn-gold:hover { transform: translateY(-3px); }
+    .btn-sm { padding: 8px 16px; font-size: 11px; }
+    .btn-lg { padding: 16px 36px; font-size: 15px; }
+
+    .booking-hero { background: var(--gradient-hero); color: white; padding: 80px 0; text-align: center; }
+    .section-tag { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); background: var(--gold-pale); border: 1px solid rgba(201,168,76,0.3); padding: 5px 16px; border-radius: 20px; margin-bottom: 12px; }
+    .section-title { font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; margin-bottom: 12px; }
+    .section-title span { background: var(--gradient-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+    .booking-card { max-width: 780px; margin: -40px auto 60px; background: white; border-radius: 24px; padding: 40px; border: 1px solid rgba(201,168,76,0.3); box-shadow: var(--shadow-md); position: relative; z-index: 10; }
+    .booking-type-toggle { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 24px; }
+    .type-btn { padding: 14px; border-radius: 12px; border: 2px solid #E0E0EA; background: #FAF9F6; font-size: 13px; font-weight: 700; cursor: pointer; text-align: center; color: var(--dark-gray); transition: var(--transition); }
+    .type-btn.active { border-color: var(--gold); background: var(--gold-pale); color: var(--charcoal); }
+
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 20px; }
+    .form-control { width: 100%; padding: 12px 16px; border: 1px solid #D5D5E0; border-radius: 10px; font-size: 13px; font-family: var(--font-body); }
+    .form-control:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(201,168,76,0.15); }
+
+    .site-footer { background: var(--charcoal); color: white; padding: 70px 0 30px; border-top: 1px solid rgba(201,168,76,0.25); }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 40px; margin-bottom: 50px; }
+    .footer-title { font-family: var(--font-heading); font-size: 17px; font-weight: 600; color: var(--gold-light); margin-bottom: 16px; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 12px; color: var(--light-gray); }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 12px; color: var(--gray); flex-wrap: wrap; gap: 12px; }
+
+    .wa-float { position: fixed; bottom: 24px; right: 24px; z-index: 9990; display: flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #25D366, #128C7E); color: white; padding: 12px 20px; border-radius: 50px; font-size: 13px; font-weight: 700; box-shadow: 0 10px 30px rgba(37,211,102,0.45); }
+
+    @media (max-width: 900px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .nav-links { display: none; }
+      .form-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div>🗓️ Instant Online Reservation · Free Cancellation up to 24h Prior</div>
+      <div><a href="https://wa.me/447477154228" target="_blank" class="top-bar-link">💬 Book on WhatsApp: +44 7477 154228</a></div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-nav">
+      <a href="/" class="logo">
+        <span class="logo-script">Ayesha</span>
+        <span class="logo-main">LUXE BEAUTY</span>
+        <span class="logo-sub">26 UK BRANCHES & DOORSTEP SALON</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/branches/">26 Branches</a></li>
+        <li><a href="/shop/">Shop 🛒</a></li>
+        <li><a href="/packages/">Packages</a></li>
+        <li><a href="/academy/">Academy</a></li>
+        <li><a href="/careers/">Careers</a></li>
+        <li><a href="/franchise/">Franchise</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/book-now/" class="active">Book Now</a></li>
+      </ul>
+
+      <div class="header-actions">
+        <a href="#bookForm" class="btn btn-gold btn-sm">Reserve Now</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="booking-hero">
+    <div class="container">
+      <span class="section-tag" style="background:rgba(201,168,76,0.2); color:var(--gold-light);">Instant Reservation</span>
+      <h1 class="section-title" style="color:white;">Book an <span>Appointment</span></h1>
+      <p style="color:rgba(255,255,255,0.85); max-width:650px; margin:0 auto 40px;">
+        Choose from our 26 luxury salon concessions or schedule our mobile doorstep beauty team to visit your home within 2 miles.
+      </p>
+    </div>
+  </section>
+
+  <main class="container">
+    <div class="booking-card" id="bookForm">
+      <div class="booking-type-toggle">
+        <div class="type-btn active" id="btnBranch" onclick="setBookingType('branch')">
+          🏬 Salon Concession (26 Branches)
+        </div>
+        <div class="type-btn" id="btnDoorstep" onclick="setBookingType('doorstep')">
+          🚗 Mobile Doorstep Salon (Within 2 Mi)
+        </div>
+      </div>
+
+      <form onsubmit="handleBookingSubmit(event)">
+        <div class="form-grid">
+          <div>
+            <label style="display:block; font-size:12px; font-weight:700; margin-bottom:4px;">Full Name *</label>
+            <input type="text" id="bName" class="form-control" placeholder="e.g. Emma Watson" required>
+          </div>
+          <div>
+            <label style="display:block; font-size:12px; font-weight:700; margin-bottom:4px;">Phone / WhatsApp *</label>
+            <input type="tel" id="bPhone" class="form-control" placeholder="+44 7123 456789" required>
+          </div>
+          <div>
+            <label style="display:block; font-size:12px; font-weight:700; margin-bottom:4px;">Email Address *</label>
+            <input type="email" id="bEmail" class="form-control" placeholder="emma@example.co.uk" required>
+          </div>
+          <div>
+            <label style="display:block; font-size:12px; font-weight:700; margin-bottom:4px;">Treatment Category *</label>
+            <select id="bService" class="form-control" required>
+              <option value="">Select treatment...</option>
+              <option value="BIAB Builder Gel Overlay (£38)">💅 BIAB Builder Gel Overlay (£38)</option>
+              <option value="Classic 1:1 Eyelash Extensions (£55)">👁️ Classic 1:1 Lashes (£55)</option>
+              <option value="Russian Volume Lashes (£78)">👁️ Russian Volume Lashes (£78)</option>
+              <option value="Brow Lamination & Hybrid Tint (£42)">✨ Brow Lamination & Hybrid Tint (£42)</option>
+              <option value="Eyebrow Threading & Tint (£19)">🪡 Eyebrow Threading & Tint (£19)</option>
+              <option value="Signature 6-Step Hydra Facial (£68)">💧 Signature 6-Step Hydra Facial (£68)</option>
+              <option value="Signature Glow Duo Package (£65)">🎁 Signature Glow Duo Package (£65)</option>
+              <option value="The Ultimate Glam Trio (£115)">🎁 The Ultimate Glam Trio (£115)</option>
+            </select>
+          </div>
+          <div id="branchSelectGroup">
+            <label style="display:block; font-size:12px; font-weight:700; margin-bottom:4px;">Select Salon Branch *</label>
+            <select id="bBranch" class="form-control">
+              <option value="London - Oxford Street Primark Concession">London - Oxford Street Concession</option>
+              <option value="London - Westfield Stratford City">London - Westfield Stratford</option>
+              <option value="London - Westfield White City">London - Westfield White City</option>
+              <option value="Birmingham - Bullring Floor 2">Birmingham - Bullring Concession</option>
+              <option value="Manchester - Arndale Market St">Manchester - Arndale Concession</option>
+              <option value="Cardiff - St David's Concession">Cardiff - St David's Concession</option>
+              <option value="Bristol - Cribbs Causeway">Bristol - Cribbs Causeway</option>
+              <option value="Leeds - Trinity Centre">Leeds - Trinity Centre</option>
+              <option value="Glasgow - Braehead Centre">Glasgow - Braehead Centre</option>
+              <option value="Liverpool - Liverpool ONE">Liverpool - Liverpool ONE</option>
+            </select>
+          </div>
+          <div id="doorstepAddressGroup" style="display:none;">
+            <label style="display:block; font-size:12px; font-weight:700; margin-bottom:4px;">Home Postcode & Address (Within 2 Mi) *</label>
+            <input type="text" id="bAddress" class="form-control" placeholder="House number, street and UK postcode">
+          </div>
+          <div>
+            <label style="display:block; font-size:12px; font-weight:700; margin-bottom:4px;">Preferred Date *</label>
+            <input type="date" id="bDate" class="form-control" required>
+          </div>
+          <div>
+            <label style="display:block; font-size:12px; font-weight:700; margin-bottom:4px;">Preferred Time Slot *</label>
+            <select id="bTime" class="form-control" required>
+              <option value="Morning (10:00 - 12:00)">Morning (10:00 - 12:00)</option>
+              <option value="Afternoon (12:00 - 15:00)">Afternoon (12:00 - 15:00)</option>
+              <option value="Late Afternoon (15:00 - 18:00)">Late Afternoon (15:00 - 18:00)</option>
+              <option value="Evening (18:00 - 20:00)">Evening (18:00 - 20:00)</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="margin-bottom:20px;">
+          <label style="display:block; font-size:12px; font-weight:700; margin-bottom:4px;">Special Requests / Allergies (Optional)</label>
+          <textarea id="bNotes" class="form-control" rows="3" placeholder="Tell us if you need gel removal, have sensitive eyes, or require a patch test..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-gold btn-lg" style="width:100%;">
+          ✨ Confirm Reservation via WhatsApp
+        </button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3 style="font-family:var(--font-heading); font-size:24px; color:white; margin-bottom:12px;">Ayesha Luxe Beauty</h3>
+          <p style="font-size:12px; color:var(--light-gray); line-height:1.7;">
+            Operating across 26 UK salon branches and doorstep mobile treatments within 2 miles.
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/branches/">26 Branches</a></li>
+            <li><a href="/shop/">Shop 🛒</a></li>
+            <li><a href="/packages/">Packages</a></li>
+            <li><a href="/academy/">Academy</a></li>
+            <li><a href="/careers/">Careers</a></li>
+            <li><a href="/franchise/">Franchise</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/book-now/">Book Now</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Direct Contact</h4>
+          <p style="font-size:12px; color:var(--light-gray); margin-bottom:6px;">📱 WhatsApp: +44 7477 154228</p>
+          <p style="font-size:12px; color:var(--light-gray); margin-bottom:6px;">💌 booking@aluxebeauty.co.uk</p>
+          <p style="font-size:12px; color:var(--light-gray);">📍 26 UK Salons Nationwide</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Ayesha Luxe Beauty. All rights reserved. Enhance your beauty, embrace your glow.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/447477154228?text=Hello%20Ayesha%2C%20I%20want%20to%20book%20an%20appointment" target="_blank" class="wa-float">
+    <span style="font-size:18px;">💬</span>
+    <span>WhatsApp Booking</span>
+  </a>
+
+  <script>
+    var currentBookingType = 'branch';
+
+    function setBookingType(type) {
+      currentBookingType = type;
+      if (type === 'branch') {
+        document.getElementById('btnBranch').classList.add('active');
+        document.getElementById('btnDoorstep').classList.remove('active');
+        document.getElementById('branchSelectGroup').style.display = 'block';
+        document.getElementById('doorstepAddressGroup').style.display = 'none';
+      } else {
+        document.getElementById('btnDoorstep').classList.add('active');
+        document.getElementById('btnBranch').classList.remove('active');
+        document.getElementById('branchSelectGroup').style.display = 'none';
+        document.getElementById('doorstepAddressGroup').style.display = 'block';
+      }
+    }
+
+    function handleBookingSubmit(e) {
+      e.preventDefault();
+      var name = document.getElementById('bName').value;
+      var phone = document.getElementById('bPhone').value;
+      var email = document.getElementById('bEmail').value;
+      var service = document.getElementById('bService').value;
+      var date = document.getElementById('bDate').value;
+      var time = document.getElementById('bTime').value;
+      var notes = document.getElementById('bNotes').value || 'None';
+
+      var locationInfo = (currentBookingType === 'branch') ?
+        ("*Branch:* " + document.getElementById('bBranch').value) :
+        ("*Doorstep Address:* " + document.getElementById('bAddress').value + " (Within 2 Miles)");
+
+      var msg = "🌟 NEW SALON RESERVATION:%0A%0A" +
+                "*Name:* " + encodeURIComponent(name) + "%0A" +
+                "*Phone:* " + encodeURIComponent(phone) + "%0A" +
+                "*Email:* " + encodeURIComponent(email) + "%0A" +
+                "*Treatment:* " + encodeURIComponent(service) + "%0A" +
+                encodeURIComponent(locationInfo) + "%0A" +
+                "*Date:* " + encodeURIComponent(date) + "%0A" +
+                "*Time:* " + encodeURIComponent(time) + "%0A" +
+                "*Notes:* " + encodeURIComponent(notes) + "%0A%0A" +
+                "Please confirm my appointment slot!";
+
+      window.open("https://wa.me/447477154228?text=" + msg, "_blank");
+      alert("Thank you " + name + "! Your booking request has been initiated. Ayesha Luxe Beauty will confirm your slot via WhatsApp.");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beauty Packages & Bundles | Ayesha Luxe Beauty - 26 UK Branches & Doorstep</title>
+  <meta name="description" content="Save with our curated beauty packages: Bridal glam, lash & brow trios, mother-daughter bundles, and monthly pamper subscriptions.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700;800&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --gold: #C9A84C;
+      --gold-light: #E2C97A;
+      --gold-dark: #A8862E;
+      --gold-pale: #FDF8EE;
+      --pink: #E8829A;
+      --charcoal: #1A1A2E;
+      --dark-gray: #4A4A6A;
+      --gray: #8888AA;
+      --light-gray: #F0F0F5;
+      --white: #FFFFFF;
+      --gradient-gold: linear-gradient(135deg, #E2C97A 0%, #C9A84C 50%, #A8862E 100%);
+      --gradient-hero: linear-gradient(160deg, #1A1A2E 0%, #16213E 50%, #0F3460 100%);
+      --font-heading: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'Montserrat', sans-serif;
+      --font-script: 'Great Vibes', cursive;
+      --border-radius: 16px;
+      --border-radius-pill: 50px;
+      --shadow-sm: 0 4px 14px rgba(26,26,46,0.06);
+      --shadow-md: 0 10px 30px rgba(26,26,46,0.1);
+      --shadow-gold: 0 8px 30px rgba(201,168,76,0.3);
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: var(--font-body); color: var(--charcoal); background: var(--white); line-height: 1.6; overflow-x: hidden; }
+    a { text-decoration: none; color: inherit; transition: var(--transition); }
+    .container { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+
+    .top-bar { background: var(--charcoal); color: var(--white); padding: 8px 0; font-size: 12px; border-bottom: 1px solid rgba(201,168,76,0.25); }
+    .top-bar-inner { display: flex; justify-content: space-between; align-items: center; }
+    .top-bar-link { color: var(--gold-light); font-weight: 700; }
+
+    .site-header { position: sticky; top: 0; z-index: 1000; background: rgba(255,255,255,0.96); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(201,168,76,0.15); padding: 12px 0; }
+    .header-nav { display: flex; justify-content: space-between; align-items: center; }
+    .logo { display: flex; flex-direction: column; text-decoration: none; line-height: 1; }
+    .logo-script { font-family: var(--font-script); font-size: 26px; color: var(--gold-dark); margin-left: 2px; }
+    .logo-main { font-family: var(--font-heading); font-size: 22px; font-weight: 700; letter-spacing: 3px; color: var(--charcoal); }
+    .logo-sub { font-size: 8px; font-weight: 700; letter-spacing: 2px; color: var(--pink); text-transform: uppercase; margin-top: 2px; }
+    
+    .nav-links { display: flex; align-items: center; gap: 16px; list-style: none; }
+    .nav-links a { font-size: 12px; font-weight: 600; color: var(--charcoal); position: relative; padding: 6px 0; }
+    .nav-links a:hover, .nav-links a.active { color: var(--gold-dark); }
+    .nav-links a.active::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--gold); border-radius: 2px; }
+
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 28px; border-radius: var(--border-radius-pill); font-size: 13px; font-weight: 700; cursor: pointer; transition: var(--transition); border: 2px solid transparent; }
+    .btn-gold { background: var(--gradient-gold); color: var(--charcoal); box-shadow: var(--shadow-gold); }
+    .btn-gold:hover { transform: translateY(-3px); }
+    .btn-dark { background: var(--charcoal); color: white; }
+    .btn-sm { padding: 8px 16px; font-size: 11px; }
+    .btn-lg { padding: 16px 36px; font-size: 15px; }
+
+    .packages-hero { background: var(--gradient-hero); color: white; padding: 80px 0; text-align: center; }
+    .section-tag { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); background: var(--gold-pale); border: 1px solid rgba(201,168,76,0.3); padding: 5px 16px; border-radius: 20px; margin-bottom: 12px; }
+    .section-title { font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; margin-bottom: 12px; }
+    .section-title span { background: var(--gradient-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+    .packages-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 28px; }
+    .package-card { background: white; border-radius: 20px; border: 1px solid rgba(201,168,76,0.22); overflow: hidden; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between; transition: var(--transition); position: relative; }
+    .package-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); border-color: var(--gold); }
+    .package-header { padding: 24px; background: #FAF9F6; border-bottom: 1px solid var(--light-gray); }
+    .package-badge { display: inline-block; font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; background: var(--gold); color: #1A1A2E; padding: 4px 12px; border-radius: 20px; margin-bottom: 10px; }
+    .package-name { font-family: var(--font-heading); font-size: 1.45rem; font-weight: 700; color: var(--charcoal); margin-bottom: 6px; }
+    .package-body { padding: 24px; flex: 1; }
+    .package-desc { font-size: 13px; color: var(--dark-gray); line-height: 1.6; margin-bottom: 16px; }
+    .package-includes { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
+    .package-includes li { font-size: 12px; color: var(--charcoal); display: flex; align-items: center; gap: 8px; }
+    .package-includes li::before { content: '★'; color: var(--gold-dark); }
+    .package-footer { padding: 20px 24px; background: #FAF8F5; border-top: 1px solid var(--light-gray); display: flex; justify-content: space-between; align-items: center; }
+    .package-price { font-family: var(--font-heading); font-size: 1.6rem; font-weight: 700; color: var(--gold-dark); }
+    .package-price span { font-size: 11px; font-family: var(--font-body); color: var(--gray); font-weight: 500; text-decoration: line-through; margin-left: 6px; }
+
+    .site-footer { background: var(--charcoal); color: white; padding: 70px 0 30px; border-top: 1px solid rgba(201,168,76,0.25); }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 40px; margin-bottom: 50px; }
+    .footer-title { font-family: var(--font-heading); font-size: 17px; font-weight: 600; color: var(--gold-light); margin-bottom: 16px; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 12px; color: var(--light-gray); }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 12px; color: var(--gray); flex-wrap: wrap; gap: 12px; }
+
+    .wa-float { position: fixed; bottom: 24px; right: 24px; z-index: 9990; display: flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #25D366, #128C7E); color: white; padding: 12px 20px; border-radius: 50px; font-size: 13px; font-weight: 700; box-shadow: 0 10px 30px rgba(37,211,102,0.45); }
+
+    @media (max-width: 900px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div>🎁 Save Up to 30% with Bundled Salon Packages · Ideal for Gifts</div>
+      <div><a href="https://wa.me/447477154228" target="_blank" class="top-bar-link">💬 Book Package on WhatsApp: +44 7477 154228</a></div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-nav">
+      <a href="/" class="logo">
+        <span class="logo-script">Ayesha</span>
+        <span class="logo-main">LUXE BEAUTY</span>
+        <span class="logo-sub">26 UK BRANCHES & DOORSTEP SALON</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/branches/">26 Branches</a></li>
+        <li><a href="/shop/">Shop 🛒</a></li>
+        <li><a href="/packages/" class="active">Packages</a></li>
+        <li><a href="/academy/">Academy</a></li>
+        <li><a href="/careers/">Careers</a></li>
+        <li><a href="/franchise/">Franchise</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/book-now/">Book Now</a></li>
+      </ul>
+
+      <div class="header-actions">
+        <a href="/book-now/" class="btn btn-gold btn-sm">Book Package</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="packages-hero">
+    <div class="container">
+      <span class="section-tag" style="background:rgba(201,168,76,0.2); color:var(--gold-light);">Curated Combinations</span>
+      <h1 class="section-title" style="color:white;">Luxury Beauty <span>Packages</span></h1>
+      <p style="color:rgba(255,255,255,0.85); max-width:650px; margin:0 auto 20px;">
+        Indulge in our bundled pamper sessions designed for events, bridal preparation, mother-daughter dates, and monthly beauty upkeep.
+      </p>
+      <a href="/book-now/" class="btn btn-gold btn-lg">Book Instant Appointment</a>
+    </div>
+  </section>
+
+  <main class="container" style="padding: 60px 24px;">
+    <div class="packages-grid">
+      <!-- 1 -->
+      <div class="package-card">
+        <div class="package-header">
+          <span class="package-badge">Most Popular</span>
+          <h3 class="package-name">Signature Glow Duo</h3>
+        </div>
+        <div class="package-body">
+          <p class="package-desc">The essential monthly refresh. Combine structured BIAB gel nails with fluffy brow lamination and custom tint.</p>
+          <ul class="package-includes">
+            <li>BIAB Builder Gel manicure with cuticle care</li>
+            <li>Brow lamination, precision thread & hybrid tint</li>
+            <li>Nourishing 24K gold cuticle oil application</li>
+            <li>Duration: Approx 75 mins</li>
+          </ul>
+        </div>
+        <div class="package-footer">
+          <div class="package-price">£65.00 <span>£80.00</span></div>
+          <a href="/book-now/?package=Glow-Duo" class="btn btn-gold btn-sm">Book Duo</a>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="package-card">
+        <div class="package-header">
+          <span class="package-badge">The Glam Reset</span>
+          <h3 class="package-name">The Ultimate Glam Trio</h3>
+        </div>
+        <div class="package-body">
+          <p class="package-desc">Complete head-to-toe beauty preparation before vacations, weddings, or special celebrations.</p>
+          <ul class="package-includes">
+            <li>Full set of Russian Volume or Hybrid Lashes</li>
+            <li>BIAB gel overlay or Gel extensions</li>
+            <li>Signature brow shape, thread & tint</li>
+            <li>Duration: Approx 2 hours 15 mins</li>
+          </ul>
+        </div>
+        <div class="package-footer">
+          <div class="package-price">£115.00 <span>£140.00</span></div>
+          <a href="/book-now/?package=Glam-Trio" class="btn btn-gold btn-sm">Book Trio</a>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="package-card">
+        <div class="package-header">
+          <span class="package-badge">Bridal Luxury</span>
+          <h3 class="package-name">Bridal Royalty Package</h3>
+        </div>
+        <div class="package-body">
+          <p class="package-desc">Exquisite full-service bridal pampering to ensure you look breathtaking on your special day.</p>
+          <ul class="package-includes">
+            <li>Full bridal hair & HD airbrush makeup + trial</li>
+            <li>Luxury spa manicure & pedicure with gel</li>
+            <li>Lash extensions or lash lift with brow sculpture</li>
+            <li>Hydra-infusion facial 3 days prior</li>
+          </ul>
+        </div>
+        <div class="package-footer">
+          <div class="package-price">£280.00 <span>£340.00</span></div>
+          <a href="/book-now/?package=Bridal-Royalty" class="btn btn-gold btn-sm">Book Bridal</a>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="package-card">
+        <div class="package-header">
+          <span class="package-badge">Doorstep Mobile</span>
+          <h3 class="package-name">Doorstep Pamper Party</h3>
+        </div>
+        <div class="package-body">
+          <p class="package-desc">We bring the full salon experience to your living room. Minimum 2 people within 2 miles of any branch (free travel).</p>
+          <ul class="package-includes">
+            <li>Gel nails or BIAB for each guest</li>
+            <li>Brow shaping and threading for each guest</li>
+            <li>Mini radiance express facial</li>
+            <li>Free mobile travel within 2 miles</li>
+          </ul>
+        </div>
+        <div class="package-footer">
+          <div class="package-price">£75.00 / pp <span>£95.00</span></div>
+          <a href="/book-now/?package=Pamper-Party" class="btn btn-gold btn-sm">Book Doorstep</a>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="package-card">
+        <div class="package-header">
+          <span class="package-badge">Best Value</span>
+          <h3 class="package-name">Mother & Daughter Pamper</h3>
+        </div>
+        <div class="package-body">
+          <p class="package-desc">A relaxing bonding afternoon. Side-by-side treatments in our luxury concession booths or at your home.</p>
+          <ul class="package-includes">
+            <li>2x Gel manicures or pedicure treatments</li>
+            <li>2x Eyebrow threading and precision shape</li>
+            <li>Glass of complimentary sparkling drink</li>
+            <li>Duration: Approx 90 mins total</li>
+          </ul>
+        </div>
+        <div class="package-footer">
+          <div class="package-price">£85.00 <span>£110.00</span></div>
+          <a href="/book-now/?package=Mother-Daughter" class="btn btn-gold btn-sm">Book Bundle</a>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="package-card">
+        <div class="package-header">
+          <span class="package-badge">Subscription Pass</span>
+          <h3 class="package-name">VIP Monthly Glow Pass</h3>
+        </div>
+        <div class="package-body">
+          <p class="package-desc">Unlimited brow threading and priority salon booking slots throughout the month across all 26 branches.</p>
+          <ul class="package-includes">
+            <li>Unlimited eyebrow threading & upper lip shaping</li>
+            <li>1x Monthly BIAB or Gel polish manicure</li>
+            <li>10% discount on all shop products</li>
+            <li>Cancel or pause anytime with 1 click</li>
+          </ul>
+        </div>
+        <div class="package-footer">
+          <div class="package-price">£49.00 / mo <span>£75.00</span></div>
+          <a href="/book-now/?package=VIP-Pass" class="btn btn-gold btn-sm">Join Pass</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3 style="font-family:var(--font-heading); font-size:24px; color:white; margin-bottom:12px;">Ayesha Luxe Beauty</h3>
+          <p style="font-size:12px; color:var(--light-gray); line-height:1.7;">
+            Operating across 26 UK salon branches and doorstep mobile treatments within 2 miles.
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/branches/">26 Branches</a></li>
+            <li><a href="/shop/">Shop 🛒</a></li>
+            <li><a href="/packages/">Packages</a></li>
+            <li><a href="/academy/">Academy</a></li>
+            <li><a href="/careers/">Careers</a></li>
+            <li><a href="/franchise/">Franchise</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/book-now/">Book Now</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Direct Contact</h4>
+          <p style="font-size:12px; color:var(--light-gray); margin-bottom:6px;">📱 WhatsApp: +44 7477 154228</p>
+          <p style="font-size:12px; color:var(--light-gray); margin-bottom:6px;">💌 info@aluxebeauty.co.uk</p>
+          <p style="font-size:12px; color:var(--light-gray);">📍 26 UK Salons Nationwide</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Ayesha Luxe Beauty. All rights reserved. Enhance your beauty, embrace your glow.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/447477154228?text=Hello%20Ayesha%2C%20I%20want%20to%20book%20a%20beauty%20package" target="_blank" class="wa-float">
+    <span style="font-size:18px;">💬</span>
+    <span>Book Package</span>
+  </a>
+</body>
+</html>

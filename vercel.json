@@ -1,18 +1,8 @@
 {
   "version": 2,
-  "framework": null,
   "cleanUrls": true,
-  "rewrites": [
-    { "source": "/academy/?", "destination": "/academy/index.html" },
-    { "source": "/careers/?", "destination": "/careers/index.html" },
-    { "source": "/services/?", "destination": "/services/index.html" },
-    { "source": "/branches/?", "destination": "/branches/index.html" },
-    { "source": "/shop/?", "destination": "/shop/index.html" },
-    { "source": "/packages/?", "destination": "/packages/index.html" },
-    { "source": "/franchise/?", "destination": "/franchise/index.html" },
-    { "source": "/blog/?", "destination": "/blog/index.html" },
-    { "source": "/book-now/?", "destination": "/book-now/index.html" },
-    { "source": "/", "destination": "/index.html" },
-    { "source": "/index.php", "destination": "/index.html" }
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
